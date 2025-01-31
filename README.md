@@ -11,7 +11,13 @@ To create a production build of the project run the following command in your te
 npm run build
 ```
 
-To push changes to website, go to Actions and run this workflow:
+## How to push to production
+
+**Automatically:**
+When merging to **main** branch, all changes are pushed to production. 
+
+**Manually:**
+To push changes to production manually, go to Actions and run this workflow:
 ```sh
 Deploy Astro site to Pages
 ```
