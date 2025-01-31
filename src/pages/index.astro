@@ -1,29 +1,358 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-import CTA from '../components/CTA.astro';
-import FAQ from '../components/FAQ.astro';
+import PrimaryCTA from '../components/PrimaryCTA.astro';
+import GeneralFAQ from '../components/GeneralFAQ.astro';
 import Integrations from '../components/Integrations.astro';
-import FeaturesOne from '../components/FeaturesOne.astro';
-import FeaturesTwo from '../components/FeaturesTwo.astro';
-import FeaturesThree from '../components/FeaturesThree.astro';
-import FeaturesFour from '../components/FeaturesFour.astro';
 import Footer from '../components/Footer.astro';
-import Hero from '../components/Hero.astro';
+import CustomerLogos from '../components/CustomerLogos.astro';
 import Navbar from '../components/Navbar.astro';
 import Pricing from '../components/Pricing.astro';
 ---
 
 <Layout>
   <Navbar />
-  <Hero />
-  <FeaturesOne />
-  <FeaturesTwo />
-  <FeaturesThree />
-  <FeaturesFour />
+  <body>
+    <section class="bg-white dark:bg-gray-900">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 mt-10">
+            <!-- Hero Section -->
+            <div class="grid gap-8 items-center mb-8 lg:mb-24 lg:gap-12 lg:grid-cols-12">
+                <div class="col-span-6 text-left sm:mb-6 lg:text-left lg:mb-0">
+                    <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl xl:text-6xl dark:text-white">
+                        The World's First Digital Product Manager
+                    </h1>
+                    <p class="mb-6 max-w-xl font-light text-gray-500 xl:mb-8 md:text-lg xl:text-xl dark:text-gray-400">
+                        Say goodbye to the chaos of traditional product management and hello to a smarter, more efficient way to drive product success.
+                    </p>
+                    <form action="#" class="">
+                        <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
+                            <div class="relative">
+                                <label for="email" class="hidden mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    Email address
+                                </label>
+                                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                    <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                    </svg>
+                                </div>
+                                <input class="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:w-80 xl:w-96 focus:ring-brand-800 focus:border-brand-800 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-brand-800 dark:focus:border-brand-800"
+                                    placeholder="Enter your email" type="email" id="email" required="">
+                            </div>
+                            <button type="submit" class="w-full sm:w-auto justify-center text-white bg-brand-800 hover:bg-brand-600 focus:ring-4 focus:outline-none focus:ring-brand-100 font-medium rounded-lg px-5 py-2.5 text-center inline-flex items-center dark:bg-brand-800 dark:hover:bg-brand-600 dark:focus:ring-brand-800">
+                                Sign up
+                                <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-span-6 flex justify-end items-center">
+                    <img class="rounded-lg shrink-0 w-[400px] h-[400px] relative" style="object-fit: cover" src="/sindre_avatar_with_name_square.png" alt="Sindre" />
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Feature 1 -->
+                <div class="grid grid-cols-[auto_1fr]">
+                    <div class="flex justify-center items-top w-10 h-10 lg:h-12 lg:w-12">
+                        <svg class="w-5 h-5 text-brand-800 lg:w-6 lg:h-6 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.872 9.687 20 6.56 17.44 4 4 17.44 6.56 20 16.873 9.687Zm0 0-2.56-2.56M6 7v2m0 0v2m0-2H4m2 0h2m7 7v2m0 0v2m0-2h-2m2 0h2M8 4h.01v.01H8V4Zm2 2h.01v.01H10V6Zm2-2h.01v.01H12V4Zm8 8h.01v.01H20V12Zm-2 2h.01v.01H18V14Zm2 2h.01v.01H20V16Z"/>
+                        </svg>
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-bold dark:text-white">Fine-Tuned AI for Product Management</h3>
+                        <p class="text-gray-500 dark:text-gray-400">Leverage an AI designed specifically for product management, equipped with industry best practices.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="grid grid-cols-[auto_1fr]">
+                    <div class="flex justify-center items-top w-10 h-10 lg:h-12 lg:w-12">
+                        <svg class="w-5 h-5 text-brand-800 lg:w-6 lg:h-6 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14v3m-3-6V7a3 3 0 1 1 6 0v4m-8 0h10a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1Z"/>
+                        </svg>
+
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-bold dark:text-white">Secure Data Handling</h3>
+                        <p class="text-gray-500 dark:text-gray-400">Your company data is handled securely. Sindre utilizes uploads and integrations to protect sensitive information while providing valuable insights tailored to your needs.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="grid grid-cols-[auto_1fr]">
+                    <div class="flex justify-center items-top w-10 h-10 lg:h-12 lg:w-12">
+                        <svg class="w-5 h-5 text-brand-800 lg:w-6 lg:h-6 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.213 9.787a3.391 3.391 0 0 0-4.795 0l-3.425 3.426a3.39 3.39 0 0 0 4.795 4.794l.321-.304m-.321-4.49a3.39 3.39 0 0 0 4.795 0l3.424-3.426a3.39 3.39 0 0 0-4.794-4.795l-1.028.961"/>
+                        </svg>
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-bold dark:text-white">AI PM Agent</h3>
+                        <p class="text-gray-500 dark:text-gray-400">Sindre builds knowledge and product sense from discussions in meetings and conversations allowing you to focus on strategic work.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+  <CustomerLogos />
+
+  <!-- FeaturesOne start -->
+    <section class="bg-white dark:bg-gray-900">
+        <div class="items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid xl:grid-cols-3 lg:gap-8 xl:gap-24 sm:py-16 lg:px-6">
+            <div class="mb-8 lg:mb-0">
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Meet your new AI Product Manager</h2>
+                <p class="mb-4 text-gray-500 sm:text-xl dark:text-gray-400">With Sindre by your side, you’ll navigate the complexities of product development with ease, harness data-driven insights while Sindre does the grunt work for you.</p>
+            </div>
+            <div class="col-span-2 grid grid-cols-2 gap-12">
+                <div>
+                    <div
+                        class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-brand-100 lg:h-12 lg:w-12 dark:bg-brand-800">
+                        <svg class="w-5 h-5 text-brand-800 lg:w-6 lg:h-6 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M16 19h4a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-2m-2.236-4a3 3 0 1 0 0-4M3 18v-1a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1Zm8-10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="mb-2 text-xl font-bold dark:text-white">Be a product manager, not a project manager</h3>
+                    <p class="text-gray-500 dark:text-gray-400">While you focus on strategic discussions and engaging with customers and colleges, Sindre captures valuable insights and actions to ensure alignment on learnings and decisions.</p>
+                </div>
+                <div>
+                    <div
+                        class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-brand-100 lg:h-12 lg:w-12 dark:bg-brand-800">
+                        <svg class="w-5 h-5 text-brand-800 lg:w-6 lg:h-6 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M4.5 17H4a1 1 0 0 1-1-1 3 3 0 0 1 3-3h1m0-3.05A2.5 2.5 0 1 1 9 5.5M19.5 17h.5a1 1 0 0 0 1-1 3 3 0 0 0-3-3h-1m0-3.05a2.5 2.5 0 1 0-2-4.45m.5 13.5h-7a1 1 0 0 1-1-1 3 3 0 0 1 3-3h3a3 3 0 0 1 3 3 1 1 0 0 1-1 1Zm-1-9.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="mb-2 text-xl font-bold dark:text-white">Collaborate with your team to build better products</h3>
+                    <p class="text-gray-500 dark:text-gray-400">Collaborate with your team on new features and capabilities in slack or teams, while Sindre transforms these into clear feature descriptions and user stories. This way, you can dedicate more time to strategy and less time to documentation.</p>
+                </div>
+                <div class="col-span-2">
+                     <div>
+                        <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-brand-100 lg:h-12 lg:w-12 dark:bg-brand-800">
+                        <svg class="w-5 h-5 text-brand-800 lg:w-6 lg:h-6 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 3v4a1 1 0 0 1-1 1H5m4 10v-2m3 2v-6m3 6v-3m4-11v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="mb-2 text-xl font-bold dark:text-white">Easier access to insights when making decisions</h3>
+                    <p class="text-gray-500 dark:text-gray-400">Use AI to gain access to customer insights that empower you to create more impactful roadmap items and well-defined tasks for your developers, ensuring that customer needs are prioritized in your product vision.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FeaturesOne end -->
+  
+  <!-- FeaturesTwo start -->
+    <section class="bg-white dark:bg-gray-900">
+        <div
+            class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 xl:gap-16 sm:py-16 lg:px-6 ">
+            <img class="mb-4 w-full lg:mb-0 rounded-lg"
+                src="/vertical-bar-chart.png"
+                alt="feature image">
+            <div class="text-gray-500 dark:text-gray-400 sm:text-lg">
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Escape the Build Trap with Customer Insights</h2>
+                <p class="mb-8 font-light lg:text-xl">Gain a deep understanding of your customers, make informed decisions, and drive growth with actionable insights.</p>
+                <div class="py-8 mb-6 border-t border-b border-gray-200 dark:border-gray-700">
+                    <div class="flex">
+                        <div
+                            class="flex justify-center items-center mr-4 w-8 h-8 rounded-full bg-brand-100 dark:bg-brand-800 shrink-0">
+                            <svg class="w-5 h-5 text-brand-800 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.005 11.19V12l6.998 4.042L19 12v-.81M5 16.15v.81L11.997 21l6.998-4.042v-.81M12.003 3 5.005 7.042l6.998 4.042L19 7.042 12.003 3Z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Multi-Source Data Collection</h3>
+                            <p class="mb-2 font-light text-gray-500 dark:text-gray-400">Aggregate feedback, usage analytics, and market research in one place.</p>
+                        </div>
+                    </div>
+                    <div class="flex pt-8">
+                        <div
+                            class="flex justify-center items-center mr-4 w-8 h-8 bg-purple-100 rounded-full dark:bg-purple-900 shrink-0">
+                            <svg class="w-5 h-5 text-purple-600 dark:text-purple-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.651 7.65a7.131 7.131 0 0 0-12.68 3.15M18.001 4v4h-4m-7.652 8.35a7.13 7.13 0 0 0 12.68-3.15M6 20v-4h4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Continuous Discovery</h3>
+                            <p class="mb-2 font-light text-gray-500 dark:text-gray-400">Align your product with evolving customer needs. </p>
+                        </div>
+                    </div>
+                    <div class="flex pt-8">
+                        <div
+                            class="flex justify-center items-center mr-4 w-8 h-8 bg-brand-100 rounded-full dark:bg-brand-800 shrink-0">
+                            <svg class="w-5 h-5 text-brand-800 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 9a3 3 0 0 1 3-3m-2 15h4m0-3c0-4.1 4-4.9 4-9A6 6 0 1 0 6 9c0 4 4 5 4 9h4Z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Actionable Insights</h3>
+                            <p class="mb-2 font-light text-gray-500 dark:text-gray-400">Receive clear recommendations to guide product development, marketing, and customer engagement.</p>
+                        </div>
+                    </div>
+                    <div class="flex pt-8">
+                        <div
+                            class="flex justify-center items-center mr-4 w-8 h-8 bg-brand-100 rounded-full dark:bg-brand-800 shrink-0">
+                            <svg class="w-5 h-5 text-brand-800 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 3v4a1 1 0 0 1-1 1H5m4 8h6m-6-4h6m4-8v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1Z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Product Definition</h3>
+                            <p class="mb-2 font-light text-gray-500 dark:text-gray-400">Clearly define your product vision and goals based on customer feedback and market trends.</p>
+                        </div>
+                    </div>
+                    <div class="flex pt-8">
+                        <div
+                            class="flex justify-center items-center mr-4 w-8 h-8 bg-brand-100 rounded-full dark:bg-brand-800 shrink-0">
+                            <svg class="w-5 h-5 text-brand-800 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 3v4a1 1 0 0 1-1 1H5m4 10v-2m3 2v-6m3 6v-3m4-11v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1Z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Specify work based on insights</h3>
+                            <p class="mb-2 font-light text-gray-500 dark:text-gray-400">Create targeted work items that address specific customer pain points and opportunities for growth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FeaturesTwo end -->
+
+    <!-- FeaturesThree start -->
+    <section class="bg-white dark:bg-gray-900">
+        <div
+            class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 xl:gap-16 sm:py-16 lg:px-6 ">
+            <div class="text-gray-500 dark:text-gray-400 sm:text-lg">
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Productive meetings and a highly aligned organisation</h2>
+                <p class="mb-8 font-light lg:text-xl">Sindre acts as an engaged coworker that participates in meetings and conversations. It takes smart notes, captures key discussion points, and tracks action items so you can focus on what matters most. </p>
+                <div class="py-8 mb-6 border-t border-b border-gray-200 dark:border-gray-700">
+                    <div class="flex">
+                        <div
+                            class="flex justify-center items-center mr-4 w-8 h-8 rounded-full bg-brand-100 dark:bg-brand-800 shrink-0">
+                            <svg class="w-5 h-5 text-brand-800 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Smart Note-Taking</h3>
+                            <p class="mb-2 font-light text-gray-500 dark:text-gray-400">Automatically records essential details, ensuring nothing is missed.</p>
+                        </div>
+                    </div>
+                    <div class="flex pt-8">
+                        <div
+                            class="flex justify-center items-center mr-4 w-8 h-8 bg-purple-100 rounded-full dark:bg-purple-900 shrink-0">
+                            <svg class="w-5 h-5 text-purple-600 dark:text-purple-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.03v13m0-13c-2.819-.831-4.715-1.076-8.029-1.023A.99.99 0 0 0 3 6v11c0 .563.466 1.014 1.03 1.007 3.122-.043 5.018.212 7.97 1.023m0-13c2.819-.831 4.715-1.076 8.029-1.023A.99.99 0 0 1 21 6v11c0 .563-.466 1.014-1.03 1.007-3.122-.043-5.018.212-7.97 1.023"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Best Practice Insights</h3>
+                            <p class="mb-2 font-light text-gray-500 dark:text-gray-400">Shares relevant suggestions tailored to your discussions.</p>
+                        </div>
+                    </div>
+                    <div class="flex pt-8">
+                        <div
+                            class="flex justify-center items-center mr-4 w-8 h-8 bg-brand-100 rounded-full dark:bg-brand-800 shrink-0">
+                            <svg class="w-5 h-5 text-brand-800 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.779 17.779 4.36 19.918 6.5 13.5m4.279 4.279 8.364-8.643a3.027 3.027 0 0 0-2.14-5.165 3.03 3.03 0 0 0-2.14.886L6.5 13.5m4.279 4.279L6.499 13.5m2.14 2.14 6.213-6.504M12.75 7.04 17 11.28"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Real-Time Collaboration</h3>
+                            <p class="mb-2 font-light text-gray-500 dark:text-gray-400">Participates actively, providing instant feedback and support.</p>
+                        </div>
+                    </div>
+                    <div class="flex pt-8">
+                        <div
+                            class="flex justify-center items-center mr-4 w-8 h-8 bg-brand-100 rounded-full dark:bg-brand-800 shrink-0">
+                            <svg class="w-5 h-5 text-brand-800 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Task Management</h3>
+                            <p class="mb-2 font-light text-gray-500 dark:text-gray-400">Assigns tasks directly during meetings and keeps track of deadlines.</p>
+                        </div>
+                    </div>
+                    <div class="flex pt-8">
+                        <div
+                            class="flex justify-center items-center mr-4 w-8 h-8 bg-brand-100 rounded-full dark:bg-brand-800 shrink-0">
+                            <svg class="w-5 h-5 text-brand-800 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 17h6m-3 3v-6M4.857 4h4.286c.473 0 .857.384.857.857v4.286a.857.857 0 0 1-.857.857H4.857A.857.857 0 0 1 4 9.143V4.857C4 4.384 4.384 4 4.857 4Zm10 0h4.286c.473 0 .857.384.857.857v4.286a.857.857 0 0 1-.857.857h-4.286A.857.857 0 0 1 14 9.143V4.857c0-.473.384-.857.857-.857Zm-10 10h4.286c.473 0 .857.384.857.857v4.286a.857.857 0 0 1-.857.857H4.857A.857.857 0 0 1 4 19.143v-4.286c0-.473.384-.857.857-.857Z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Seamless Integration</h3>
+                            <p class="mb-2 font-light text-gray-500 dark:text-gray-400">Easily integrates with your preferred tools for a smooth workflow.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="w-full rounded-lg"
+                src="/meeting-summaries.png"
+                alt="feature image">
+        </div>
+    </section>
+    <!-- FeaturesThree end -->
+
+  <!-- Features Four start -->
+    <section class="bg-gray-50 dark:bg-gray-900">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+            <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-16">
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Unleash your Full Product Management Potential</h2>
+                <p class="font-light text-gray-500 dark:text-gray-400 sm:text-xl">Product management is not just about keeping up, but about leading. <br>With Sindre, you get ahead.</p>
+            </div>
+            <div class="space-y-8 md:grid grid-cols-2 md:gap-8 xl:gap-8 md:space-y-0">
+                <div class="p-6 bg-white rounded shadow dark:bg-gray-800">
+                    <div
+                        class="flex justify-center items-center mb-4 w-10 h-10 rounded bg-brand-100 lg:h-12 lg:w-12 dark:bg-brand-800">
+                        <svg class="w-5 h-5 text-brand-800 lg:w-6 lg:h-6 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.872 9.687 20 6.56 17.44 4 4 17.44 6.56 20 16.873 9.687Zm0 0-2.56-2.56M6 7v2m0 0v2m0-2H4m2 0h2m7 7v2m0 0v2m0-2h-2m2 0h2M8 4h.01v.01H8V4Zm2 2h.01v.01H10V6Zm2-2h.01v.01H12V4Zm8 8h.01v.01H20V12Zm-2 2h.01v.01H18V14Zm2 2h.01v.01H20V16Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="mb-2 text-xl font-bold dark:text-white">Enhanced Productivity</h3>
+                    <p class="font-light text-gray-500 dark:text-gray-400">Spend less time on administrative tasks and more time on strategic initiatives. Sindre takes care of the details, allowing you to focus on what truly matters—driving your product forward.</p>
+                </div>
+                <div class="p-6 bg-white rounded shadow dark:bg-gray-800">
+                    <div
+                        class="flex justify-center items-center mb-4 w-10 h-10 rounded bg-brand-100 lg:h-12 lg:w-12 dark:bg-brand-800">
+                        <svg class="w-5 h-5 text-brand-800 lg:w-6 lg:h-6 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 3v4a1 1 0 0 1-1 1H5m4 10v-2m3 2v-6m3 6v-3m4-11v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="mb-2 text-xl font-bold dark:text-white">Informed Decision-Making</h3>
+                    <p class="font-light text-gray-500 dark:text-gray-400">With real-time insights and comprehensive notes from customer interactions, you can make decisions based on solid data rather than guesswork. Sindre ensures you have the context you need to prioritize effectively.</p>
+                </div>
+                <div class="p-6 bg-white rounded shadow dark:bg-gray-800">
+                    <div
+                        class="flex justify-center items-center mb-4 w-10 h-10 rounded bg-brand-100 lg:h-12 lg:w-12 dark:bg-brand-800">
+                        <svg class="w-5 h-5 text-brand-800 lg:w-6 lg:h-6 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7 16 4-4-4-4m6 8 4-4-4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="mb-2 text-xl font-bold dark:text-white">Improved Team Alignment</h3>
+                    <p class="font-light text-gray-500 dark:text-gray-400">Sindre fosters collaboration and keeps everyone on the same page. With clear documentation and shared insights, your team can work more cohesively, reducing misunderstandings and increasing efficiency.</p>
+                </div>
+                <div class="p-6 bg-white rounded shadow dark:bg-gray-800">
+                    <div
+                        class="flex justify-center items-center mb-4 w-10 h-10 rounded bg-brand-100 lg:h-12 lg:w-12 dark:bg-brand-800">
+                        <svg class="w-5 h-5 text-brand-800 lg:w-6 lg:h-6 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M4.5 17H4a1 1 0 0 1-1-1 3 3 0 0 1 3-3h1m0-3.05A2.5 2.5 0 1 1 9 5.5M19.5 17h.5a1 1 0 0 0 1-1 3 3 0 0 0-3-3h-1m0-3.05a2.5 2.5 0 1 0-2-4.45m.5 13.5h-7a1 1 0 0 1-1-1 3 3 0 0 1 3-3h3a3 3 0 0 1 3 3 1 1 0 0 1-1 1Zm-1-9.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="mb-2 text-xl font-bold dark:text-white">Customer-Centric Development</h3>
+                    <p class="font-light text-gray-500 dark:text-gray-400">By representing customer needs and feedback, Sindre helps you build products that resonate with your audience, ultimately leading to higher satisfaction and loyalty.</p>
+                </div>                
+            </div>
+        </div>
+    </section>
+    <!-- FeaturesFour end -->
+
   <Integrations />
   <Pricing />
-  <FAQ />
-  <CTA />
+  <GeneralFAQ />
+  <PrimaryCTA />
   <Footer />
 </Layout>
