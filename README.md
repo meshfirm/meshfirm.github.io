@@ -10,3 +10,8 @@ To create a production build of the project run the following command in your te
 ```sh
 npm run build
 ```
+
+To push changes to website, go to Actions and run this workflow:
+```sh
+Deploy Astro site to Pages
+```
