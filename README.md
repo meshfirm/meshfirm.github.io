@@ -1,4 +1,4 @@
-#This is the website for Sindre.ai
+# This is the website for Sindre.ai
 
 Run the following command to start a local development server:
 ```sh
