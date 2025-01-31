@@ -15,7 +15,7 @@ import Pricing from '../components/Pricing.astro';
   <body>
     <section class="bg-white dark:bg-gray-900">
         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 mt-10">
-            <!-- Hero Section -->
+            <!-- Hero Section start -->
             <div class="grid gap-8 items-center mb-8 lg:mb-24 lg:gap-12 lg:grid-cols-12">
                 <div class="col-span-6 text-left sm:mb-6 lg:text-left lg:mb-0">
                     <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl xl:text-6xl dark:text-white">
@@ -53,7 +53,7 @@ import Pricing from '../components/Pricing.astro';
                 </div>
             </div>
 
-            <!-- Features Section -->
+            <!-- Hero's Features Section -->
             <div class="grid lg:grid-cols-3 gap-12">
                 <!-- Feature 1 -->
                 <div class="grid grid-cols-[auto_1fr]">
@@ -97,6 +97,7 @@ import Pricing from '../components/Pricing.astro';
             </div>
         </div>
     </section>
+    <!-- Hero Section end -->
   
   <CustomerLogos />
 
@@ -149,7 +150,7 @@ import Pricing from '../components/Pricing.astro';
             class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 xl:gap-16 sm:py-16 lg:px-6 ">
             <img class="mb-4 w-full lg:mb-0 rounded-lg"
                 src="/vertical-bar-chart.png"
-                alt="feature image">
+                alt="Bar chart">
             <div class="text-gray-500 dark:text-gray-400 sm:text-lg">
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Escape the Build Trap with Customer Insights</h2>
                 <p class="mb-8 font-light lg:text-xl">Gain a deep understanding of your customers, make informed decisions, and drive growth with actionable insights.</p>
@@ -292,7 +293,7 @@ import Pricing from '../components/Pricing.astro';
             </div>
             <img class="w-full rounded-lg"
                 src="/meeting-summaries.png"
-                alt="feature image">
+                alt="Summary of meetings">
         </div>
     </section>
     <!-- FeaturesThree end -->
@@ -355,4 +356,7 @@ import Pricing from '../components/Pricing.astro';
   <GeneralFAQ />
   <PrimaryCTA />
   <Footer />
+  
+  <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+
 </Layout>
