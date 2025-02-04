@@ -7,39 +7,31 @@
     <title>Sindre</title>
     <link href="../../dist/output.css" rel="stylesheet">
     
-    <!-- Move the handleSubmit function to the head and wrap it in DOMContentLoaded -->
+    
+    <!-- Waitlist api start-->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Make handleSubmit available in global scope
             window.handleSubmit = async function(event) {
-                // Ensure we prevent the default form submission
                 event.preventDefault();
                 
-                // Disable the submit button to prevent double submission
                 const submitButton = event.target.querySelector('button[type="submit"]');
                 submitButton.disabled = true;
                 
                 const form = event.target;
                 const formData = new FormData(form);
                 
-                // Get form values
                 const email = formData.get('email');
                 const firstName = formData.get('first-name');
                 const lastName = formData.get('last-name');
-                const newsletter = document.getElementById('newsletter').checked;
                 
-                // Create the request payload
                 const payload = {
                     email: email,
                     waitlist_id: 19114,
                     first_name: firstName,
-                    last_name: lastName,
-                    metadata: {
-                        newsletter_opt_in: newsletter
-                    }
+                    last_name: lastName
                 };
 
-                console.log('Sending payload:', payload); // Debug log
+                console.log('Sending payload:', payload);
                 
                 try {
                     const response = await fetch('https://api.getwaitlist.com/api/v1/signup', {
@@ -50,10 +42,10 @@
                         body: JSON.stringify(payload)
                     });
                     
-                    console.log('Response status:', response.status); // Debug log
+                    console.log('Response status:', response.status);
                     
                     const data = await response.json();
-                    console.log('Response data:', data); // Debug log
+                    console.log('Response data:', data);
                     
                     if (response.ok) {
                         alert('Successfully joined the waitlist!');
@@ -65,24 +57,55 @@
                     console.error('Error:', error);
                     alert('Error submitting form. Please try again.');
                 } finally {
-                    // Re-enable the submit button
                     submitButton.disabled = false;
                 }
             };
         });
     </script>
+    <!-- Waitlist api end-->
+    
+    
+    <!-- signup button scroll start-->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check if URL has a hash and scroll to it smoothly
+        if (window.location.hash === '#signup') {
+            const element = document.getElementById('signup');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    
+        // Handle all links that point to #signup
+        document.querySelectorAll('a[href="#signup"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const element = document.getElementById('signup');
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                    // Update URL without triggering a scroll
+                    history.pushState(null, null, '#signup');
+                }
+            });
+        });
+    });
+    </script>
+    <!-- signup button scroll end-->
+
+
 </head>
 
 <body>
 
     <!-- Block start -->
-    <section class="bg-white dark:bg-gray-900">
+    <section id="signup" class="bg-white dark:bg-gray-900">
         <div class="grid lg:h-screen lg:grid-cols-2">
             <div class="flex justify-center items-center py-6 px-4 lg:py-0 sm:px-0">
                 <form id="signupForm" class="space-y-4 max-w-md md:space-y-6 xl:max-w-xl" onsubmit="handleSubmit(event)">
-                    <h2 class="text-xl font-bold text-gray-900 dark:text-white">Your Best Work Starts Here</h2>
-                    <p class="mb-6 text-gray-800 md:text-lg dark:text-gray-400">Experience the Future of Product Management<br>
-                        Sign Up for Your Free Trial Today!
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Get Started with a 14 Day Free Frial</h2>
+                    <p class="mb-6 text-gray-800 md:text-lg dark:text-gray-400">
+                        Sign up for your Free Trial Today!
                     </p>
                     <div class="flex items-center">
                         <div class="w-full h-0.5 bg-gray-200 dark:bg-gray-700"></div>
@@ -129,20 +152,9 @@
                                         href="https://meshfirm.github.io/privacy-policy">Privacy Policy</a>.</label>
                             </div>
                         </div>
-                        <div class="flex items-start">
-                            <div class="flex items-center h-5">
-                                <input id="newsletter" aria-describedby="newsletter" type="checkbox"
-                                    class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-brand-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-brand-600 dark:ring-offset-gray-800"
-                                    required="">
-                            </div>
-                            <div class="ml-3 text-sm">
-                                <label for="newsletter" class="font-light text-gray-500 dark:text-gray-300">Email me
-                                    about product updates and resources.</label>
-                            </div>
-                        </div>
                     </div>
                     <button type="submit"
-                        class="w-full text-white bg-brand-600 hover:bg-brand-700 focus:ring-4 focus:outline-none focus:ring-brand-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-brand-600 dark:hover:bg-brand-700 dark:focus:ring-brand-700">
+                        class="w-full text-white bg-brand-800 hover:bg-brand-700 focus:ring-4 focus:outline-none focus:ring-brand-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-brand-600 dark:hover:bg-brand-700 dark:focus:ring-brand-700">
                         Sign up
                     </button>
                 </form>
@@ -153,11 +165,11 @@
                         <img class="w-10 h-10 border-2 border-brand-700 dark:border-brand-300 rounded-full" src="/sindre_avatar_with_name_square.png" alt="Sindre Avatar">
                         Sindre
                     </a>
-                    <h1 class="mb-4 text-3xl font-extrabold tracking-tight leading-none text-white dark:text-gray-800 xl:text-5xl">Experience the Future 
-                        of Product Management.</h1>
-                    <p class="mb-4 font-light text-brand-200 dark:text-brand-800 lg:mb-8">Millions of designers and agencies around the
-                        world showcase their portfolio work on Flowbite - the home to the world’s best design and
-                        creative professionals.</p>
+                    <h2 class="mb-4 text-3xl font-extrabold tracking-tight leading-none text-white dark:text-gray-800 xl:text-5xl">Experience the Future 
+                        of Product Management.</h2>
+                    <p class="mb-4 font-light text-brand-200 dark:text-brand-800 lg:mb-8">Say goodbye to the chaos of 
+                        traditional product management and hello to a smarter, more efficient way to drive product success.
+                    </p>
                     <div class="flex items-center divide-x divide-brand-500">
                         <div class="flex pr-3 -space-x-4 sm:pr-5">
                             <img class="w-10 h-10 border-2 border-white rounded-full"
@@ -174,8 +186,8 @@
                                 alt="thomas avatar">
                         </div>
                         <a href="#" class="pl-3 text-white sm:pl-5 dark:text-gray-800">
-                            <span class="text-sm text-brand-200 dark:text-brand-800">Over <span
-                                    class="font-medium text-white dark:text-gray-800">15.7k</span> Happy Customers</span>
+                            <span class="text-sm text-brand-200 dark:text-brand-800">Used by <span
+                                    class="font-medium text-white dark:text-gray-800">Startups and Scaleups</span></span>
                         </a>
                     </div>
                 </div>
@@ -183,74 +195,6 @@
         </div>
     </section>
     <!-- Form end -->
-
-
-
-    <!-- GetWaitlist.com API script start -->
-    <!--
-    <script>
-        async function handleSubmit(event) {
-            // Ensure we prevent the default form submission
-            event.preventDefault();
-            
-            // Disable the submit button to prevent double submission
-            const submitButton = event.target.querySelector('button[type="submit"]');
-            submitButton.disabled = true;
-            
-            const form = event.target;
-            const formData = new FormData(form);
-            
-            // Get form values
-            const email = formData.get('email');
-            const firstName = formData.get('first-name');
-            const lastName = formData.get('last-name');
-            const newsletter = document.getElementById('newsletter').checked;
-            
-            // Create the request payload
-            const payload = {
-                email: email,
-                waitlist_id: 19114,
-                first_name: firstName,
-                last_name: lastName,
-                metadata: {
-                    newsletter_opt_in: newsletter
-                }
-            };
-
-            console.log('Sending payload:', payload); // Debug log
-            
-            try {
-                const response = await fetch('https://api.getwaitlist.com/api/v1/signup', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(payload)
-                });
-                
-                console.log('Response status:', response.status); // Debug log
-                
-                const data = await response.json();
-                console.log('Response data:', data); // Debug log
-                
-                if (response.ok) {
-                    alert('Successfully joined the waitlist!');
-                    form.reset();
-                } else {
-                    alert('Error joining waitlist: ' + (data.message || 'Unknown error'));
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                alert('Error submitting form. Please try again.');
-            } finally {
-                // Re-enable the submit button
-                submitButton.disabled = false;
-            }
-        }
-    </script>
-    -->
-    <!-- GetWaitlist.com API script end -->
-
 
     <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
 </body>
