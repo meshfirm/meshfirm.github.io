@@ -1,12 +1,76 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sindre</title>
     <link href="../../dist/output.css" rel="stylesheet">
+    
+    <!-- Move the handleSubmit function to the head and wrap it in DOMContentLoaded -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Make handleSubmit available in global scope
+            window.handleSubmit = async function(event) {
+                // Ensure we prevent the default form submission
+                event.preventDefault();
+                
+                // Disable the submit button to prevent double submission
+                const submitButton = event.target.querySelector('button[type="submit"]');
+                submitButton.disabled = true;
+                
+                const form = event.target;
+                const formData = new FormData(form);
+                
+                // Get form values
+                const email = formData.get('email');
+                const firstName = formData.get('first-name');
+                const lastName = formData.get('last-name');
+                const newsletter = document.getElementById('newsletter').checked;
+                
+                // Create the request payload
+                const payload = {
+                    email: email,
+                    waitlist_id: 19114,
+                    first_name: firstName,
+                    last_name: lastName,
+                    metadata: {
+                        newsletter_opt_in: newsletter
+                    }
+                };
+
+                console.log('Sending payload:', payload); // Debug log
+                
+                try {
+                    const response = await fetch('https://api.getwaitlist.com/api/v1/signup', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(payload)
+                    });
+                    
+                    console.log('Response status:', response.status); // Debug log
+                    
+                    const data = await response.json();
+                    console.log('Response data:', data); // Debug log
+                    
+                    if (response.ok) {
+                        alert('Successfully joined the waitlist!');
+                        form.reset();
+                    } else {
+                        alert('Error joining waitlist: ' + (data.message || 'Unknown error'));
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('Error submitting form. Please try again.');
+                } finally {
+                    // Re-enable the submit button
+                    submitButton.disabled = false;
+                }
+            };
+        });
+    </script>
 </head>
 
 <body>
@@ -123,10 +187,15 @@
 
 
     <!-- GetWaitlist.com API script start -->
-
+    <!--
     <script>
         async function handleSubmit(event) {
+            // Ensure we prevent the default form submission
             event.preventDefault();
+            
+            // Disable the submit button to prevent double submission
+            const submitButton = event.target.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
             
             const form = event.target;
             const formData = new FormData(form);
@@ -137,40 +206,49 @@
             const lastName = formData.get('last-name');
             const newsletter = document.getElementById('newsletter').checked;
             
+            // Create the request payload
+            const payload = {
+                email: email,
+                waitlist_id: 19114,
+                first_name: firstName,
+                last_name: lastName,
+                metadata: {
+                    newsletter_opt_in: newsletter
+                }
+            };
+
+            console.log('Sending payload:', payload); // Debug log
+            
             try {
                 const response = await fetch('https://api.getwaitlist.com/api/v1/signup', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify({
-                        email: email,
-                        waitlist_id: 19114,
-                        metadata: {
-                            first_name: firstName,
-                            last_name: lastName,
-                            newsletter_opt_in: newsletter
-                        },
-                        answers: [] // Include if you need to add specific questions later
-                    })
+                    body: JSON.stringify(payload)
                 });
                 
+                console.log('Response status:', response.status); // Debug log
+                
                 const data = await response.json();
+                console.log('Response data:', data); // Debug log
                 
                 if (response.ok) {
-                    // Success handling
                     alert('Successfully joined the waitlist!');
                     form.reset();
                 } else {
-                    // Error handling
-                    alert('Error joining waitlist: ' + data.message);
+                    alert('Error joining waitlist: ' + (data.message || 'Unknown error'));
                 }
             } catch (error) {
                 console.error('Error:', error);
                 alert('Error submitting form. Please try again.');
+            } finally {
+                // Re-enable the submit button
+                submitButton.disabled = false;
             }
         }
     </script>
+    -->
     <!-- GetWaitlist.com API script end -->
 
 
