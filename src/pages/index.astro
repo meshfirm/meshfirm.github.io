@@ -11,42 +11,29 @@ import Navbar from '../components/Navbar.astro';
 <Layout>
   <Navbar />
   <body>
+    <!-- Hero Section start -->
     <section class="bg-white dark:bg-gray-900">
         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 mt-10">
-            <!-- Hero Section start -->
+            <!-- Hero start -->
             <div class="grid gap-8 items-center mb-8 lg:mb-24 lg:gap-12 lg:grid-cols-12">
                 <div class="col-span-7 text-left sm:mb-6 lg:text-left lg:mb-0">
-                    <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl xl:text-6xl dark:text-white">
-                        Sindre answers your product & customer questions
+                    <h1 class="mb-4 text-4xl font-bold tracking-tight leading-none text-gray-900 md:text-5xl xl:text-6xl dark:text-white">
+                        Launch products that truly meet customer needs—faster than ever
                     </h1>
-                    <ul class="mb-4 space-y-2 max-w-xl xl:mb-8 md:text-lg xl:text-xl dark:text-gray-400">
-                        <li class="flex items-start">
-                            <span class="mr-2">&bull;</span>
-                            What are my customers' needs?
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">&bull;</span>
-                            Is there anything blocking my Dev Team?
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">&bull;</span>
-                            What promises has the sales team made recently?
-                        </li>
-                    </ul>
                     <p class="mb-6 max-w-xl font-medium text-gray-900 xl:mb-8 md:text-lg xl:text-xl dark:text-gray-400">
-                        Critical customer feedback and product decisions are rarely recorded and used.<br></br>
-                        Sindre gives you up-to-date insights from across the organisation to align your product with customer needs.
+                        Sindre is your digital product manager that captures insights from meetings, uses your preferred tools to build up product sense seamlessly.
                     </p>
                     <button type="submit" class="w-full sm:w-auto justify-center text-white bg-brand-800 hover:bg-brand-600 focus:ring-4 focus:outline-none focus:ring-brand-100 font-medium rounded-lg px-5 py-2.5 text-center inline-flex items-center dark:bg-brand-800 dark:hover:bg-brand-600 dark:focus:ring-brand-800">
                         <a href="#signup" class="flex items-center text-white no-underline">
-                            Sign up for Sindre
+                            Sign up now
                         </a>
                     </button>
                 </div>
-                <div class="col-span-4 flex justify-end items-center">
-                    <img class="rounded-lg shrink-0 w-[400px] h-[400px] relative" style="object-fit: cover" src="/sindre_avatar_with_name_square.png" alt="Sindre" />
+                <div class="md:col-span-4 md:justify-end flex items-center max-md:col-span-7">
+                    <img class="rounded-lg shrink-0 md:w-[400px] md:h-[400px] max-md:w-full relative" style="object-fit: cover" src="/sindre-logo-square.png" alt="Sindre" />
                 </div>
             </div>
+            <!-- Hero end -->
 
             <!-- Hero's Features Section -->
             <div class="grid lg:grid-cols-3 gap-12">
@@ -59,7 +46,7 @@ import Navbar from '../components/Navbar.astro';
                     </div>
                     <div class="space-y-2">
                         <h3 class="text-xl font-bold dark:text-white">Fine-Tuned AI for Product Management</h3>
-                        <p class="text-gray-500 dark:text-gray-400">Leverage an AI designed specifically for product management, equipped with industry best practices.</p>
+                        <p class="text-gray-900 dark:text-gray-400">Leverage an AI designed specifically for product management, equipped with industry best practices.</p>
                     </div>
                 </div>
 
@@ -73,7 +60,7 @@ import Navbar from '../components/Navbar.astro';
                     </div>
                     <div class="space-y-2">
                         <h3 class="text-xl font-bold dark:text-white">Secure Data Handling</h3>
-                        <p class="text-gray-500 dark:text-gray-400">Your company data is handled securely. Sindre utilizes uploads and integrations to protect sensitive information while providing valuable insights tailored to your needs.</p>
+                        <p class="text-gray-900 dark:text-gray-400">Your company data is handled securely. Sindre utilizes uploads and integrations to protect sensitive information while providing valuable insights tailored to your needs.</p>
                     </div>
                 </div>
 
@@ -86,7 +73,7 @@ import Navbar from '../components/Navbar.astro';
                     </div>
                     <div class="space-y-2">
                         <h3 class="text-xl font-bold dark:text-white">AI PM Agent</h3>
-                        <p class="text-gray-500 dark:text-gray-400">Sindre builds knowledge and product sense from discussions in meetings and conversations allowing you to focus on strategic work.</p>
+                        <p class="text-gray-900 dark:text-gray-400">Sindre builds knowledge and product sense from discussions in meetings and conversations allowing you to focus on strategic work.</p>
                     </div>
                 </div>
             </div>
@@ -94,15 +81,106 @@ import Navbar from '../components/Navbar.astro';
     </section>
     <!-- Hero Section end -->
 
-  <!-- FeaturesOne start -->
+    
+    <!-- Spearhead Features Section start -->
     <section class="bg-gray-50 dark:bg-gray-800">
+        <div class="items-center py-8 px-4 mx-auto max-w-screen-xl pt-8 pb-8 lg:gap-8 xl:gap-24 sm:py-16 lg:px-6">
+            <div class="w-full" id="tabs-example">
+                <ul class="flex flex-wrap items-center -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400">
+                    <li class="me-2">
+                        <a href="#" id="meeting-tab" class="inline-flex items-center justify-center p-4 hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group" aria-controls="meeting-content" aria-selected="false" role="tab">
+                            <svg class="w-4 h-4 me-2 group-hover:text-brand-600 dark:text-gray-500 dark:group-hover:text-gray-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z"/>
+                            </svg>Meeting Summaries & Action Items
+                        </a>
+                    </li>
+                    <li class="me-2">
+                        <a href="#" id="sales-tab" class="inline-flex items-center justify-center p-4 hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group" aria-controls="sales-content" aria-selected="true" role="tab">
+                            <svg class="w-4 h-4 me-2 group-hover:text-brand-600 dark:text-gray-500 dark:group-hover:text-gray-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
+                                <path d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z"/>
+                            </svg>Sales & Customer Conversations
+                        </a>
+                    </li>
+                    <li class="me-2">
+                        <a href="#" id="feedback-tab" class="inline-flex items-center justify-center p-4 hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group" aria-controls="feedback-content" aria-selected="false" role="tab">
+                            <svg class="w-4 h-4 me-2 group-hover:text-brand-600 dark:text-gray-500 dark:group-hover:text-gray-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M5 11.424V1a1 1 0 1 0-2 0v10.424a3.228 3.228 0 0 0 0 6.152V19a1 1 0 1 0 2 0v-1.424a3.228 3.228 0 0 0 0-6.152ZM19.25 14.5A3.243 3.243 0 0 0 17 11.424V1a1 1 0 0 0-2 0v10.424a3.227 3.227 0 0 0 0 6.152V19a1 1 0 1 0 2 0v-1.424a3.243 3.243 0 0 0 2.25-3.076Zm-6-9A3.243 3.243 0 0 0 11 2.424V1a1 1 0 0 0-2 0v1.424a3.228 3.228 0 0 0 0 6.152V19a1 1 0 1 0 2 0V8.576A3.243 3.243 0 0 0 13.25 5.5Z"/>
+                            </svg>Analyze Customer Feedback
+                        </a>
+                    </li>
+                    <li class="me-2">
+                        <a href="#" id="assistant-tab" class="inline-flex items-center justify-center p-4 hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group" aria-controls="assistant-content" aria-selected="false" role="tab">
+                            <svg class="w-4 h-4 me-2 group-hover:text-brand-600 dark:text-gray-500 dark:group-hover:text-gray-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                                <path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z"/>
+                            </svg>AI Project Manager Assistant
+                        </a>
+                    </li>
+                    <li class="me-2">
+                        <a href="#" id="hosting-tab" class="inline-flex items-center justify-center p-4 hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group" aria-controls="hosting-content" aria-selected="false" role="tab">
+                            <svg class="w-4 h-4 me-2 group-hover:text-brand-600 dark:text-gray-500 dark:group-hover:text-gray-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                                <path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z"/>
+                            </svg>On-Prem Hosting
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Tab content container -->
+            <div id="tabContentContainer" class="w-full mt-4 col-span-3">
+                <!-- Meeting Summaries Tab Content -->
+                <div class="hidden rounded-lg bg-gray-50 p-4 dark:bg-gray-800" id="meeting-content" role="tabpanel" aria-labelledby="meeting-tab">
+                    <p class="text-center text-xl font-semibold text-gray-900 dark:text-gray-400 pb-6">
+                        Get accurate summaries and action items after every meeting.
+                    </p>
+                    <img class="rounded-lg shrink-0 w-full relative drop-shadow-lg" style="object-fit: cover" src="/meeting-summary.png" alt="Sindre" />
+                </div>
+                
+                <!-- Sales & Customer Conversations Tab Content -->
+                <div class="rounded-lg bg-gray-50 p-4 dark:bg-gray-800" id="sales-content" role="tabpanel" aria-labelledby="sales-tab">
+                    <p class="text-center text-xl font-semibold text-gray-900 dark:text-gray-400 pb-6">
+                        Stay close to customers by always having sales and customer meetings at hand.
+                    </p>
+                    <img class="rounded-lg shrink-0 w-full relative drop-shadow-lg" style="object-fit: cover" src="/Sales-conversation.png" alt="Sindre" />
+                </div>
+                
+                <!-- Customer Feedback Tab Content -->
+                <div class="hidden rounded-lg bg-gray-50 p-4 dark:bg-gray-800" id="feedback-content" role="tabpanel" aria-labelledby="feedback-tab">
+                    <p class="text-center text-xl font-semibold text-gray-900 dark:text-gray-400 pb-6">
+                        Learn what your customers are struggling with and identify their pain points easily.
+                    </p>
+                    <img class="rounded-lg shrink-0 w-full relative drop-shadow-lg" style="object-fit: cover" src="/feedback-talk-with-data.png" alt="Sindre" />
+                </div>
+                
+                <!-- AI Project Manager Assistant Tab Content -->
+                <div class="hidden rounded-lg bg-gray-50 p-4 dark:bg-gray-800" id="assistant-content" role="tabpanel" aria-labelledby="assistant-tab">
+                    <p class="text-center text-xl font-semibold text-gray-900 dark:text-gray-400 pb-6">
+                        Get Sindre to create precise and well formulated tickets for you.
+                    </p>
+                    <img class="rounded-lg shrink-0 w-full relative drop-shadow-lg" style="object-fit: cover" src="/project-manager-assistant-linear-tickets.png" alt="Sindre" />
+                </div>
+
+                <!-- On-prem hosting Tab Content -->
+                <div class="hidden rounded-lg p-4 dark:bg-gray-800" id="hosting-content" role="tabpanel" aria-labelledby="hosting-tab">
+                    <p class="text-center text-xl font-semibold text-gray-900 dark:text-gray-400 pb-6">
+                        Your data, your choice. Host it locally, on the cloud, or hybrid.
+                        It's GDPR compliant no matter what you choose.
+                    </p>
+                    <img class="rounded-lg shrink-0 w-full relative drop-shadow-lg" style="object-fit: cover" src="/Security.png" alt="Sindre" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Spearhead Features Section end -->
+
+    <!-- FeaturesOne start -->
+    <section class="bg-white dark:bg-gray-800">
         <div class="items-center py-8 px-4 mx-auto max-w-screen-xl pt-8 pb-8 lg:grid xl:grid-cols-3 lg:gap-8 xl:gap-24 sm:py-16 lg:px-6">
             <div class="mb-8 lg:mb-0">
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Meet your new AI Product Manager</h2>
-                <p class="mb-4 text-gray-500 sm:text-xl dark:text-gray-400">With Sindre by your side, you’ll navigate the complexities of product development with ease, harness data-driven insights while Sindre does the grunt work for you.</p>
+                <p class="mb-4 text-gray-900 sm:text-xl dark:text-gray-400">With Sindre by your side, you’ll navigate the complexities of product development with ease, harness data-driven insights while Sindre does the grunt work for you.</p>
             </div>
             <div class="col-span-2 grid grid-cols-2 gap-12">
-                <div>
+                <div class="max-md:col-span-2">
                     <div
                         class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-brand-100 lg:h-12 lg:w-12 dark:bg-brand-800">
                         <svg class="w-5 h-5 text-brand-800 lg:w-6 lg:h-6 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -110,9 +188,9 @@ import Navbar from '../components/Navbar.astro';
                         </svg>
                     </div>
                     <h3 class="mb-2 text-xl font-bold dark:text-white">Be a product manager, not a project manager</h3>
-                    <p class="text-gray-500 dark:text-gray-400">While you focus on strategic discussions and engaging with customers and colleges, Sindre captures valuable insights and actions to ensure alignment on learnings and decisions.</p>
+                    <p class="text-gray-900 dark:text-gray-400">While you focus on strategic discussions and engaging with customers and colleges, Sindre captures valuable insights and actions to ensure alignment on learnings and decisions.</p>
                 </div>
-                <div>
+                <div class="max-md:col-span-2"> 
                     <div
                         class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-brand-100 lg:h-12 lg:w-12 dark:bg-brand-800">
                         <svg class="w-5 h-5 text-brand-800 lg:w-6 lg:h-6 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -120,7 +198,7 @@ import Navbar from '../components/Navbar.astro';
                         </svg>
                     </div>
                     <h3 class="mb-2 text-xl font-bold dark:text-white">Collaborate with your team to build better products</h3>
-                    <p class="text-gray-500 dark:text-gray-400">Collaborate with your team on new features and capabilities in slack or teams, while Sindre transforms these into clear feature descriptions and user stories. This way, you can dedicate more time to strategy and less time to documentation.</p>
+                    <p class="text-gray-900 dark:text-gray-400">Collaborate with your team on new features and capabilities in slack or teams, while Sindre transforms these into clear feature descriptions and user stories. This way, you can dedicate more time to strategy and less time to documentation.</p>
                 </div>
                 <div class="col-span-2">
                      <div>
@@ -130,7 +208,7 @@ import Navbar from '../components/Navbar.astro';
                         </svg>
                     </div>
                     <h3 class="mb-2 text-xl font-bold dark:text-white">Easier access to insights when making decisions</h3>
-                    <p class="text-gray-500 dark:text-gray-400">Use AI to gain access to customer insights that empower you to create more impactful roadmap items and well-defined tasks for your developers, ensuring that customer needs are prioritized in your product vision.</p>
+                    <p class="text-gray-900 dark:text-gray-400">Use AI to gain access to customer insights that empower you to create more impactful roadmap items and well-defined tasks for your developers, ensuring that customer needs are prioritized in your product vision.</p>
                 </div>
             </div>
         </div>
@@ -138,15 +216,15 @@ import Navbar from '../components/Navbar.astro';
     <!-- FeaturesOne end -->
   
   <!-- FeaturesTwo start -->
-    <section class="bg-white dark:bg-gray-900">
+    <section class="bg-gray-50 dark:bg-gray-900">
         <div
             class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 xl:gap-16 sm:py-16 lg:px-6 ">
             <img class="mb-4 w-full lg:mb-0 rounded-lg"
                 src="/vertical-bar-chart.png"
                 alt="Bar chart">
-            <div class="text-gray-500 dark:text-gray-400 sm:text-lg">
+            <div class="text-gray-900 dark:text-gray-400 sm:text-lg">
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Escape the Build Trap with Customer Insights</h2>
-                <p class="mb-8 font-light lg:text-xl">Gain a deep understanding of your customers, make informed decisions, and drive growth with actionable insights.</p>
+                <p class="mb-8 font-base lg:text-xl">Gain a deep understanding of your customers, make informed decisions, and drive growth with actionable insights.</p>
                 <div class="py-8 mb-6 border-t border-b border-gray-200 dark:border-gray-700">
                     <div class="flex">
                         <div
@@ -157,19 +235,19 @@ import Navbar from '../components/Navbar.astro';
                         </div>
                         <div>
                             <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Multi-Source Data Collection</h3>
-                            <p class="mb-2 font-light text-gray-500 dark:text-gray-400">Aggregate feedback, usage analytics, and market research in one place.</p>
+                            <p class="mb-2 font-base text-gray-900 dark:text-gray-400">Aggregate feedback, usage analytics, and market research in one place.</p>
                         </div>
                     </div>
                     <div class="flex pt-8">
                         <div
-                            class="flex justify-center items-center mr-4 w-8 h-8 bg-purple-100 rounded-full dark:bg-purple-900 shrink-0">
-                            <svg class="w-5 h-5 text-purple-600 dark:text-purple-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            class="flex justify-center items-center mr-4 w-8 h-8 bg-brand-100 rounded-full dark:bg-brand-900 shrink-0">
+                            <svg class="w-5 h-5 text-brand-600 dark:text-brand-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.651 7.65a7.131 7.131 0 0 0-12.68 3.15M18.001 4v4h-4m-7.652 8.35a7.13 7.13 0 0 0 12.68-3.15M6 20v-4h4"/>
                             </svg>
                         </div>
                         <div>
                             <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Continuous Discovery</h3>
-                            <p class="mb-2 font-light text-gray-500 dark:text-gray-400">Align your product with evolving customer needs. </p>
+                            <p class="mb-2 font-base text-gray-900 dark:text-gray-400">Align your product with evolving customer needs. </p>
                         </div>
                     </div>
                     <div class="flex pt-8">
@@ -181,7 +259,7 @@ import Navbar from '../components/Navbar.astro';
                         </div>
                         <div>
                             <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Actionable Insights</h3>
-                            <p class="mb-2 font-light text-gray-500 dark:text-gray-400">Receive clear recommendations to guide product development, marketing, and customer engagement.</p>
+                            <p class="mb-2 font-base text-gray-900 dark:text-gray-400">Receive clear recommendations to guide product development, marketing, and customer engagement.</p>
                         </div>
                     </div>
                     <div class="flex pt-8">
@@ -193,7 +271,7 @@ import Navbar from '../components/Navbar.astro';
                         </div>
                         <div>
                             <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Product Definition</h3>
-                            <p class="mb-2 font-light text-gray-500 dark:text-gray-400">Clearly define your product vision and goals based on customer feedback and market trends.</p>
+                            <p class="mb-2 font-base text-gray-900 dark:text-gray-400">Clearly define your product vision and goals based on customer feedback and market trends.</p>
                         </div>
                     </div>
                     <div class="flex pt-8">
@@ -205,7 +283,7 @@ import Navbar from '../components/Navbar.astro';
                         </div>
                         <div>
                             <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Specify work based on insights</h3>
-                            <p class="mb-2 font-light text-gray-500 dark:text-gray-400">Create targeted work items that address specific customer pain points and opportunities for growth.</p>
+                            <p class="mb-2 font-base text-gray-900 dark:text-gray-400">Create targeted work items that address specific customer pain points and opportunities for growth.</p>
                         </div>
                     </div>
                 </div>
@@ -218,9 +296,9 @@ import Navbar from '../components/Navbar.astro';
     <section class="bg-white dark:bg-gray-900">
         <div
             class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 xl:gap-16 sm:py-16 lg:px-6 ">
-            <div class="text-gray-500 dark:text-gray-400 sm:text-lg">
+            <div class="text-gray-900 dark:text-gray-400 sm:text-lg">
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Productive meetings and a highly aligned organisation</h2>
-                <p class="mb-8 font-light lg:text-xl">Sindre acts as an engaged coworker that participates in meetings and conversations. It takes smart notes, captures key discussion points, and tracks action items so you can focus on what matters most. </p>
+                <p class="mb-8 font-base lg:text-xl">Sindre acts as an engaged coworker that participates in meetings and conversations. It takes smart notes, captures key discussion points, and tracks action items so you can focus on what matters most. </p>
                 <div class="py-8 mb-6 border-t border-b border-gray-200 dark:border-gray-700">
                     <div class="flex">
                         <div
@@ -231,19 +309,19 @@ import Navbar from '../components/Navbar.astro';
                         </div>
                         <div>
                             <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Smart Note-Taking</h3>
-                            <p class="mb-2 font-light text-gray-500 dark:text-gray-400">Automatically records essential details, ensuring nothing is missed.</p>
+                            <p class="mb-2 font-base text-gray-900 dark:text-gray-400">Automatically records essential details, ensuring nothing is missed.</p>
                         </div>
                     </div>
                     <div class="flex pt-8">
                         <div
-                            class="flex justify-center items-center mr-4 w-8 h-8 bg-purple-100 rounded-full dark:bg-purple-900 shrink-0">
-                            <svg class="w-5 h-5 text-purple-600 dark:text-purple-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            class="flex justify-center items-center mr-4 w-8 h-8 bg-brand-100 rounded-full dark:bg-brand-900 shrink-0">
+                            <svg class="w-5 h-5 text-brand-600 dark:text-brand-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.03v13m0-13c-2.819-.831-4.715-1.076-8.029-1.023A.99.99 0 0 0 3 6v11c0 .563.466 1.014 1.03 1.007 3.122-.043 5.018.212 7.97 1.023m0-13c2.819-.831 4.715-1.076 8.029-1.023A.99.99 0 0 1 21 6v11c0 .563-.466 1.014-1.03 1.007-3.122-.043-5.018.212-7.97 1.023"/>
                             </svg>
                         </div>
                         <div>
                             <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Best Practice Insights</h3>
-                            <p class="mb-2 font-light text-gray-500 dark:text-gray-400">Shares relevant suggestions tailored to your discussions.</p>
+                            <p class="mb-2 font-base text-gray-900 dark:text-gray-400">Shares relevant suggestions tailored to your discussions.</p>
                         </div>
                     </div>
                     <div class="flex pt-8">
@@ -255,7 +333,7 @@ import Navbar from '../components/Navbar.astro';
                         </div>
                         <div>
                             <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Real-Time Collaboration</h3>
-                            <p class="mb-2 font-light text-gray-500 dark:text-gray-400">Participates actively, providing instant feedback and support.</p>
+                            <p class="mb-2 font-base text-gray-900 dark:text-gray-400">Participates actively, providing instant feedback and support.</p>
                         </div>
                     </div>
                     <div class="flex pt-8">
@@ -267,7 +345,7 @@ import Navbar from '../components/Navbar.astro';
                         </div>
                         <div>
                             <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Task Management</h3>
-                            <p class="mb-2 font-light text-gray-500 dark:text-gray-400">Assigns tasks directly during meetings and keeps track of deadlines.</p>
+                            <p class="mb-2 font-base text-gray-900 dark:text-gray-400">Assigns tasks directly during meetings and keeps track of deadlines.</p>
                         </div>
                     </div>
                     <div class="flex pt-8">
@@ -279,7 +357,7 @@ import Navbar from '../components/Navbar.astro';
                         </div>
                         <div>
                             <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Seamless Integration</h3>
-                            <p class="mb-2 font-light text-gray-500 dark:text-gray-400">Easily integrates with your preferred tools for a smooth workflow.</p>
+                            <p class="mb-2 font-base text-gray-900 dark:text-gray-400">Easily integrates with your preferred tools for a smooth workflow.</p>
                         </div>
                     </div>
                 </div>
@@ -296,7 +374,7 @@ import Navbar from '../components/Navbar.astro';
         <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
             <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-16">
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Unleash your Full Product Management Potential</h2>
-                <p class="font-light text-gray-500 dark:text-gray-400 sm:text-xl">Product management is not just about keeping up, but about leading. <br>With Sindre, you get ahead.</p>
+                <p class="font-base text-gray-900 dark:text-gray-400 sm:text-xl">Product management is not just about keeping up, but about leading. <br>With Sindre, you get ahead.</p>
             </div>
             <div class="space-y-8 md:grid grid-cols-2 md:gap-8 xl:gap-8 md:space-y-0">
                 <div class="p-6 bg-white rounded shadow dark:bg-gray-900">
@@ -307,7 +385,7 @@ import Navbar from '../components/Navbar.astro';
                         </svg>
                     </div>
                     <h3 class="mb-2 text-xl font-bold dark:text-white">Enhanced Productivity</h3>
-                    <p class="font-light text-gray-500 dark:text-gray-400">Spend less time on administrative tasks and more time on strategic initiatives. Sindre takes care of the details, allowing you to focus on what truly matters—driving your product forward.</p>
+                    <p class="font-base text-gray-900 dark:text-gray-400">Spend less time on administrative tasks and more time on strategic initiatives. Sindre takes care of the details, allowing you to focus on what truly matters—driving your product forward.</p>
                 </div>
                 <div class="p-6 bg-white rounded shadow dark:bg-gray-900">
                     <div
@@ -317,7 +395,7 @@ import Navbar from '../components/Navbar.astro';
                         </svg>
                     </div>
                     <h3 class="mb-2 text-xl font-bold dark:text-white">Informed Decision-Making</h3>
-                    <p class="font-light text-gray-500 dark:text-gray-400">With real-time insights and comprehensive notes from customer interactions, you can make decisions based on solid data rather than guesswork. Sindre ensures you have the context you need to prioritize effectively.</p>
+                    <p class="font-base text-gray-900 dark:text-gray-400">With real-time insights and comprehensive notes from customer interactions, you can make decisions based on solid data rather than guesswork. Sindre ensures you have the context you need to prioritize effectively.</p>
                 </div>
                 <div class="p-6 bg-white rounded shadow dark:bg-gray-900">
                     <div
@@ -327,7 +405,7 @@ import Navbar from '../components/Navbar.astro';
                         </svg>
                     </div>
                     <h3 class="mb-2 text-xl font-bold dark:text-white">Improved Team Alignment</h3>
-                    <p class="font-light text-gray-500 dark:text-gray-400">Sindre fosters collaboration and keeps everyone on the same page. With clear documentation and shared insights, your team can work more cohesively, reducing misunderstandings and increasing efficiency.</p>
+                    <p class="font-base text-gray-900 dark:text-gray-400">Sindre fosters collaboration and keeps everyone on the same page. With clear documentation and shared insights, your team can work more cohesively, reducing misunderstandings and increasing efficiency.</p>
                 </div>
                 <div class="p-6 bg-white rounded shadow dark:bg-gray-900">
                     <div
@@ -337,17 +415,211 @@ import Navbar from '../components/Navbar.astro';
                         </svg>
                     </div>
                     <h3 class="mb-2 text-xl font-bold dark:text-white">Customer-Centric Development</h3>
-                    <p class="font-light text-gray-500 dark:text-gray-400">By representing customer needs and feedback, Sindre helps you build products that resonate with your audience, ultimately leading to higher satisfaction and loyalty.</p>
+                    <p class="font-base text-gray-900 dark:text-gray-400">By representing customer needs and feedback, Sindre helps you build products that resonate with your audience, ultimately leading to higher satisfaction and loyalty.</p>
                 </div>                
             </div>
         </div>
     </section>
     <!-- FeaturesFour end -->
-    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+
+    <!-- FeaturesFive start -->
+    <section class="bg-white dark:bg-gray-900">
+        <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 xl:gap-16 sm:py-16 lg:px-6 ">
+            <div class="text-gray-900 dark:text-gray-400 sm:text-lg">
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Every Organization Has Unique Needs</h2>
+                <p class="mb-8 font-base lg:text-xl">Flexible solutions that put you in control.</p>
+                <div class="py-8 mb-6 border-t border-b border-gray-200 dark:border-gray-700">
+                    <div class="flex">
+                        <div class="flex justify-center items-center mr-4 w-8 h-8 rounded-full bg-brand-100 dark:bg-brand-800 shrink-0">
+                            <svg class="w-5 h-5 text-brand-800 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 17h6m-3 3v-6M4.857 4h4.286c.473 0 .857.384.857.857v4.286a.857.857 0 0 1-.857.857H4.857A.857.857 0 0 1 4 9.143V4.857C4 4.384 4.384 4 4.857 4Zm10 0h4.286c.473 0 .857.384.857.857v4.286a.857.857 0 0 1-.857.857h-4.286A.857.857 0 0 1 14 9.143V4.857c0-.473.384-.857.857-.857Zm-10 10h4.286c.473 0 .857.384.857.857v4.286a.857.857 0 0 1-.857.857H4.857A.857.857 0 0 1 4 19.143v-4.286c0-.473.384-.857.857-.857Z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <!-- <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Select from a variety of models, including OpenAI, Anthropic, Meta, DeepSeek, and more.</h3>-->
+                            <p class="mb-2 font-base text-gray-900 dark:text-gray-400">Select from a variety of models, including OpenAI, Anthropic, Meta, DeepSeek, and more.</p>
+                        </div>
+                    </div>
+                    <div class="flex pt-8">
+                        <div
+                            class="flex justify-center items-center mr-4 w-8 h-8 bg-brand-100 rounded-full dark:bg-brand-900 shrink-0">
+                            <svg class="w-5 h-5 text-brand-600 dark:text-brand-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13V4M7 14H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-2m-1-5-4 5-4-5m9 8h.01"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <!--<h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Run the models on your own infrastructure or access them via the cloud, giving you the flexibility to choose what works best for your organization.</h3>-->
+                            <p class="mb-2 font-base text-gray-900 dark:text-gray-400">Run the models on your own infrastructure or access them via the cloud, giving you the flexibility to choose what works best for your organization.</p>
+                        </div>
+                    </div>
+                    <div class="flex pt-8">
+                        <div
+                            class="flex justify-center items-center mr-4 w-8 h-8 bg-brand-100 rounded-full dark:bg-brand-800 shrink-0">
+                            <svg class="w-5 h-5 text-brand-800 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.5 11.5 11 13l4-3.5M12 20a16.405 16.405 0 0 1-5.092-5.804A16.694 16.694 0 0 1 5 6.666L12 4l7 2.667a16.695 16.695 0 0 1-1.908 7.529A16.406 16.406 0 0 1 12 20Z"/>
+                            </svg>                              
+                        </div>
+                        <div>
+                            <!--<h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Your data privacy is our priority. We adhere to ISO standards and comply with GDPR regulations, ensuring that your information is handled with the utmost care and security.</h3> -->
+                            <p class="mb-2 font-base text-gray-900 dark:text-gray-400">Your data privacy is our priority. We adhere to ISO standards and comply with GDPR regulations, ensuring that your information is handled with the utmost care and security.</p>
+                        </div>
+                    </div>
+                    <div class="flex pt-8">
+                        <div
+                            class="flex justify-center items-center mr-4 w-8 h-8 bg-brand-100 rounded-full dark:bg-brand-800 shrink-0">
+                            <svg class="w-5 h-5 text-brand-800 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13v-2a1 1 0 0 0-1-1h-.757l-.707-1.707.535-.536a1 1 0 0 0 0-1.414l-1.414-1.414a1 1 0 0 0-1.414 0l-.536.535L14 4.757V4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v.757l-1.707.707-.536-.535a1 1 0 0 0-1.414 0L4.929 6.343a1 1 0 0 0 0 1.414l.536.536L4.757 10H4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h.757l.707 1.707-.535.536a1 1 0 0 0 0 1.414l1.414 1.414a1 1 0 0 0 1.414 0l.536-.535 1.707.707V20a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-.757l1.707-.708.536.536a1 1 0 0 0 1.414 0l1.414-1.414a1 1 0 0 0 0-1.414l-.535-.536.707-1.707H20a1 1 0 0 0 1-1Z"/>
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                            </svg>                              
+                        </div>
+                        <div>
+                            <!-- <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Retain full control over your data with options to customize how it’s used and stored.</h3> -->
+                            <p class="mb-2 font-base text-gray-900 dark:text-gray-400">Retain full control over your data with options to customize how it’s used and stored.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="w-full rounded-lg"
+                src="/Security.png"
+                alt="Secure & Configurable">
+        </div>
+    </section>
+    <!-- FeaturesFive end -->
+    
+    <!-- FeaturesSix start -->
+    <section class="bg-gray-50 dark:bg-gray-800">
+        <div class="gap-8 items-center py-8 px-4 md:mx-auto md:max-w-screen-xl md:mb-24 md:gap-12 md:grid-cols-12 grid">
+            <div class="col-span-7 text-left sm:mb-6 lg:text-left lg:mb-0">
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+                    Your Digital PM has the answers you’re looking for
+                </h2>
+                <ul class="mb-4 space-y-2 max-w-xl xl:mb-8 md:text-lg xl:text-xl dark:text-gray-400">
+                    <li class="flex items-start">
+                        <span class="mr-2">&bull;</span>
+                        What are my customers' needs?
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-2">&bull;</span>
+                        Is there anything blocking my Dev Team?
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-2">&bull;</span>
+                        What promises has the sales team made recently?
+                    </li>
+                </ul>
+                <p class="mb-6 max-w-xl text-gray-900 xl:mb-8 md:text-lg xl:text-xl dark:text-gray-400">
+                    Critical customer feedback and product decisions are rarely recorded and used.<br></br>
+                    Sindre gives you up-to-date insights from across the organisation to align your product with customer needs.
+                </p>
+            </div>
+            <div class="md:col-span-4 md:justify-end flex items-center max-md:col-span-7">
+                <img class="rounded-lg shrink-0 md:w-[400px] md:h-[400px] max-md:w-full relative" style="object-fit: cover" src="/sindre-logo-square.png" alt="Sindre" />
+            </div>
+        </div>
+    </section>
+    <!-- FeaturesSix end-->
 
   <Integrations />
   <GeneralFAQ />
   <PrimaryCTA />
   <Footer />
+
+  <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+
+  <!-- Tabs Script start -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get the tabs container
+        const tabsElement = document.getElementById('tabs-example');
+        
+        // Define the tab elements with their respective content
+        const tabElements = [
+            {
+                id: 'meeting',
+                triggerEl: document.getElementById('meeting-tab'),
+                targetEl: document.getElementById('meeting-content')
+            },
+            {
+                id: 'sales',
+                triggerEl: document.getElementById('sales-tab'),
+                targetEl: document.getElementById('sales-content')
+            },
+            {
+                id: 'feedback',
+                triggerEl: document.getElementById('feedback-tab'),
+                targetEl: document.getElementById('feedback-content')
+            },
+            {
+                id: 'assistant',
+                triggerEl: document.getElementById('assistant-tab'),
+                targetEl: document.getElementById('assistant-content')
+            },
+            {
+                id: 'hosting',
+                triggerEl: document.getElementById('hosting-tab'),
+                targetEl: document.getElementById('hosting-content')
+            }
+        ];
+        // Options with default values
+        const options = {
+            defaultTabId: 'meeting',
+            activeClasses: 'text-brand-600 hover:text-brand-600 dark:text-brand-500 dark:hover:text-brand-400 border-brand-600 dark:border-brand-500 bg-white rounded-lg drop-shadow-md',
+            inactiveClasses: 'text-gray-500 hover:text-gray-600 dark:text-gray-400 border-transparent hover:border-gray-300 dark:hover:text-gray-300',
+            onShow: () => {
+                console.log('tab is shown');
+            }
+        };
+        
+        // Simple tabs implementation
+        function initTabs() {
+            // Set initial active tab
+            showTab(options.defaultTabId);
+            
+            // Add click event listeners to each tab
+            tabElements.forEach(tab => {
+                tab.triggerEl.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    showTab(tab.id);
+                });
+            });
+        }
+        
+        // Function to show a specific tab
+        function showTab(tabId) {
+            // Hide all tab content first
+            tabElements.forEach(tab => {
+                // Hide tab content
+                tab.targetEl.classList.add('hidden');
+                
+                // Remove active classes from tab trigger
+                tab.triggerEl.classList.remove(...options.activeClasses.split(' '));
+                tab.triggerEl.classList.add(...options.inactiveClasses.split(' '));
+                tab.triggerEl.setAttribute('aria-selected', 'false');
+            });
+            
+            // Find the tab to show
+            const activeTab = tabElements.find(tab => tab.id === tabId);
+            
+            if (activeTab) {
+                // Show tab content
+                activeTab.targetEl.classList.remove('hidden');
+                
+                // Add active classes to tab trigger
+                activeTab.triggerEl.classList.remove(...options.inactiveClasses.split(' '));
+                activeTab.triggerEl.classList.add(...options.activeClasses.split(' '));
+                activeTab.triggerEl.setAttribute('aria-selected', 'true');
+                
+                // Call onShow callback
+                if (options.onShow) {
+                    options.onShow();
+                }
+            }
+        }
+        
+        // Initialize the tabs
+        initTabs();
+    });
+    </script>
+    <!-- Tabs Script end -->
 
 </Layout>
