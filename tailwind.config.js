@@ -75,6 +75,38 @@ module.exports = {
 		  }
 		},
 	plugins: [
-		require('flowbite/plugin')
+		require('flowbite/plugin'),
+		function({ addComponents, theme }) {
+			addComponents({
+				'.btn-primary': {
+					display: 'inline-flex',
+					alignItems: 'center',
+					justifyContent: 'center',
+					padding: '0.75rem 1.5rem',
+					backgroundColor: theme('colors.brand.600'),
+					color: 'white',
+					borderRadius: '0.75rem',
+					fontWeight: '600',
+					fontSize: '0.875rem',
+					lineHeight: '1.25rem',
+					textAlign: 'center',
+					cursor: 'pointer',
+					border: 'none',
+					transition: 'all 0.2s ease-in-out',
+					'&:hover': {
+						backgroundColor: theme('colors.brand.700'),
+						transform: 'translateY(-1px)',
+						boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)',
+					},
+					'&:focus': {
+						outline: 'none',
+						boxShadow: `0 0 0 3px ${theme('colors.brand.200')}`,
+					},
+					'&:active': {
+						transform: 'translateY(0)',
+					},
+				},
+			});
+		}
 	],
 }
