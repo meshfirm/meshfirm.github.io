@@ -34,7 +34,10 @@ module.exports = {
 			"900": "#1F2A37",
 			"950": "#111928",
 			},
-		}
+		},
+		backgroundImage: ({ theme }) => ({
+			'gradient-primary': `linear-gradient(135deg, ${theme('colors.gray.500')}, ${theme('colors.gray.700')})`,
+		})
 		},
 		fontFamily: {
 			body: [
