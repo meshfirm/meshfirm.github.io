@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout.astro';
 import PrimaryCTA from '../components/PrimaryCTA.astro';
 import GeneralFAQ from '../components/GeneralFAQ.astro';
 import Integrations from '../components/Integrations.astro';
+import InteractiveDemo from '../components/InteractiveDemo.astro';
 import Footer from '../components/Footer.astro';
 import Navbar from '../components/Navbar.astro';
 ---
@@ -12,81 +13,133 @@ import Navbar from '../components/Navbar.astro';
   <Navbar />
   <body>
     <!-- Hero Section start -->
-    <section class="bg-white dark:bg-gray-900">
-        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 mt-10">
-            <!-- Hero start -->
-            <div class="grid gap-8 items-center mb-8 lg:mb-24 lg:gap-12 lg:grid-cols-12">
-                <div class="col-span-7 text-left sm:mb-6 lg:text-left lg:mb-0">
-                    <h1 class="mb-4 text-4xl font-bold tracking-tight leading-none text-gray-900 md:text-5xl xl:text-6xl dark:text-white">
-                        Launch products that truly meet customer needs—faster than ever
-                    </h1>
-                    <p class="mb-6 max-w-xl font-medium text-gray-900 xl:mb-8 md:text-lg xl:text-xl dark:text-gray-400">
-                        Sindre is your digital product manager that captures insights from meetings, uses your preferred tools to build up product sense seamlessly.
-                    </p>
-                    <div>
-                        <button type="submit" class="w-full sm:w-auto justify-center text-white bg-brand-800 hover:bg-brand-600 focus:ring-4 focus:outline-none focus:ring-brand-100 font-medium rounded-lg px-5 py-2.5 text-center inline-flex items-center dark:bg-brand-800 dark:hover:bg-brand-600 dark:focus:ring-brand-800">
-                            <a href="https://app.sindre.ai/login" class="flex items-center text-white no-underline">
-                                Get Started
-                            </a>
-                        </button>
-                        <p class="text-sm text-gray-600 mt-2">14 days free trial</p>
-                    </div>
-                </div>
-                <div class="md:col-span-4 md:justify-end flex items-center max-md:col-span-7">
-                    <img class="rounded-lg shrink-0 md:w-[400px] md:h-[400px] max-md:w-full relative" style="object-fit: cover" src="/sindre-logo-square.png" alt="Sindre" />
-                </div>
-            </div>
-            <!-- Hero end -->
+    <section class="min-h-screen flex items-center relative overflow-hidden">
+        <div class="py-20 px-4 mx-auto max-w-7xl relative z-10">
+            <div class="text-center">
+                <!-- Main Heading -->
+                <h1 class="mb-6 text-5xl font-bold tracking-tight leading-tight md:text-6xl lg:text-7xl dark:text-white text-gray-900">
+                    Work Smarter with <span class="bg-gradient-to-br from-secondary-800 to-secondary-600 bg-clip-text text-transparent">AI</span>
+                </h1>
+                
+                <!-- Subheading -->
+                <h2 class="mb-4 text-2xl font-semibold dark:text-gray-200 lg:text-3xl text-gray-900">
+                    The AI Agent for Product Teams That Gets Work Done
+                </h2>
+                
+                <!-- Supporting text -->
+                <p class="mb-12 max-w-4xl mx-auto text-xl leading-relaxed dark:text-gray-300 text-gray-600">
+                    The coach that organizes your work, uncovers insights, and accelerates progress—so your team can focus on creating exceptional products
+                </p>
 
-            <!-- Hero's Features Section -->
-            <div class="grid lg:grid-cols-3 gap-12">
-                <!-- Feature 1 -->
-                <div class="grid grid-cols-[auto_1fr]">
-                    <div class="flex justify-center items-top w-10 h-10 lg:h-12 lg:w-12">
-                        <svg class="w-5 h-5 text-brand-800 lg:w-6 lg:h-6 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.872 9.687 20 6.56 17.44 4 4 17.44 6.56 20 16.873 9.687Zm0 0-2.56-2.56M6 7v2m0 0v2m0-2H4m2 0h2m7 7v2m0 0v2m0-2h-2m2 0h2M8 4h.01v.01H8V4Zm2 2h.01v.01H10V6Zm2-2h.01v.01H12V4Zm8 8h.01v.01H20V12Zm-2 2h.01v.01H18V14Zm2 2h.01v.01H20V16Z"/>
+                <!-- CTAs -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                    <a href="https://app.sindre.ai/login" class="group inline-flex items-center px-8 py-4 text-lg font-semibold text-white rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] bg-gradient-to-br from-brand-600 to-brand-400">
+                        Get Started
+                        <svg class="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
-                    </div>
-                    <div class="space-y-2">
-                        <h3 class="text-xl font-bold dark:text-white">Fine-Tuned AI for Product Management</h3>
-                        <p class="text-gray-900 dark:text-gray-400">Leverage an AI designed specifically for product management, equipped with industry best practices.</p>
-                    </div>
+                    </a>
                 </div>
-
-                <!-- Feature 2 -->
-                <div class="grid grid-cols-[auto_1fr]">
-                    <div class="flex justify-center items-top w-10 h-10 lg:h-12 lg:w-12">
-                        <svg class="w-5 h-5 text-brand-800 lg:w-6 lg:h-6 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14v3m-3-6V7a3 3 0 1 1 6 0v4m-8 0h10a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1Z"/>
-                        </svg>
-
+                
+                <!-- Trust indicators with customer logos -->
+                <div class="flex flex-col items-center gap-6">
+                    <div class="flex flex-col sm:flex-row items-center gap-6 text-sm text-gray-500 dark:text-gray-400">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            14 days free trial
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            No credit card required
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            GDPR compliant
+                        </div>
                     </div>
-                    <div class="space-y-2">
-                        <h3 class="text-xl font-bold dark:text-white">Secure Data Handling</h3>
-                        <p class="text-gray-900 dark:text-gray-400">Your company data is handled securely. Sindre utilizes uploads and integrations to protect sensitive information while providing valuable insights tailored to your needs.</p>
-                    </div>
-                </div>
-
-                <!-- Feature 3 -->
-                <div class="grid grid-cols-[auto_1fr]">
-                    <div class="flex justify-center items-top w-10 h-10 lg:h-12 lg:w-12">
-                        <svg class="w-5 h-5 text-brand-800 lg:w-6 lg:h-6 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.213 9.787a3.391 3.391 0 0 0-4.795 0l-3.425 3.426a3.39 3.39 0 0 0 4.795 4.794l.321-.304m-.321-4.49a3.39 3.39 0 0 0 4.795 0l3.424-3.426a3.39 3.39 0 0 0-4.794-4.795l-1.028.961"/>
-                        </svg>
-                    </div>
-                    <div class="space-y-2">
-                        <h3 class="text-xl font-bold dark:text-white">AI PM Agent</h3>
-                        <p class="text-gray-900 dark:text-gray-400">Sindre builds knowledge and product sense from discussions in meetings and conversations allowing you to focus on strategic work.</p>
+                    
+                    <!-- Customer logos -->
+                    <div class="flex items-center gap-8 opacity-60">
+                        
+                        
+                        
                     </div>
                 </div>
             </div>
         </div>
+        
+        <!-- Premium background decoration -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute -top-40 -right-40 w-80 h-80 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse bg-gradient-to-br from-gray-400 to-gray-200"></div>
+            <div class="absolute -bottom-40 -left-40 w-80 h-80 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-pulse bg-gradient-to-br from-gray-400 to-gray-200" style="animation-delay: 3s;"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full mix-blend-multiply filter blur-2xl opacity-40 animate-pulse bg-gradient-radial from-gray-400 to-transparent" style="animation-delay: 6s;"></div>
+        </div>
     </section>
     <!-- Hero Section end -->
 
+    <!-- Interactive Demo Section -->
+    <InteractiveDemo />
+
+    <!-- AI Operating System Section -->
+    <section class="py-20 px-4 mx-auto max-w-7xl">
+        <div class="text-center max-w-4xl mx-auto">
+            <h2 class="mb-8 text-4xl font-bold md:text-5xl dark:text-white text-gray-900">
+                The AI-Powered Operating System for Product Teams
+            </h2>
+            <p class="mb-16 text-xl leading-relaxed dark:text-gray-300 text-gray-600">
+                Sindre unifies your product work in one intelligent workspace. Our AI agent listens, organizes, and acts—turning conversations into clear tasks, surfacing key insights, and keeping your team aligned from strategy to delivery.
+            </p>
+            
+            <!-- Key Features Grid -->
+            <div class="grid md:grid-cols-2 gap-8 text-left">
+                <div class="p-6 dark:bg-gray-900 rounded-xl shadow-md">
+                    <h3 class="mb-3 text-xl font-semibold dark:text-white text-gray-900">
+                        AI Meeting Coach
+                    </h3>
+                    <p class="dark:text-gray-300 text-gray-600">
+                        Automatically captures decisions and action items so nothing slips through the cracks.
+                    </p>
+                </div>
+                
+                <div class="p-6 dark:bg-gray-900 rounded-xl shadow-md">
+                    <h3 class="mb-3 text-xl font-semibold dark:text-white text-gray-900">
+                        Unified Workspace
+                    </h3>
+                    <p class="dark:text-gray-300 text-gray-600">
+                        Connect meetings, tasks, files, and conversations in one place.
+                    </p>
+                </div>
+                
+                <div class="p-6 dark:bg-gray-900 rounded-xl shadow-md">
+                    <h3 class="mb-3 text-xl font-semibold dark:text-white text-gray-900">
+                        Insight Engine
+                    </h3>
+                    <p class="dark:text-gray-300 text-gray-600">
+                        Surface trends and feedback that drive smarter product decisions.
+                    </p>
+                </div>
+                
+                <div class="p-6 dark:bg-gray-900 rounded-xl shadow-md">
+                    <h3 class="mb-3 text-xl font-semibold dark:text-white text-gray-900">
+                        Seamless Collaboration
+                    </h3>
+                    <p class="dark:text-gray-300 text-gray-600">
+                        Keep your team aligned with real-time updates and shared context.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     
     <!-- Spearhead Features Section start -->
-    <section class="bg-gray-50 dark:bg-gray-800">
+    <section>
         <div class="items-center py-8 px-4 mx-auto max-w-screen-xl pt-8 pb-8 lg:gap-8 xl:gap-24 sm:py-16 lg:px-6">
             <div class="w-full" id="tabs-example">
                 <ul class="flex flex-wrap items-center -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400">
@@ -175,6 +228,79 @@ import Navbar from '../components/Navbar.astro';
     </section>
     <!-- Spearhead Features Section end -->
 
+    <!-- Meeting Notetaking and Tasks -->
+    <section class="py-24 px-4 mx-auto max-w-7xl relative overflow-hidden">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8">
+                <div class="space-y-6">
+                    <h2 class="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl dark:text-white text-gray-900">
+                        Effortless Meeting Notes and <span class="bg-gradient-to-br from-secondary-900 to-secondary-500 bg-clip-text text-transparent">Actionable Tasks</span>
+                    </h2>
+                    <p class="text-xl leading-relaxed dark:text-gray-300 max-w-xl text-gray-600">
+                        Never miss a decision or action item again. Sindre's AI automatically captures meeting notes, extracts key decisions, and creates clear, assignable tasks—so your team can move from talk to action without delay.
+                    </p>
+                </div>
+
+                <!-- Checkmarks -->
+                <div class="grid gap-4">
+                    <div class="flex items-center gap-4 p-4 dark:bg-gray-800/50 rounded-xl border dark:border-gray-700/50 backdrop-blur-sm bg-gray-50/80 border-gray-300/20">
+                        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-gradient-to-br from-brand-600 to-brand-400">
+                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <span class="dark:text-gray-300 font-medium text-gray-900">Real-time transcription and summarization</span>
+                    </div>
+                    <div class="flex items-center gap-4 p-4 dark:bg-gray-800/50 rounded-xl border dark:border-gray-700/50 backdrop-blur-sm bg-gray-50/80 border-gray-300/20">
+                        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-gradient-to-br from-brand-600 to-brand-400">
+                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <span class="dark:text-gray-300 font-medium text-gray-900">Automatic task extraction and assignment</span>
+                    </div>
+                    <div class="flex items-center gap-4 p-4 dark:bg-gray-800/50 rounded-xl border dark:border-gray-700/50 backdrop-blur-sm bg-gray-50/80 border-gray-300/20">
+                        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-gradient-to-br from-brand-600 to-brand-400">
+                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <span class="dark:text-gray-300 font-medium text-gray-900">Seamless integration with your calendars and task tools</span>
+                    </div>
+                    <div class="flex items-center gap-4 p-4 dark:bg-gray-800/50 rounded-xl border dark:border-gray-700/50 backdrop-blur-sm bg-gray-50/80 border-gray-300/20">
+                        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-gradient-to-br from-brand-600 to-brand-400">
+                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <span class="dark:text-gray-300 font-medium text-gray-900">Searchable meeting archives for easy reference</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image -->
+            <div class="relative">
+                <div class="relative rounded-3xl p-12 border border-gray-300/30 bg-gradient-to-br from-gray-50 to-gray-100 dark:border-gray-700/50">
+                    <div class="text-center space-y-6">
+                        <div class="w-24 h-24 mx-auto rounded-2xl flex items-center justify-center shadow-lg bg-gradient-to-br from-gray-600 to-gray-400">
+                            <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-lg font-semibold dark:text-white text-gray-900">AI Meeting Assistant</h3>
+                            <p class="text-sm dark:text-gray-400 text-gray-600">Transform conversations into organized, actionable insights</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Decorative elements -->
+                <div class="absolute -top-4 -right-4 w-24 h-24 rounded-full blur-xl bg-brand-300/20"></div>
+                <div class="absolute -bottom-4 -left-4 w-32 h-32 rounded-full blur-xl bg-brand-200/20"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- FeaturesOne start -->
     <section class="bg-white dark:bg-gray-800">
         <div class="items-center py-8 px-4 mx-auto max-w-screen-xl pt-8 pb-8 lg:grid xl:grid-cols-3 lg:gap-8 xl:gap-24 sm:py-16 lg:px-6">
@@ -217,9 +343,86 @@ import Navbar from '../components/Navbar.astro';
         </div>
     </section>
     <!-- FeaturesOne end -->
+
+    <!-- Insights -->
+    <section class="py-24 px-4 mx-auto max-w-7xl dark:from-gray-900/10 dark:via-gray-900 dark:to-gray-900/10 relative overflow-hidden">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="relative lg:order-first">
+
+                <!-- Image -->
+                <div class="relative rounded-3xl p-12 border border-brand-300/30 bg-gradient-to-br from-brand-50 to-brand-100 dark:border-gray-700/50">
+                    <div class="text-center space-y-6">
+                        <div class="w-24 h-24 mx-auto rounded-2xl flex items-center justify-center shadow-lg bg-gradient-to-br from-gray-800 to-gray-600">
+                            <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-lg font-semibold dark:text-white text-gray-900">Smart Analytics Dashboard</h3>
+                            <p class="text-sm dark:text-gray-400 text-gray-600">Discover patterns and trends in your product data</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Decorative elements -->
+                <div class="absolute -top-4 -left-4 w-24 h-24 rounded-full blur-xl bg-brand-400/20"></div>
+                <div class="absolute -bottom-4 -right-4 w-32 h-32 rounded-full blur-xl bg-brand-300/20"></div>
+            </div>
+            
+            <div class="space-y-8">
+                <div class="space-y-6">
+                    <h2 class="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl dark:text-white text-gray-900">
+                        Turn Data into Decisions with <span class="bg-gradient-to-br from-brand-900 to-brand-600 bg-clip-text text-transparent">AI-Driven Insights</span>
+                    </h2>
+                    <p class="text-xl leading-relaxed dark:text-gray-300 max-w-xl text-gray-600">
+                        Sindre surfaces patterns, feedback, and risks hidden in your meetings and product data. Get actionable insights that help you prioritize features, identify blockers early, and align your roadmap with real user needs.
+                    </p>
+                </div>
+                
+                <!-- Checkboxes -->
+                <div class="grid gap-4">
+                    <div class="flex items-center gap-4 p-4 dark:bg-gray-800/50 rounded-xl border dark:border-gray-700/50 backdrop-blur-sm bg-gray-50/80 border-gray-300/20">
+                        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-gradient-to-br from-gray-800 to-gray-600">
+                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <span class="dark:text-gray-300 font-medium text-gray-900">AI-powered trend detection across meetings and tasks</span>
+                    </div>
+                    <div class="flex items-center gap-4 p-4 dark:bg-gray-800/50 rounded-xl border dark:border-gray-700/50 backdrop-blur-sm bg-gray-50/80 border-gray-300/20">
+                        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-gradient-to-br from-gray-800 to-gray-600">
+                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <span class="dark:text-gray-300 font-medium text-gray-900">Customer feedback and sentiment analysis</span>
+                    </div>
+                    <div class="flex items-center gap-4 p-4 dark:bg-gray-800/50 rounded-xl border dark:border-gray-700/50 backdrop-blur-sm bg-gray-50/80 border-gray-300/20">
+                        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-gradient-to-br from-gray-800 to-gray-600">
+                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <span class="dark:text-gray-300 font-medium text-gray-900">Risk and opportunity alerts</span>
+                    </div>
+                    <div class="flex items-center gap-4 p-4 dark:bg-gray-800/50 rounded-xl border dark:border-gray-700/50 backdrop-blur-sm bg-gray-50/80 border-gray-300/20">
+                        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-gradient-to-br from-gray-800 to-gray-600">
+                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <span class="dark:text-gray-300 font-medium text-gray-900">Customizable insight dashboards</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Background decoration -->
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse" style="background: radial-gradient(circle, rgba(156, 163, 175, 0.7), transparent); animation-delay: 2s;"></div>
+    </section>
   
   <!-- FeaturesTwo start -->
-    <section class="bg-gray-50 dark:bg-gray-900">
+    <section>
         <div
             class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 xl:gap-16 sm:py-16 lg:px-6 ">
             <img class="mb-4 w-full lg:mb-0 rounded-lg"
@@ -296,9 +499,9 @@ import Navbar from '../components/Navbar.astro';
     <!-- FeaturesTwo end -->
 
     <!-- FeaturesThree start -->
-    <section class="bg-white dark:bg-gray-900">
+    <section>
         <div
-            class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 xl:gap-16 sm:py-16 lg:px-6 ">
+            class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 xl:gap-16 sm:py-16 lg:px-6 bg-gray-50 dark:bg-gray-900 ">
             <div class="text-gray-900 dark:text-gray-400 sm:text-lg">
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Productive meetings and a highly aligned organisation</h2>
                 <p class="mb-8 font-base lg:text-xl">Sindre acts as an engaged coworker that participates in meetings and conversations. It takes smart notes, captures key discussion points, and tracks action items so you can focus on what matters most. </p>
@@ -372,8 +575,79 @@ import Navbar from '../components/Navbar.astro';
     </section>
     <!-- FeaturesThree end -->
 
+    <!-- AI Product Coach -->
+    <section class="py-24 px-4 mx-auto max-w-7xl relative overflow-hidden">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8">
+                <div class="space-y-6">
+                    <h2 class="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl dark:text-white text-gray-900">
+                        Your <span class="bg-gradient-to-br from-brand-800 to-brand-600 bg-clip-text text-transparent">AI Coach</span> for Smarter Product Management
+                    </h2>
+                    <p class="text-xl leading-relaxed dark:text-gray-300 max-w-xl text-gray-600">
+                        Sindre's AI coach guides your team through best practices, suggests next steps, and keeps everyone aligned on goals and priorities. It's like having a seasoned product manager available 24/7 to help you deliver better products faster.
+                    </p>
+                </div>
+                
+                <div class="grid gap-4">
+                    <div class="flex items-center gap-4 p-4 dark:bg-gray-800/50 rounded-xl border dark:border-gray-700/50 backdrop-blur-sm bg-gray-50/80 border-gray-300/20">
+                        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-gradient-to-br from-gray-800 to-gray-600">
+                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <span class="dark:text-gray-300 font-medium text-gray-900">Personalized recommendations based on your product data</span>
+                    </div>
+                    <div class="flex items-center gap-4 p-4 dark:bg-gray-800/50 rounded-xl border dark:border-gray-700/50 backdrop-blur-sm bg-gray-50/80 border-gray-300/20">
+                        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-gradient-to-br from-gray-800 to-gray-600">
+                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <span class="dark:text-gray-300 font-medium text-gray-900">Proactive reminders and follow-ups</span>
+                    </div>
+                    <div class="flex items-center gap-4 p-4 dark:bg-gray-800/50 rounded-xl border dark:border-gray-700/50 backdrop-blur-sm bg-gray-50/80 border-gray-300/20">
+                        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-gradient-to-br from-gray-800 to-gray-600">
+                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <span class="dark:text-gray-300 font-medium text-gray-900">Workflow optimization tips</span>
+                    </div>
+                    <div class="flex items-center gap-4 p-4 dark:bg-gray-800/50 rounded-xl border dark:border-gray-700/50 backdrop-blur-sm bg-gray-50/80 border-gray-300/20">
+                        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-gradient-to-br from-gray-800 to-gray-600">
+                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <span class="dark:text-gray-300 font-medium text-gray-900">Continuous learning from your team's work patterns</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative lg:order-first">
+                <div class="relative rounded-3xl p-12 border border-brand-300/30 bg-gradient-to-br from-brand-400/10 to-brand-300/20 dark:border-gray-700/50">
+                    <div class="text-center space-y-6">
+                        <div class="w-24 h-24 mx-auto rounded-2xl flex items-center justify-center shadow-lg bg-gradient-to-br from-gray-800 to-gray-600">
+                            <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-lg font-semibold dark:text-white text-gray-900">Intelligent AI Assistant</h3>
+                            <p class="text-sm dark:text-gray-400 text-gray-600">Your 24/7 product management companion</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Decorative elements -->
+                <div class="absolute -top-4 -right-4 w-24 h-24 rounded-full blur-xl bg-brand-400/20"></div>
+                <div class="absolute -bottom-4 -left-4 w-32 h-32 rounded-full blur-xl bg-brand-300/15"></div>
+            </div>
+        </div>
+    </section>
+
   <!-- Features Four start -->
-    <section class="bg-gray-50 dark:bg-gray-800">
+    <section>
         <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
             <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-16">
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Unleash your Full Product Management Potential</h2>
@@ -426,8 +700,8 @@ import Navbar from '../components/Navbar.astro';
     <!-- FeaturesFour end -->
 
     <!-- FeaturesFive start -->
-    <section class="bg-white dark:bg-gray-900">
-        <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 xl:gap-16 sm:py-16 lg:px-6 ">
+    <section>
+        <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 xl:gap-16 sm:py-16 lg:px-6 bg-gray-50 dark:bg-gray-900">
             <div class="text-gray-900 dark:text-gray-400 sm:text-lg">
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Every Organization Has Unique Needs</h2>
                 <p class="mb-8 font-base lg:text-xl">Flexible solutions that put you in control.</p>
@@ -490,7 +764,7 @@ import Navbar from '../components/Navbar.astro';
     <!-- FeaturesFive end -->
     
     <!-- FeaturesSix start -->
-    <section class="bg-gray-50 dark:bg-gray-800">
+    <section>
         <div class="gap-8 items-center py-8 px-4 md:mx-auto md:max-w-screen-xl md:mb-24 md:gap-12 md:grid-cols-12 grid">
             <div class="col-span-7 text-left sm:mb-6 lg:text-left lg:mb-0">
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">

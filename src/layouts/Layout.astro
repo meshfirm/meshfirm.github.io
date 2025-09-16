@@ -4,6 +4,11 @@
     <link rel="icon" type="image/png" href="/sindre_avatar_with_name_square.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sindre</title>
+
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Dark mode script -->
     <script is:inline>
@@ -50,8 +55,30 @@
           }
         }
       });
+
+      // Navbar scroll functionality
+      const navbar = document.getElementById('navbar');
+      if (navbar) {
+        const handleScroll = () => {
+          if (window.scrollY > 50) {
+            // Add white background when scrolled
+            navbar.classList.remove('bg-transparent', 'border-transparent');
+            navbar.classList.add('bg-white/95', 'backdrop-blur-md', 'border-gray-200', 'shadow-sm', 'dark:bg-gray-900/95', 'dark:border-gray-600');
+          } else {
+            // Remove white background at top
+            navbar.classList.remove('bg-white/95', 'shadow-sm', 'dark:bg-gray-900/95', 'dark:border-gray-600');
+            navbar.classList.add('bg-transparent', 'border-transparent');
+          }
+        };
+
+        // Initial check
+        handleScroll();
+
+        // Listen for scroll events
+        window.addEventListener('scroll', handleScroll);
+      }
     </script>
-    
+
     <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js" async></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
