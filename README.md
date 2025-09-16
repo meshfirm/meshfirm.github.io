@@ -1,5 +1,10 @@
 # This is the website for Sindre.ai
 
+First, install all dependencies:
+```sh
+npm install
+```
+
 Run the following command to start a local development server:
 ```sh
 npm run dev
