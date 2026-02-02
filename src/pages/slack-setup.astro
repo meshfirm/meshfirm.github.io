@@ -1,0 +1,156 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import Footer from '../components/Footer.astro';
+import Navbar from '../components/Navbar.astro';
+---
+
+<Layout>
+  <Navbar />
+
+  <body>
+    <!-- Setup Guide Section start -->
+    <section class="bg-white dark:bg-gray-900">
+        <div class="py-12 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 mt-10">
+            <div class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
+
+                <!-- Heading for Setup Guide -->
+                <div class="max-w-screen-lg mb-12 text-gray-500 sm:text-lg dark:text-gray-400">
+                    <h1 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Slack Integration Setup Guide</h1>
+                    <p class="mb-4">Follow these steps to connect Sindre to your Slack workspace. Setup takes under 5 minutes.</p>
+                    <a href="https://slack.com/oauth/v2/authorize?client_id=7432820969396.7427451311141&scope=app_mentions:read,channels:history,channels:read,chat:write,commands,groups:history,groups:read,im:history,im:read,im:write,mpim:read,team:read,users:read,users:read.email,links:read,links:write,reactions:read&user_scope=users:read,users:read.email,team:read"><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcset="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" /></a>
+                </div>
+
+                <!-- Step 1 -->
+                <div class="max-w-screen-lg mb-12 text-gray-500 sm:text-lg dark:text-gray-400 py-8 mx-auto max-w-screen-xl lg:py-8">
+                    <h2 class="mb-4 text-2xl tracking-tight font-bold text-gray-900 dark:text-white">1. Sign in to Sindre</h2>
+                    <p class="mb-4"><i>Access your Sindre account to begin setup.</i></p>
+
+                    <ul class="mb-4 space-y-2">
+                        <li class="flex items-start">
+                            <span class="mr-2">1.</span>
+                            Go to&nbsp;<a class="text-brand-600" href="https://app.sindre.ai/signup" target="_blank">app.sindre.ai/signup</a>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">2.</span>
+                            Sign in with your existing account or create a new one
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="max-w-screen-lg mb-12 text-gray-500 sm:text-lg dark:text-gray-400 py-8 mx-auto max-w-screen-xl lg:py-8">
+                    <h2 class="mb-4 text-2xl tracking-tight font-bold text-gray-900 dark:text-white">2. Connect Slack</h2>
+                    <p class="mb-4"><i>Link your Slack workspace to Sindre.</i></p>
+
+                    <ul class="mb-4 space-y-2">
+                        <li class="flex items-start">
+                            <span class="mr-2">1.</span>
+                            Navigate to&nbsp;<a class="text-brand-600" href="https://app.sindre.ai/settings?tab=integrations" target="_blank">Settings → Integrations</a>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">2.</span>
+                            Find Slack in the list of available integrations
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">3.</span>
+                            Click "Connect" and authorize Sindre to access your Slack workspace
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">4.</span>
+                            Select the workspace you want to connect
+                        </li>
+                    </ul>
+
+                    <a href="https://app.sindre.ai/settings?tab=integrations" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700">
+                        Go to Integration Settings
+                        <svg class="ml-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                    </a>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="max-w-screen-lg mb-12 text-gray-500 sm:text-lg dark:text-gray-400 py-8 mx-auto max-w-screen-xl lg:py-8">
+                    <h2 class="mb-4 text-2xl tracking-tight font-bold text-gray-900 dark:text-white">3. Configure Settings</h2>
+                    <p class="mb-4"><i>Customize how Sindre works with your Slack workspace.</i></p>
+
+                    <ul class="mb-4 space-y-2">
+                        <li class="flex items-start">
+                            <span class="mr-2">1.</span>
+                            Set your notification preferences (task updates, mentions, weekly summaries)
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">2.</span>
+                            Configure a default channel for notifications (optional)
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">3.</span>
+                            Enable or disable auto-response features for @mentions
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="max-w-screen-lg mb-12 text-gray-500 sm:text-lg dark:text-gray-400 py-8 mx-auto max-w-screen-xl lg:py-8">
+                    <h2 class="mb-4 text-2xl tracking-tight font-bold text-gray-900 dark:text-white">4. Start Using Sindre in Slack</h2>
+                    <p class="mb-4"><i>Begin enhancing your Slack workflow.</i></p>
+
+                    <ul class="mb-4 space-y-2">
+                        <li class="flex items-start">
+                            <span class="mr-2">1.</span>
+                            Try the <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">/sindre</code> command in any channel to see available options
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">2.</span>
+                            Mention <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">@Sindre</code> in a message thread to start a conversation
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">3.</span>
+                            React to a message with a designated emoji to capture it as a task or insight
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">4.</span>
+                            Check the Sindre Home tab for your personalized dashboard
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Need help section -->
+                <div class="max-w-screen-lg mb-16 text-gray-500 sm:text-lg dark:text-gray-400 py-8 mx-auto max-w-screen-xl lg:py-8 mt-5">
+                    <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">Need Help?</h2>
+                    <p class="mb-4">Please contact us if you're experiencing troubles when setting up the integration.</p>
+                    <a href="https://www.sindre.ai/contact" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700">
+                        Contact Support
+                        <svg class="ml-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Setup Guide Section end -->
+
+    <!-- Get Started CTA Section start -->
+    <section class="bg-gray-50 dark:bg-gray-800">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+            <div class="max-w-screen-md mx-auto text-center">
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Ready to Get Started?</h2>
+                <p class="mb-8 font-light text-gray-500 sm:text-xl dark:text-gray-400">Connect Sindre to Slack and bring AI-powered productivity to your workspace.</p>
+                <div class="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
+                    <a href="https://app.sindre.ai/signup" class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-center text-white bg-brand-700 rounded-lg hover:bg-brand-800 focus:ring-4 focus:ring-brand-300 dark:focus:ring-brand-900">
+                        Get started
+                    </a>
+                    <a href="/slack" class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+                        Learn more
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Get Started CTA Section end -->
+
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+
+    <Footer />
+
+    </body>
+
+</Layout>

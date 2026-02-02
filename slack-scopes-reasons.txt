@@ -1,0 +1,93 @@
+Bot token scopes
+Scopes that govern what your app can access.
+
+OAuth scope
+Description
+ 
+app_mentions:read
+View messages that directly mention @Sindre in conversations that the app is in
+Please add reasons for your app to request this scope.
+
+channels:history
+View messages and other content in public channels that "Sindre" has been added to
+Please add reasons for your app to request this scope.
+
+channels:read
+View basic information about public channels in a workspace
+Please add reasons for your app to request this scope.
+
+chat:write
+Send messages as @Sindre
+Please add reasons for your app to request this scope.
+
+commands
+Add shortcuts and/or slash commands that people can use
+Please add reasons for your app to request this scope.
+
+groups:history
+View messages and other content in private channels that "Sindre" has been added to
+Please add reasons for your app to request this scope.
+
+groups:read
+View basic information about private channels that "Sindre" has been added to
+Please add reasons for your app to request this scope.
+
+im:history
+View messages and other content in direct messages that "Sindre" has been added to
+Please add reasons for your app to request this scope.
+
+im:read
+View basic information about direct messages that "Sindre" has been added to
+Please add reasons for your app to request this scope.
+
+im:write
+Start direct messages with people
+Please add reasons for your app to request this scope.
+
+links:read
+View app.sindre.ai, test-notetakerfe-413164390576.europe-west1.run.app and test.sindre.ai URLs in messages
+Please add reasons for your app to request this scope.
+
+links:write
+Show previews of app.sindre.ai, test-notetakerfe-413164390576.europe-west1.run.app and test.sindre.ai URLs in messages
+Please add reasons for your app to request this scope.
+
+mpim:read
+View basic information about group direct messages that "Sindre" has been added to
+Please add reasons for your app to request this scope.
+
+reactions:read
+View emoji reactions and their associated content in channels and conversations that "Sindre" has been added to
+Please add reasons for your app to request this scope.
+
+team:read
+View the name, email domain and icon for workspaces "Sindre" is connected to
+Please add reasons for your app to request this scope.
+
+users:read
+View people in a workspace
+Please add reasons for your app to request this scope.
+
+users:read.email
+View email addresses of people in a workspace
+Please add reasons for your app to request this scope.
+
+
+
+User token scopes
+Scopes that access user data and act on behalf of users that authorise them.
+
+OAuth scope
+Description
+ 
+team:read
+View the name, email domain and icon for workspaces that a user is connected to
+Please add reasons for your app to request this scope.
+
+users:read
+View people in a workspace
+Request reason: We need to call users.info because we want to let users attribute feedback to the person who gave the feedback.
+
+users:read.email
+View email addresses of people in a workspace
+Please add reasons for your app to request this scope.
