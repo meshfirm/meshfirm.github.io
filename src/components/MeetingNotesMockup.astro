@@ -1,0 +1,179 @@
+<!-- Stylized meeting notes mockup — live meeting view where Sindre captures notes in real-time -->
+<div class="mn-mock w-full rounded-2xl border border-gray-200/50 dark:border-gray-700/30 bg-white dark:bg-gray-800/80 shadow-xl shadow-gray-900/[0.04] dark:shadow-black/20 overflow-hidden select-none">
+
+  <!-- Window chrome -->
+  <div class="flex items-center gap-1.5 px-4 py-2.5 bg-gray-50 dark:bg-gray-800 border-b border-gray-200/60 dark:border-gray-700/40">
+    <span class="w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+    <span class="w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+    <span class="w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+    <span class="ml-4 text-[11px] text-gray-400 dark:text-gray-500 font-medium">app.sindre.ai/meetings/live</span>
+  </div>
+
+  <!-- Meeting header -->
+  <div class="px-5 md:px-6 pt-4 md:pt-5 pb-3.5 border-b border-gray-200/60 dark:border-gray-700/40">
+    <div class="flex items-start justify-between gap-3">
+      <div class="min-w-0">
+        <div class="flex items-center gap-2.5">
+          <h2 class="text-[15px] md:text-base font-semibold text-gray-900 dark:text-white leading-tight truncate">Product Sync — Weekly</h2>
+          <!-- Live indicator -->
+          <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200/60 dark:border-emerald-800/30 flex-shrink-0">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse"></span>
+            <span class="text-[10px] font-semibold text-emerald-700 dark:text-emerald-400 uppercase tracking-wide">Live</span>
+          </span>
+        </div>
+        <div class="flex items-center gap-2.5 mt-1.5">
+          <div class="flex items-center gap-1.5 text-[11px] text-gray-400 dark:text-gray-500">
+            <!-- Clock icon -->
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+            <span>34 min</span>
+          </div>
+          <span class="w-0.5 h-0.5 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+          <span class="text-[11px] text-gray-400 dark:text-gray-500">Google Meet</span>
+          <span class="w-0.5 h-0.5 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+          <!-- Participants inline -->
+          <div class="flex -space-x-1.5">
+            <div class="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-900/40 border border-white dark:border-gray-800 flex items-center justify-center"><span class="text-[7px] font-bold text-emerald-700 dark:text-emerald-300">SC</span></div>
+            <div class="w-5 h-5 rounded-full bg-blue-100 dark:bg-blue-900/40 border border-white dark:border-gray-800 flex items-center justify-center"><span class="text-[7px] font-bold text-blue-700 dark:text-blue-300">MK</span></div>
+            <div class="w-5 h-5 rounded-full bg-amber-100 dark:bg-amber-900/40 border border-white dark:border-gray-800 flex items-center justify-center"><span class="text-[7px] font-bold text-amber-700 dark:text-amber-300">JP</span></div>
+            <div class="w-5 h-5 rounded-full bg-rose-100 dark:bg-rose-900/40 border border-white dark:border-gray-800 flex items-center justify-center"><span class="text-[7px] font-bold text-rose-700 dark:text-rose-300">AL</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Sindre recording badge -->
+      <div class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-gray-50 dark:bg-gray-700/40 border border-gray-100 dark:border-gray-700/50 flex-shrink-0">
+        <img src="/sindre-logo-128.png" alt="" class="w-4 h-4 rounded" />
+        <span class="text-[11px] font-medium text-gray-500 dark:text-gray-400">Taking notes</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notes content -->
+  <div class="px-5 md:px-6 py-4 md:py-5 space-y-5">
+
+    <!-- Smart Notes section -->
+    <div>
+      <h3 class="text-[11px] font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-3">Discussion Notes</h3>
+      <div class="space-y-3">
+
+        <!-- Note 1 -->
+        <div class="flex gap-3">
+          <span class="text-[11px] text-gray-400 dark:text-gray-500 tabular-nums pt-0.5 flex-shrink-0 w-8">10:03</span>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-start gap-2">
+              <div class="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-900/40 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-[7px] font-bold text-emerald-700 dark:text-emerald-300">SC</span></div>
+              <p class="text-[13px] text-gray-700 dark:text-gray-300 leading-relaxed">Onboarding drop-off at step 3 is now <span class="font-medium">28%</span> — proposed simplifying the workspace setup into a single guided flow</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Note 2 -->
+        <div class="flex gap-3">
+          <span class="text-[11px] text-gray-400 dark:text-gray-500 tabular-nums pt-0.5 flex-shrink-0 w-8">10:12</span>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-start gap-2">
+              <div class="w-5 h-5 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-[7px] font-bold text-blue-700 dark:text-blue-300">MK</span></div>
+              <p class="text-[13px] text-gray-700 dark:text-gray-300 leading-relaxed">API rate limits need revisiting — enterprise customers hitting caps during batch imports. Suggests <span class="font-medium">tiered rate limiting</span> by plan</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Note 3 -->
+        <div class="flex gap-3">
+          <span class="text-[11px] text-gray-400 dark:text-gray-500 tabular-nums pt-0.5 flex-shrink-0 w-8">10:21</span>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-start gap-2">
+              <div class="w-5 h-5 rounded-full bg-amber-100 dark:bg-amber-900/40 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-[7px] font-bold text-amber-700 dark:text-amber-300">JP</span></div>
+              <p class="text-[13px] text-gray-700 dark:text-gray-300 leading-relaxed">Dashboard redesign mockups ready for review — focusing on <span class="font-medium">faster time-to-insight</span> with contextual filters</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Note 4 — most recent, with subtle highlight -->
+        <div class="flex gap-3">
+          <span class="text-[11px] text-gray-400 dark:text-gray-500 tabular-nums pt-0.5 flex-shrink-0 w-8">10:31</span>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-start gap-2">
+              <div class="w-5 h-5 rounded-full bg-rose-100 dark:bg-rose-900/40 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-[7px] font-bold text-rose-700 dark:text-rose-300">AL</span></div>
+              <p class="text-[13px] text-gray-700 dark:text-gray-300 leading-relaxed">Customer success flagged <span class="font-medium">3 at-risk accounts</span> — common thread is lack of team adoption. Wants to add an in-app team invite prompt</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Best Practice card -->
+    <div class="rounded-lg border border-amber-200/40 dark:border-amber-800/30 bg-amber-50/50 dark:bg-amber-900/10 px-4 py-3">
+      <div class="flex items-start gap-2.5">
+        <!-- Lightbulb icon -->
+        <svg class="w-4 h-4 text-amber-500 dark:text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/></svg>
+        <div class="min-w-0">
+          <span class="text-[11px] font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400">Sindre Insight</span>
+          <p class="text-[13px] text-gray-700 dark:text-gray-300 leading-relaxed mt-1">This discussion covers 4 separate topics in 34 min. Consider using <span class="font-medium">timeboxing</span> (e.g. 8 min per topic) to keep discussions focused and ensure all agenda items get equal attention.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Action Items section -->
+    <div>
+      <h3 class="text-[11px] font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-3">Action Items</h3>
+      <div class="rounded-lg border border-gray-100 dark:border-gray-700/50 overflow-hidden">
+        <div class="divide-y divide-gray-100 dark:divide-gray-700/40">
+
+          <!-- Action item 1 — open -->
+          <div class="flex items-center justify-between px-3.5 py-2.5 bg-white dark:bg-transparent">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <span class="w-4 h-4 rounded border border-gray-300 dark:border-gray-600 flex-shrink-0"></span>
+              <span class="text-[13px] text-gray-700 dark:text-gray-300 truncate">Prototype simplified onboarding flow</span>
+            </div>
+            <div class="flex items-center gap-2 flex-shrink-0 ml-3">
+              <span class="text-[11px] text-gray-400 dark:text-gray-500">Feb 14</span>
+              <div class="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-900/40 flex items-center justify-center"><span class="text-[8px] font-bold text-emerald-700 dark:text-emerald-300">SC</span></div>
+            </div>
+          </div>
+
+          <!-- Action item 2 — open -->
+          <div class="flex items-center justify-between px-3.5 py-2.5 bg-white dark:bg-transparent">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <span class="w-4 h-4 rounded border border-gray-300 dark:border-gray-600 flex-shrink-0"></span>
+              <span class="text-[13px] text-gray-700 dark:text-gray-300 truncate">Draft tiered rate-limit proposal</span>
+            </div>
+            <div class="flex items-center gap-2 flex-shrink-0 ml-3">
+              <span class="text-[11px] text-gray-400 dark:text-gray-500">Feb 12</span>
+              <div class="w-5 h-5 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center"><span class="text-[8px] font-bold text-blue-700 dark:text-blue-300">MK</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom bar — recording indicator -->
+  <div class="flex items-center justify-between px-5 md:px-6 py-2.5 bg-gray-50/80 dark:bg-gray-800/60 border-t border-gray-200/60 dark:border-gray-700/40">
+    <div class="flex items-center gap-2">
+      <!-- Microphone icon -->
+      <svg class="w-3.5 h-3.5 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z"/></svg>
+      <span class="text-[11px] text-gray-400 dark:text-gray-500">Transcribing live</span>
+      <!-- Animated dots -->
+      <span class="flex items-center gap-0.5">
+        <span class="w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-600 animate-pulse"></span>
+        <span class="w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-600 animate-pulse" style="animation-delay: 0.2s;"></span>
+        <span class="w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-600 animate-pulse" style="animation-delay: 0.4s;"></span>
+      </span>
+    </div>
+    <div class="flex items-center gap-1.5">
+      <!-- Notes count -->
+      <svg class="w-3.5 h-3.5 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/></svg>
+      <span class="text-[11px] text-gray-400 dark:text-gray-500">4 notes &middot; 2 actions</span>
+    </div>
+  </div>
+
+</div>
+
+<style>
+  .mn-mock {
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  }
+</style>
