@@ -1,123 +1,305 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-import PrimaryCTA from '../components/PrimaryCTA.astro';
 import GeneralFAQ from '../components/GeneralFAQ.astro';
 import Footer from '../components/Footer.astro';
 import Navbar from '../components/Navbar.astro';
 ---
 
-
 <Layout>
-
+  <div class="contact-page">
     <Navbar />
 
-    <body>
+    <!-- ═══════════════════════════════════ HERO ═══════════════════════════════════ -->
+    <section class="relative overflow-hidden bg-white dark:bg-gray-900">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="relative pt-36 lg:pt-48 pb-16 lg:pb-24 px-4 mx-auto max-w-screen-xl">
+        <div class="text-center max-w-3xl mx-auto">
 
-        <!-- Block start -->
-        <section class="bg-white dark:bg-gray-900">
-            <div class="bg-[url('https://flowbite.s3.amazonaws.com/blocks/marketing-ui/contact/laptop-human.jpg')] bg-no-repeat bg-cover bg-center bg-gray-700 bg-blend-multiply">
-                <div class="py-8 px-4 lg:pt-24 pt-8 pb-72 lg:pb-80 mx-auto max-w-screen-sm text-center lg:px-6 lg:py-16 mt-10">
-                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">Contact Us</h2>
-                    <p class="mb-16 font-light text-gray-400 sm:text-xl">Have questions about Sindre, how it can help your company or just want to know more? Our AI & Product experts are here to help you.
-                    </p>
-                </div> 
-            </div>
-            <div class="py-16 px-4 mx-auto -mt-96 max-w-screen-xl sm:py-24 lg:px-6">
-                <form id="contactForm" class="grid grid-cols-1 gap-8 p-6 mx-auto mb-16 max-w-screen-md bg-white rounded-lg border border-gray-200 shadow-sm lg:mb-28 dark:bg-gray-800 dark:border-gray-700 sm:grid-cols-2">
-                    <div>
-                        <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">First Name</label>
-                        <input type="text" name="first_name" id="first_name" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-brand-500 focus:border-brand-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-brand-500 dark:focus:border-brand-500 dark:shadow-sm-light" placeholder="Egon" required>
-                    </div>
-                    <div>
-                        <label for="last_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Last Name</label>
-                        <input type="text" name="last_name" id="last_name" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-brand-500 focus:border-brand-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-brand-500 dark:focus:border-brand-500 dark:shadow-sm-light" placeholder="Olsen" required>
-                    </div>
-                    <div>
-                        <label for="from_email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
-                        <input type="email" name="from_email" id="from_email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-brand-500 focus:border-brand-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-brand-500 dark:focus:border-brand-500 dark:shadow-sm-light" placeholder="egon@sindre.ai" required>
-                    </div>
-                    <div>
-                        <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Phone Number</label>
-                        <input type="tel" name="phone" id="phone" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-brand-500 focus:border-brand-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-brand-500 dark:focus:border-brand-500 dark:shadow-sm-light" placeholder="+45 1234 5678" required>
-                    </div>
-                    <div class="sm:col-span-2">
-                        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
-                        <textarea name="message" id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-brand-500 focus:border-brand-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-brand-500 dark:focus:border-brand-500" placeholder="Leave a message..."></textarea>
-                        <p class="mt-4 text-sm text-gray-500">By submitting this form you agree to our <a href="https://www.sindre.ai/terms-and-conditions" class="text-brand-600 hover:underline dark:text-brand-500">terms and conditions</a> and our <a href="https://www.sindre.ai/privacy-policy" class="text-brand-600 hover:underline dark:text-brand-500">privacy policy</a>.</p>
-                    </div>
-                    <button type="submit" id="submit-btn" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-brand-700 sm:w-fit hover:bg-brand-800 focus:ring-4 focus:outline-none focus:ring-brand-300 dark:bg-brand-600 dark:hover:bg-brand-700 dark:focus:ring-brand-800">Send message</button>
-                </form>
-                <div class="space-y-8 text-center md:grid md:grid-cols-2 lg:grid-cols-2 md:gap-12 md:space-y-0">
-                    <div>
-                        <div class="flex justify-center items-center mx-auto mb-4 w-10 h-10 bg-brand-100 rounded-lg dark:bg-brand-800 lg:h-16 lg:w-16">
-                            <svg class="w-5 h-5 text-brand-800 lg:w-8 lg:h-8 dark:text-brand-100" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
-                        </div>
-                        <p class="mb-2 text-xl font-bold dark:text-white">Email us:</p>
-                        <p class="mb-3 text-gray-500 dark:text-gray-400">Email us for general queries, including marketing and partnership opportunities.</p>
-                        <a href="mailto:magnus@meshfirm.com" class="font-semibold text-brand-600 dark:text-brand-500 hover:underline">magnus@meshfirm.com</a>
-                    </div>
-                    <div>
-                        <div class="flex justify-center items-center mx-auto mb-4 w-10 h-10 bg-brand-100 rounded-lg dark:bg-brand-800 lg:h-16 lg:w-16">
-                            <svg class="w-5 h-5 text-brand-800 lg:w-8 lg:h-8 dark:text-brand-100" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
-                        </div>
-                        <p class="mb-2 text-xl font-bold dark:text-white">Call us:</p>
-                        <p class="mb-3 text-gray-500 dark:text-gray-400">Call us to speak to a member of our team. We are always happy to help.</p>
-                        <span class="font-semibold text-brand-600 dark:text-brand-500">+45 2639 2768</span>
-                    </div>
-                    <!-- support center
-                    <div>
-                        <div class="flex justify-center items-center mx-auto mb-4 w-10 h-10 bg-brand-100 rounded-lg dark:bg-brand-800 lg:h-16 lg:w-16">
-                            <svg class="w-5 h-5 text-brand-800 lg:w-8 lg:h-8 dark:text-brand-100" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-2 0c0 .993-.241 1.929-.668 2.754l-1.524-1.525a3.997 3.997 0 00.078-2.183l1.562-1.562C15.802 8.249 16 9.1 16 10zm-5.165 3.913l1.58 1.58A5.98 5.98 0 0110 16a5.976 5.976 0 01-2.516-.552l1.562-1.562a4.006 4.006 0 001.789.027zm-4.677-2.796a4.002 4.002 0 01-.041-2.08l-.08.08-1.53-1.533A5.98 5.98 0 004 10c0 .954.223 1.856.619 2.657l1.54-1.54zm1.088-6.45A5.974 5.974 0 0110 4c.954 0 1.856.223 2.657.619l-1.54 1.54a4.002 4.002 0 00-2.346.033L7.246 4.668zM12 10a2 2 0 11-4 0 2 2 0 014 0z" clip-rule="evenodd"></path></svg>
-                        </div>
-                        <p class="mb-2 text-xl font-bold dark:text-white">Support</p>
-                        <p class="mb-3 text-gray-500 dark:text-gray-400">Email us for general queries, including marketing and partnership opportunities.</p>
-                        <a href="#" class="inline-flex py-2 px-4 text-sm font-medium text-center rounded-lg border text-brand-600 border-brand-600 hover:text-white hover:bg-brand-600 focus:ring-4 focus:outline-none focus:ring-brand-300 dark:border-brand-500 dark:text-brand-500 dark:hover:text-white dark:hover:bg-brand-600 dark:focus:ring-brand-800">Support center</a>
-                    </div> -->
+          <!-- Badge -->
+          <div class="reveal mb-12">
+            <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-gray-50/80 dark:bg-gray-800/50 border border-gray-200/40 dark:border-gray-700/40 backdrop-blur-sm">
+              <svg class="w-4 h-4 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
+              <span class="w-px h-3 bg-gray-200/60 dark:bg-gray-700/50"></span>
+              <span class="text-[11px] font-medium tracking-[0.12em] uppercase text-gray-400 dark:text-gray-500">Get in Touch</span>
+            </span>
+          </div>
+
+          <!-- Headline -->
+          <h1 class="reveal rd1 hero-heading text-gray-900 dark:text-white mb-8">
+            Let's build something great&nbsp;together
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="reveal rd2 text-lg text-gray-500 dark:text-gray-400 max-w-lg mx-auto leading-relaxed">
+            Have questions about Sindre or how it can help your company? Our AI &amp; Product experts are here to&nbsp;help.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ FORM + CONTACT INFO ═══════════════════════════════ -->
+    <section class="bg-gray-50/50 dark:bg-gray-800/20">
+      <div class="py-16 lg:py-24 px-4 mx-auto max-w-screen-xl">
+        <div class="grid lg:grid-cols-3 gap-8 lg:gap-12">
+
+          <!-- Form (2/3 width) -->
+          <div class="lg:col-span-2">
+            <div class="reveal p-8 lg:p-10 rounded-2xl border border-gray-200/60 dark:border-gray-700/30 bg-white dark:bg-gray-800/40">
+              <form id="contactForm">
+                <div class="grid sm:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">First Name</label>
+                    <input type="text" name="first_name" id="first_name" class="block w-full p-3 text-sm text-gray-900 bg-gray-50 dark:bg-gray-700/50 rounded-lg border border-gray-200 dark:border-gray-600 focus:ring-2 focus:ring-brand-600 focus:border-brand-600 dark:text-white dark:placeholder-gray-400 transition-colors" placeholder="Egon" required>
+                  </div>
+                  <div>
+                    <label for="last_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Last Name</label>
+                    <input type="text" name="last_name" id="last_name" class="block w-full p-3 text-sm text-gray-900 bg-gray-50 dark:bg-gray-700/50 rounded-lg border border-gray-200 dark:border-gray-600 focus:ring-2 focus:ring-brand-600 focus:border-brand-600 dark:text-white dark:placeholder-gray-400 transition-colors" placeholder="Olsen" required>
+                  </div>
                 </div>
+                <div class="grid sm:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <label for="from_email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
+                    <input type="email" name="from_email" id="from_email" class="block w-full p-3 text-sm text-gray-900 bg-gray-50 dark:bg-gray-700/50 rounded-lg border border-gray-200 dark:border-gray-600 focus:ring-2 focus:ring-brand-600 focus:border-brand-600 dark:text-white dark:placeholder-gray-400 transition-colors" placeholder="egon@sindre.ai" required>
+                  </div>
+                  <div>
+                    <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Phone Number</label>
+                    <input type="tel" name="phone" id="phone" class="block w-full p-3 text-sm text-gray-900 bg-gray-50 dark:bg-gray-700/50 rounded-lg border border-gray-200 dark:border-gray-600 focus:ring-2 focus:ring-brand-600 focus:border-brand-600 dark:text-white dark:placeholder-gray-400 transition-colors" placeholder="+45 1234 5678" required>
+                  </div>
+                </div>
+                <div class="mb-6">
+                  <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
+                  <textarea name="message" id="message" rows="6" class="block w-full p-3 text-sm text-gray-900 bg-gray-50 dark:bg-gray-700/50 rounded-lg border border-gray-200 dark:border-gray-600 focus:ring-2 focus:ring-brand-600 focus:border-brand-600 dark:text-white dark:placeholder-gray-400 transition-colors" placeholder="Leave a message..."></textarea>
+                </div>
+                <p class="mb-6 text-sm text-gray-500 dark:text-gray-400">By submitting this form you agree to our <a href="https://www.sindre.ai/terms-and-conditions" class="text-brand-600 hover:underline dark:text-brand-500">terms and conditions</a> and our <a href="https://www.sindre.ai/privacy-policy" class="text-brand-600 hover:underline dark:text-brand-500">privacy policy</a>.</p>
+                <button type="submit" id="submit-btn" class="group inline-flex items-center px-7 py-3.5 text-white bg-brand-700 hover:bg-brand-800 dark:bg-brand-600 dark:hover:bg-brand-700 rounded-xl text-sm font-medium focus:ring-4 focus:outline-none focus:ring-brand-300 dark:focus:ring-brand-800 cta-primary">
+                  Send message
+                  <svg class="w-3.5 h-3.5 ml-2 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </button>
+              </form>
+
+              <!-- Inline success state (hidden by default) -->
+              <div id="form-success" class="hidden text-center py-8">
+                <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-emerald-50 dark:bg-emerald-900/30 mb-5">
+                  <svg class="w-7 h-7 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Message sent!</h3>
+                <p class="text-gray-500 dark:text-gray-400">We'll get back to you as soon as possible.</p>
+              </div>
+
+              <!-- Inline error state (hidden by default) -->
+              <div id="form-error" class="hidden mt-4 p-4 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800/40">
+                <div class="flex items-center gap-3">
+                  <svg class="w-5 h-5 text-red-600 dark:text-red-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z"/></svg>
+                  <p class="text-sm text-red-700 dark:text-red-300">Something went wrong. Please try again or email us directly.</p>
+                </div>
+              </div>
             </div>
-        </section>
-        <!-- Block end -->
+          </div>
 
+          <!-- Contact Info (1/3 width) -->
+          <div class="lg:col-span-1">
+            <div class="reveal rd1 space-y-8 lg:pt-4">
+              <!-- Email -->
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-gray-100 dark:bg-gray-700/50 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 dark:text-white mb-1">Email us</h3>
+                  <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-2">For general queries, marketing, and partnership opportunities.</p>
+                  <a href="mailto:magnus@meshfirm.com" class="text-sm font-medium text-brand-600 dark:text-brand-500 hover:underline">magnus@meshfirm.com</a>
+                </div>
+              </div>
 
-        <!-- EmailJS script start -->
-        <script>
-            document.getElementById('contactForm').addEventListener('submit', function(event) {
-                event.preventDefault();
-                
-                const submitButton = document.getElementById('submit-btn');
-                const originalButtonText = submitButton.innerHTML;
-                submitButton.innerHTML = 'Sending...';
-                submitButton.disabled = true;
-    
-                const serviceID = 'default_service';
-                const templateID = 'template_l3w6ty5';
-    
-                emailjs.sendForm(serviceID, templateID, this)
-                    .then(() => {
-                        submitButton.innerHTML = originalButtonText;
-                        submitButton.disabled = false;
-                        alert('Message sent successfully!');
-                        this.reset();
-                    })
-                    .catch((error) => {
-                        submitButton.innerHTML = originalButtonText;
-                        submitButton.disabled = false;
-                        alert('Failed to send message. Error: ' + JSON.stringify(error));
-                    });
-            });
-        </script>
-        <!-- EmailJS script end -->
-        <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+              <!-- Phone -->
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-gray-100 dark:bg-gray-700/50 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 dark:text-white mb-1">Call us</h3>
+                  <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-2">Speak to a member of our team. We're always happy to help.</p>
+                  <span class="text-sm font-medium text-gray-900 dark:text-white">+45 2639 2768</span>
+                </div>
+              </div>
 
-    
-    <GeneralFAQ />
+              <!-- Response time -->
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-gray-100 dark:bg-gray-700/50 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 dark:text-white mb-1">Response time</h3>
+                  <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">We typically respond within 24 hours on business days.</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-    <PrimaryCTA />
+        </div>
+      </div>
+    </section>
 
-    <Footer />
+    <!-- Norse Divider -->
+    <div class="norse-divider py-4" aria-hidden="true">
+      <span class="norse-line"></span>
+      <span class="norse-diamond"></span>
+      <span class="norse-line"></span>
+    </div>
 
+  </div><!-- /contact-page -->
 
-    </body>
-
+  <GeneralFAQ />
+  <Footer />
 </Layout>
+
+<!-- ═══════════════════════════════ STYLES ═══════════════════════════════ -->
+<style is:global>
+  /* ── Page Font ── */
+  .contact-page {
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* ── Typography Scale ── */
+  .hero-heading {
+    font-size: clamp(3rem, 6.5vw, 5.25rem);
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    line-height: 1.04;
+  }
+
+  /* ── Scroll Reveal ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .rd1 { transition-delay: 0.08s; }
+  .rd2 { transition-delay: 0.16s; }
+  .rd3 { transition-delay: 0.24s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  /* ── Hero Ambient Glow ── */
+  .hero-glow {
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px;
+    height: 600px;
+    background: radial-gradient(ellipse, rgba(202, 197, 255, 0.10), transparent 70%);
+    pointer-events: none;
+  }
+  .dark .hero-glow {
+    background: radial-gradient(ellipse, rgba(84, 75, 195, 0.06), transparent 70%);
+  }
+
+  /* ── Norse Divider ── */
+  .norse-divider {
+    display: flex;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .norse-line {
+    flex: 1;
+    height: 1px;
+  }
+  .norse-line:first-child {
+    background: linear-gradient(to right, transparent, #E5E7EB);
+  }
+  .norse-line:last-child {
+    background: linear-gradient(to left, transparent, #E5E7EB);
+  }
+  .dark .norse-line:first-child {
+    background: linear-gradient(to right, transparent, rgba(55, 65, 81, 0.4));
+  }
+  .dark .norse-line:last-child {
+    background: linear-gradient(to left, transparent, rgba(55, 65, 81, 0.4));
+  }
+  .norse-diamond {
+    width: 7px;
+    height: 7px;
+    transform: rotate(45deg);
+    border: 1px solid #D1D5DB;
+    margin: 0 1rem;
+  }
+  .dark .norse-diamond {
+    border-color: rgba(75, 85, 99, 0.5);
+  }
+
+  /* ── CTA Button ── */
+  .cta-primary {
+    box-shadow: 0 1px 2px rgba(84, 75, 195, 0.12);
+    transition: all 0.3s ease;
+  }
+  .cta-primary:hover {
+    box-shadow: 0 4px 16px rgba(84, 75, 195, 0.25);
+  }
+</style>
+
+<!-- ═══════════════════════════════ SCRIPTS ═══════════════════════════════ -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Scroll reveal
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+    );
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+    // EmailJS form submission
+    const form = document.getElementById('contactForm');
+    const successEl = document.getElementById('form-success');
+    const errorEl = document.getElementById('form-error');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const submitButton = document.getElementById('submit-btn');
+      const originalButtonText = submitButton.innerHTML;
+      submitButton.innerHTML = 'Sending...';
+      submitButton.disabled = true;
+      errorEl.classList.add('hidden');
+
+      const serviceID = 'default_service';
+      const templateID = 'template_l3w6ty5';
+
+      emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+          submitButton.innerHTML = originalButtonText;
+          submitButton.disabled = false;
+          form.classList.add('hidden');
+          successEl.classList.remove('hidden');
+        })
+        .catch((error) => {
+          submitButton.innerHTML = originalButtonText;
+          submitButton.disabled = false;
+          errorEl.classList.remove('hidden');
+        });
+    });
+  });
+</script>

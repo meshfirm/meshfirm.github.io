@@ -1,0 +1,86 @@
+<!-- Abstract customer insights concept — floating composition, not a literal UI -->
+<div class="ic-mock w-full select-none py-6 px-4">
+  <div class="relative max-w-md mx-auto">
+
+    <!-- Ambient background shape -->
+    <div class="absolute inset-0 -inset-x-8 -inset-y-4 rounded-3xl bg-gradient-to-br from-gray-50 to-gray-100/50 dark:from-gray-800/40 dark:to-gray-800/20 blur-sm" aria-hidden="true"></div>
+
+    <!-- Floating composition -->
+    <div class="relative space-y-4">
+
+      <!-- Top row: metric pills floating -->
+      <div class="flex items-end justify-center gap-3 pb-2">
+        <div class="px-4 py-3 rounded-xl bg-white dark:bg-gray-800/80 border border-gray-200/60 dark:border-gray-700/40 shadow-sm">
+          <div class="text-[11px] font-medium uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-1">Conversations</div>
+          <div class="text-2xl font-semibold text-gray-900 dark:text-white tabular-nums leading-none">142</div>
+        </div>
+        <div class="px-4 py-3 rounded-xl bg-white dark:bg-gray-800/80 border border-gray-200/60 dark:border-gray-700/40 shadow-sm translate-y-2">
+          <div class="text-[11px] font-medium uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-1">Themes</div>
+          <div class="text-2xl font-semibold text-gray-900 dark:text-white tabular-nums leading-none">5</div>
+        </div>
+        <div class="px-4 py-3 rounded-xl bg-white dark:bg-gray-800/80 border border-gray-200/60 dark:border-gray-700/40 shadow-sm -translate-y-1">
+          <div class="text-[11px] font-medium uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-1">Trend</div>
+          <div class="text-2xl font-semibold text-gray-900 dark:text-white tabular-nums leading-none">+23%</div>
+        </div>
+      </div>
+
+      <!-- Abstract horizontal bars — simplified, no labels, just visual rhythm -->
+      <div class="mx-auto max-w-xs space-y-2.5 px-2">
+        <div class="flex items-center gap-3">
+          <div class="flex-1 bg-gray-100 dark:bg-gray-700/40 rounded-full h-2.5 overflow-hidden">
+            <div class="h-full rounded-full bg-gray-900 dark:bg-white" style="width: 100%"></div>
+          </div>
+          <span class="text-[12px] font-medium text-gray-900 dark:text-white tabular-nums w-6 text-right">47</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="flex-1 bg-gray-100 dark:bg-gray-700/40 rounded-full h-2.5 overflow-hidden">
+            <div class="h-full rounded-full bg-gray-600 dark:bg-gray-300" style="width: 72%"></div>
+          </div>
+          <span class="text-[12px] font-medium text-gray-600 dark:text-gray-300 tabular-nums w-6 text-right">34</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="flex-1 bg-gray-100 dark:bg-gray-700/40 rounded-full h-2.5 overflow-hidden">
+            <div class="h-full rounded-full bg-gray-400 dark:bg-gray-400" style="width: 55%"></div>
+          </div>
+          <span class="text-[12px] font-medium text-gray-500 dark:text-gray-400 tabular-nums w-6 text-right">26</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="flex-1 bg-gray-100 dark:bg-gray-700/40 rounded-full h-2.5 overflow-hidden">
+            <div class="h-full rounded-full bg-gray-300 dark:bg-gray-500" style="width: 34%"></div>
+          </div>
+          <span class="text-[12px] font-medium text-gray-400 dark:text-gray-500 tabular-nums w-6 text-right">16</span>
+        </div>
+      </div>
+
+      <!-- Floating topic tags — scattered, organic feel -->
+      <div class="flex flex-wrap items-center justify-center gap-2 pt-2">
+        <span class="px-3 py-1.5 rounded-full bg-white dark:bg-gray-800/80 border border-gray-200/60 dark:border-gray-700/40 text-[12px] font-medium text-gray-700 dark:text-gray-300 shadow-sm">Onboarding</span>
+        <span class="px-3 py-1.5 rounded-full bg-white dark:bg-gray-800/80 border border-gray-200/60 dark:border-gray-700/40 text-[12px] font-medium text-gray-500 dark:text-gray-400 shadow-sm">Mobile UX</span>
+        <span class="px-3 py-1.5 rounded-full bg-white dark:bg-gray-800/80 border border-gray-200/60 dark:border-gray-700/40 text-[12px] font-medium text-gray-500 dark:text-gray-400 shadow-sm">Search</span>
+        <span class="px-3 py-1.5 rounded-full bg-white dark:bg-gray-800/80 border border-gray-200/60 dark:border-gray-700/40 text-[12px] font-medium text-gray-400 dark:text-gray-500 shadow-sm">Pricing</span>
+        <span class="px-3 py-1.5 rounded-full bg-white dark:bg-gray-800/80 border border-gray-200/60 dark:border-gray-700/40 text-[12px] font-medium text-gray-400 dark:text-gray-500 shadow-sm">API docs</span>
+      </div>
+
+      <!-- Insight spark — floating callout -->
+      <div class="mx-auto max-w-sm mt-1">
+        <div class="rounded-xl border border-gray-200/40 dark:border-gray-700/30 bg-white/80 dark:bg-gray-800/60 backdrop-blur-sm px-4 py-3 shadow-sm">
+          <div class="flex items-start gap-2.5">
+            <svg class="w-4 h-4 text-gray-400 dark:text-gray-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456Z" />
+            </svg>
+            <p class="text-[13px] text-gray-600 dark:text-gray-400 leading-relaxed">
+              <span class="font-medium text-gray-900 dark:text-white">Onboarding mentions up 40%</span> — correlates with new user growth from Q4 campaign
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<style>
+  .ic-mock {
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  }
+</style>

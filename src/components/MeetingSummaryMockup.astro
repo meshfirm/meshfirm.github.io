@@ -1,0 +1,152 @@
+<!-- Stylized Sindre app mockup — meeting summary view -->
+<div class="ms-mock w-full rounded-2xl border border-gray-200/50 dark:border-gray-700/30 bg-white dark:bg-gray-800/80 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_8px_16px_-4px_rgba(0,0,0,0.06),0_24px_48px_-12px_rgba(0,0,0,0.08)] dark:shadow-[0_1px_2px_rgba(0,0,0,0.2),0_8px_16px_-4px_rgba(0,0,0,0.3),0_24px_48px_-12px_rgba(0,0,0,0.4)] overflow-hidden select-none">
+
+  <!-- Window chrome -->
+  <div class="flex items-center gap-1.5 px-4 py-2.5 bg-gray-50 dark:bg-gray-800 border-b border-gray-200/60 dark:border-gray-700/40">
+    <span class="w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+    <span class="w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+    <span class="w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+    <span class="ml-4 text-[11px] text-gray-400 dark:text-gray-500 font-medium">app.sindre.ai</span>
+  </div>
+
+  <div class="flex min-h-[340px] md:min-h-[400px]">
+
+    <!-- Sidebar -->
+    <div class="hidden sm:flex flex-col w-48 md:w-52 border-r border-gray-100 dark:border-gray-700/40 bg-gray-50/50 dark:bg-gray-800/50 flex-shrink-0 py-4 px-3">
+      <!-- Logo -->
+      <div class="flex items-center gap-2 px-2 mb-6">
+        <img src="/sindre-logo-128.png" alt="" class="w-5 h-5 rounded" />
+        <span class="text-sm font-semibold text-gray-900 dark:text-white">Sindre</span>
+      </div>
+      <!-- Nav items -->
+      <nav class="space-y-0.5 text-[13px] font-medium">
+        <div class="flex items-center gap-2.5 px-2.5 py-1.5 rounded-md text-gray-400 dark:text-gray-500">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955a1.126 1.126 0 0 1 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>
+          Dashboard
+        </div>
+        <div class="flex items-center gap-2.5 px-2.5 py-1.5 rounded-md bg-white dark:bg-gray-700/60 text-gray-900 dark:text-white shadow-sm border border-gray-200/60 dark:border-gray-600/30">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z"/></svg>
+          Meetings
+        </div>
+        <div class="flex items-center gap-2.5 px-2.5 py-1.5 rounded-md text-gray-400 dark:text-gray-500">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z"/></svg>
+          Tasks
+        </div>
+        <div class="flex items-center gap-2.5 px-2.5 py-1.5 rounded-md text-gray-400 dark:text-gray-500">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/></svg>
+          Insights
+        </div>
+        <div class="flex items-center gap-2.5 px-2.5 py-1.5 rounded-md text-gray-400 dark:text-gray-500">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/></svg>
+          Documents
+        </div>
+      </nav>
+    </div>
+
+    <!-- Main content -->
+    <div class="flex-1 min-w-0 overflow-hidden">
+
+      <!-- Content header -->
+      <div class="px-5 md:px-8 pt-5 md:pt-6 pb-4 border-b border-gray-100 dark:border-gray-700/40">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <h2 class="text-base md:text-lg font-semibold text-gray-900 dark:text-white leading-tight">Sprint Planning — Q1 Roadmap</h2>
+            <div class="flex items-center gap-3 mt-1.5 text-[12px] text-gray-400 dark:text-gray-500">
+              <span>Jan 15, 2025</span>
+              <span class="w-0.5 h-0.5 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+              <span>45 min</span>
+              <span class="w-0.5 h-0.5 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+              <span>Google Meet</span>
+            </div>
+          </div>
+          <!-- Participants -->
+          <div class="flex -space-x-1.5 flex-shrink-0">
+            <div class="w-7 h-7 rounded-full bg-emerald-100 dark:bg-emerald-900/40 border-2 border-white dark:border-gray-800 flex items-center justify-center"><span class="text-[10px] font-semibold text-emerald-700 dark:text-emerald-300">SC</span></div>
+            <div class="w-7 h-7 rounded-full bg-blue-100 dark:bg-blue-900/40 border-2 border-white dark:border-gray-800 flex items-center justify-center"><span class="text-[10px] font-semibold text-blue-700 dark:text-blue-300">MK</span></div>
+            <div class="w-7 h-7 rounded-full bg-amber-100 dark:bg-amber-900/40 border-2 border-white dark:border-gray-800 flex items-center justify-center"><span class="text-[10px] font-semibold text-amber-700 dark:text-amber-300">AL</span></div>
+            <div class="w-7 h-7 rounded-full bg-rose-100 dark:bg-rose-900/40 border-2 border-white dark:border-gray-800 flex items-center justify-center"><span class="text-[10px] font-semibold text-rose-700 dark:text-rose-300">JR</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Summary content -->
+      <div class="px-5 md:px-8 py-5 md:py-6 space-y-5 md:space-y-6">
+
+        <!-- Key Points -->
+        <div>
+          <h3 class="text-[11px] font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-3">Key Discussion Points</h3>
+          <div class="space-y-2">
+            <div class="flex items-start gap-2.5">
+              <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-gray-900 dark:bg-white flex-shrink-0"></span>
+              <p class="text-[13px] text-gray-700 dark:text-gray-300 leading-relaxed">Prioritized <span class="font-medium">mobile onboarding redesign</span> based on customer feedback analysis</p>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-gray-400 dark:bg-gray-500 flex-shrink-0"></span>
+              <p class="text-[13px] text-gray-700 dark:text-gray-300 leading-relaxed">API v2 migration timeline confirmed for <span class="font-medium">March release</span></p>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-600 flex-shrink-0"></span>
+              <p class="text-[13px] text-gray-700 dark:text-gray-300 leading-relaxed">Customer churn increased 12% — need deep-dive analysis before next sprint</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Items -->
+        <div>
+          <h3 class="text-[11px] font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-3">Action Items</h3>
+          <div class="rounded-lg border border-gray-100 dark:border-gray-700/50 overflow-hidden">
+            <div class="divide-y divide-gray-100 dark:divide-gray-700/40">
+              <div class="flex items-center justify-between px-3.5 py-2.5 bg-white dark:bg-transparent">
+                <div class="flex items-center gap-2.5 min-w-0">
+                  <span class="w-4 h-4 rounded border border-gray-300 dark:border-gray-600 flex-shrink-0"></span>
+                  <span class="text-[13px] text-gray-700 dark:text-gray-300 truncate">Design mobile onboarding flow</span>
+                </div>
+                <div class="flex items-center gap-2 flex-shrink-0 ml-3">
+                  <span class="text-[11px] text-gray-400 dark:text-gray-500">Jan 22</span>
+                  <div class="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-900/40 flex items-center justify-center"><span class="text-[8px] font-bold text-emerald-700 dark:text-emerald-300">SC</span></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between px-3.5 py-2.5 bg-white dark:bg-transparent">
+                <div class="flex items-center gap-2.5 min-w-0">
+                  <span class="w-4 h-4 rounded border border-gray-300 dark:border-gray-600 flex-shrink-0"></span>
+                  <span class="text-[13px] text-gray-700 dark:text-gray-300 truncate">Draft API v2 migration plan</span>
+                </div>
+                <div class="flex items-center gap-2 flex-shrink-0 ml-3">
+                  <span class="text-[11px] text-gray-400 dark:text-gray-500">Jan 29</span>
+                  <div class="w-5 h-5 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center"><span class="text-[8px] font-bold text-blue-700 dark:text-blue-300">MK</span></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between px-3.5 py-2.5 bg-white dark:bg-transparent">
+                <div class="flex items-center gap-2.5 min-w-0">
+                  <span class="w-4 h-4 rounded border border-gray-300 dark:border-gray-600 flex-shrink-0"></span>
+                  <span class="text-[13px] text-gray-700 dark:text-gray-300 truncate">Pull churn data for Q4 analysis</span>
+                </div>
+                <div class="flex items-center gap-2 flex-shrink-0 ml-3">
+                  <span class="text-[11px] text-gray-400 dark:text-gray-500">Jan 20</span>
+                  <div class="w-5 h-5 rounded-full bg-amber-100 dark:bg-amber-900/40 flex items-center justify-center"><span class="text-[8px] font-bold text-amber-700 dark:text-amber-300">AL</span></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between px-3.5 py-2.5 bg-white dark:bg-transparent">
+                <div class="flex items-center gap-2.5 min-w-0">
+                  <svg class="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75 11.25 15 15 9.75"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+                  <span class="text-[13px] text-gray-400 dark:text-gray-500 line-through truncate">Schedule stakeholder review meeting</span>
+                </div>
+                <div class="flex items-center gap-2 flex-shrink-0 ml-3">
+                  <span class="text-[11px] text-gray-300 dark:text-gray-600">Jan 16</span>
+                  <div class="w-5 h-5 rounded-full bg-rose-100 dark:bg-rose-900/40 flex items-center justify-center"><span class="text-[8px] font-bold text-rose-700 dark:text-rose-300">JR</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .ms-mock {
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  }
+</style>
