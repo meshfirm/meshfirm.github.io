@@ -6,26 +6,53 @@ import Footer from '../../components/Footer.astro';
 
 <Layout>
   <Navbar />
-  <body>
 
-    <!-- Hero Section -->
-    <section class="bg-white dark:bg-gray-900">
-      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-24 mt-10">
+  <div class="toolkit-page">
+
+    <!-- ═══════════════════════════════════ HERO ═══════════════════════════════════ -->
+    <section class="relative overflow-hidden bg-white dark:bg-gray-900">
+      <!-- Diamond lattice background -->
+      <div class="absolute inset-0 opacity-[0.025] dark:opacity-[0.04] pointer-events-none">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <pattern id="norse-lattice-hero" x="0" y="0" width="56" height="56" patternUnits="userSpaceOnUse">
+            <path d="M28 0 L56 28 L28 56 L0 28Z" fill="none" stroke="#6B7280" stroke-width="0.6"/>
+          </pattern>
+          <rect width="100%" height="100%" fill="url(#norse-lattice-hero)" />
+        </svg>
+      </div>
+
+      <div class="relative pt-28 lg:pt-36 pb-16 lg:pb-24 px-4 mx-auto max-w-screen-xl">
         <div class="mx-auto max-w-screen-md text-center">
-          <span class="inline-flex items-center px-3 py-1 mb-6 text-sm font-medium text-brand-800 bg-brand-50 rounded-full dark:bg-brand-900/30 dark:text-brand-300">
-            100% Free Resources
-          </span>
-          <h1 class="mb-6 text-4xl font-bold tracking-tight leading-none text-gray-900 md:text-5xl xl:text-6xl dark:text-white">
-            The Product Manager's Toolkit
+
+          <!-- Badge -->
+          <div class="reveal mb-8">
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+              <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0"/>
+              </svg>
+              <span class="text-sm font-medium text-gray-600 dark:text-gray-300">100% Free Resources</span>
+            </span>
+          </div>
+
+          <!-- Headline -->
+          <h1 class="reveal rd1 text-5xl md:text-6xl xl:text-7xl font-semibold leading-[1.08] tracking-tight text-gray-900 dark:text-white mb-6">
+            The Product Manager's <span class="text-brand-600 dark:text-brand-400">Toolkit</span>
           </h1>
-          <p class="mb-8 max-w-2xl mx-auto font-medium text-gray-600 md:text-lg xl:text-xl dark:text-gray-400">
-            Free learning materials, practical tools, and ready-to-use templates to help you build better products. Created by PMs, for PMs.
+
+          <!-- Subtitle -->
+          <p class="reveal rd2 text-lg text-gray-500 dark:text-gray-400 max-w-xl mx-auto leading-relaxed mb-10">
+            Free learning materials, practical tools, and ready-to-use templates to help you build better products. Created by PMs, for&nbsp;PMs.
           </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#learn" class="text-white bg-brand-800 hover:bg-brand-600 focus:ring-4 focus:outline-none focus:ring-brand-100 font-medium rounded-lg px-6 py-3 text-center dark:bg-brand-800 dark:hover:bg-brand-600 dark:focus:ring-brand-800">
+
+          <!-- CTAs -->
+          <div class="reveal rd3 flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="#learn" class="inline-flex items-center px-6 py-3 text-white bg-brand-700 hover:bg-brand-800 rounded-lg font-medium transition-colors focus:ring-4 focus:ring-brand-200 dark:focus:ring-brand-900">
               Start Learning
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
             </a>
-            <a href="#tools" class="text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg px-6 py-3 text-center dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-700">
+            <a href="#tools" class="inline-flex items-center px-6 py-3 text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium transition-colors">
               Explore Tools
             </a>
           </div>
@@ -33,252 +60,335 @@ import Footer from '../../components/Footer.astro';
       </div>
     </section>
 
-    <!-- Learning Materials Section -->
-    <section id="learn" class="bg-gray-50 dark:bg-gray-800">
-      <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-        <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-16">
-          <span class="inline-flex items-center px-3 py-1 mb-4 text-sm font-medium text-brand-800 bg-brand-50 rounded-full dark:bg-brand-900/30 dark:text-brand-300">
-            Learn
-          </span>
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Level Up Your PM Skills</h2>
-          <p class="text-gray-600 dark:text-gray-400 sm:text-xl">Practical guides and deep dives into the skills that matter most for product managers.</p>
+    <!-- Divider -->
+    <div class="norse-divider mx-auto max-w-screen-lg"></div>
+
+    <!-- ═══════════════════════════════ LEARNING MATERIALS ═══════════════════════════════ -->
+    <section id="learn" class="bg-gray-50 dark:bg-gray-800/50">
+      <div class="py-16 lg:py-24 px-4 mx-auto max-w-screen-xl">
+
+        <!-- Section heading -->
+        <div class="text-center mb-14">
+          <h2 class="reveal text-3xl md:text-5xl font-semibold text-gray-900 dark:text-white mb-4">Level Up Your PM Skills</h2>
+          <p class="reveal rd1 text-lg text-gray-500 dark:text-gray-400 max-w-xl mx-auto leading-relaxed">Practical guides and deep dives into the skills that matter most for product managers.</p>
         </div>
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+        <!-- Cards grid -->
+        <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
 
           <!-- Card 1 -->
-          <a href="#" class="block p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow dark:bg-gray-900 group">
-            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-lg bg-brand-100 lg:h-12 lg:w-12 dark:bg-brand-800">
-              <svg class="w-5 h-5 text-brand-800 lg:w-6 lg:h-6 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.005 11.19V12l6.998 4.042L19 12v-.81M5 16.15v.81L11.997 21l6.998-4.042v-.81M12.003 3 5.005 7.042l6.998 4.042L19 7.042 12.003 3Z"/>
-              </svg>
+          <div class="feature-card reveal rd1 group p-8 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-800/40">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-700/50 transition-colors group-hover:bg-gray-200 dark:group-hover:bg-gray-700">
+                <svg class="w-5 h-5 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5.005 11.19V12l6.998 4.042L19 12v-.81M5 16.15v.81L11.997 21l6.998-4.042v-.81M12.003 3 5.005 7.042l6.998 4.042L19 7.042 12.003 3Z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Prioritization Frameworks</h3>
             </div>
-            <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">Prioritization Frameworks</h3>
-            <p class="text-gray-600 dark:text-gray-400">Master RICE, MoSCoW, Kano, and other frameworks to make better prioritization decisions.</p>
-            <span class="inline-flex items-center mt-4 text-sm font-medium text-brand-600 dark:text-brand-400">
-              Coming soon
-              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            </span>
-          </a>
+            <p class="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">Master RICE, MoSCoW, Kano, and other frameworks to make better prioritization decisions.</p>
+            <span class="text-sm text-gray-400 dark:text-gray-500">Coming soon</span>
+          </div>
 
           <!-- Card 2 -->
-          <a href="#" class="block p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow dark:bg-gray-900 group">
-            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-lg bg-brand-100 lg:h-12 lg:w-12 dark:bg-brand-800">
-              <svg class="w-5 h-5 text-brand-800 lg:w-6 lg:h-6 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.872 9.687 20 6.56 17.44 4 4 17.44 6.56 20 16.873 9.687Zm0 0-2.56-2.56M6 7v2m0 0v2m0-2H4m2 0h2m7 7v2m0 0v2m0-2h-2m2 0h2M8 4h.01v.01H8V4Zm2 2h.01v.01H10V6Zm2-2h.01v.01H12V4Zm8 8h.01v.01H20V12Zm-2 2h.01v.01H18V14Zm2 2h.01v.01H20V16Z"/>
-              </svg>
+          <div class="feature-card reveal rd2 group p-8 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-800/40">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-700/50 transition-colors group-hover:bg-gray-200 dark:group-hover:bg-gray-700">
+                <svg class="w-5 h-5 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16.872 9.687 20 6.56 17.44 4 4 17.44 6.56 20 16.873 9.687Zm0 0-2.56-2.56M6 7v2m0 0v2m0-2H4m2 0h2m7 7v2m0 0v2m0-2h-2m2 0h2M8 4h.01v.01H8V4Zm2 2h.01v.01H10V6Zm2-2h.01v.01H12V4Zm8 8h.01v.01H20V12Zm-2 2h.01v.01H18V14Zm2 2h.01v.01H20V16Z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">User Research Methods</h3>
             </div>
-            <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">User Research Methods</h3>
-            <p class="text-gray-600 dark:text-gray-400">Learn how to run effective user interviews, surveys, and usability tests.</p>
-            <span class="inline-flex items-center mt-4 text-sm font-medium text-brand-600 dark:text-brand-400">
-              Coming soon
-              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            </span>
-          </a>
+            <p class="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">Learn how to run effective user interviews, surveys, and usability tests.</p>
+            <span class="text-sm text-gray-400 dark:text-gray-500">Coming soon</span>
+          </div>
 
           <!-- Card 3 -->
-          <a href="#" class="block p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow dark:bg-gray-900 group">
-            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-lg bg-brand-100 lg:h-12 lg:w-12 dark:bg-brand-800">
-              <svg class="w-5 h-5 text-brand-800 lg:w-6 lg:h-6 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 3v4a1 1 0 0 1-1 1H5m4 10v-2m3 2v-6m3 6v-3m4-11v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1Z"/>
-              </svg>
+          <div class="feature-card reveal rd3 group p-8 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-800/40">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-700/50 transition-colors group-hover:bg-gray-200 dark:group-hover:bg-gray-700">
+                <svg class="w-5 h-5 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M10 3v4a1 1 0 0 1-1 1H5m4 10v-2m3 2v-6m3 6v-3m4-11v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1Z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Roadmap Planning</h3>
             </div>
-            <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">Roadmap Planning</h3>
-            <p class="text-gray-600 dark:text-gray-400">Build outcome-driven roadmaps that align stakeholders and communicate strategy clearly.</p>
-            <span class="inline-flex items-center mt-4 text-sm font-medium text-brand-600 dark:text-brand-400">
-              Coming soon
-              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            </span>
-          </a>
+            <p class="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">Build outcome-driven roadmaps that align stakeholders and communicate strategy clearly.</p>
+            <span class="text-sm text-gray-400 dark:text-gray-500">Coming soon</span>
+          </div>
 
           <!-- Card 4 -->
-          <a href="#" class="block p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow dark:bg-gray-900 group">
-            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-lg bg-brand-100 lg:h-12 lg:w-12 dark:bg-brand-800">
-              <svg class="w-5 h-5 text-brand-800 lg:w-6 lg:h-6 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.03v13m0-13c-2.819-.831-4.715-1.076-8.029-1.023A.99.99 0 0 0 3 6v11c0 .563.466 1.014 1.03 1.007 3.122-.043 5.018.212 7.97 1.023m0-13c2.819-.831 4.715-1.076 8.029-1.023A.99.99 0 0 1 21 6v11c0 .563-.466 1.014-1.03 1.007-3.122-.043-5.018.212-7.97 1.023"/>
-              </svg>
+          <div class="feature-card reveal rd1 group p-8 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-800/40">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-700/50 transition-colors group-hover:bg-gray-200 dark:group-hover:bg-gray-700">
+                <svg class="w-5 h-5 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.03v13m0-13c-2.819-.831-4.715-1.076-8.029-1.023A.99.99 0 0 0 3 6v11c0 .563.466 1.014 1.03 1.007 3.122-.043 5.018.212 7.97 1.023m0-13c2.819-.831 4.715-1.076 8.029-1.023A.99.99 0 0 1 21 6v11c0 .563-.466 1.014-1.03 1.007-3.122-.043-5.018.212-7.97 1.023"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Stakeholder Management</h3>
             </div>
-            <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">Stakeholder Management</h3>
-            <p class="text-gray-600 dark:text-gray-400">Navigate organizational dynamics, manage expectations, and build alignment across teams.</p>
-            <span class="inline-flex items-center mt-4 text-sm font-medium text-brand-600 dark:text-brand-400">
-              Coming soon
-              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            </span>
-          </a>
+            <p class="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">Navigate organizational dynamics, manage expectations, and build alignment across teams.</p>
+            <span class="text-sm text-gray-400 dark:text-gray-500">Coming soon</span>
+          </div>
 
           <!-- Card 5 -->
-          <a href="#" class="block p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow dark:bg-gray-900 group">
-            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-lg bg-brand-100 lg:h-12 lg:w-12 dark:bg-brand-800">
-              <svg class="w-5 h-5 text-brand-800 lg:w-6 lg:h-6 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.213 9.787a3.391 3.391 0 0 0-4.795 0l-3.425 3.426a3.39 3.39 0 0 0 4.795 4.794l.321-.304m-.321-4.49a3.39 3.39 0 0 0 4.795 0l3.424-3.426a3.39 3.39 0 0 0-4.794-4.795l-1.028.961"/>
-              </svg>
+          <div class="feature-card reveal rd2 group p-8 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-800/40">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-700/50 transition-colors group-hover:bg-gray-200 dark:group-hover:bg-gray-700">
+                <svg class="w-5 h-5 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.213 9.787a3.391 3.391 0 0 0-4.795 0l-3.425 3.426a3.39 3.39 0 0 0 4.795 4.794l.321-.304m-.321-4.49a3.39 3.39 0 0 0 4.795 0l3.424-3.426a3.39 3.39 0 0 0-4.794-4.795l-1.028.961"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Metrics & Analytics</h3>
             </div>
-            <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">Metrics & Analytics</h3>
-            <p class="text-gray-600 dark:text-gray-400">Define the right KPIs, set up measurement frameworks, and use data to drive decisions.</p>
-            <span class="inline-flex items-center mt-4 text-sm font-medium text-brand-600 dark:text-brand-400">
-              Coming soon
-              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            </span>
-          </a>
+            <p class="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">Define the right KPIs, set up measurement frameworks, and use data to drive decisions.</p>
+            <span class="text-sm text-gray-400 dark:text-gray-500">Coming soon</span>
+          </div>
 
           <!-- Card 6 -->
-          <a href="#" class="block p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow dark:bg-gray-900 group">
-            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-lg bg-brand-100 lg:h-12 lg:w-12 dark:bg-brand-800">
-              <svg class="w-5 h-5 text-brand-800 lg:w-6 lg:h-6 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 9a3 3 0 0 1 3-3m-2 15h4m0-3c0-4.1 4-4.9 4-9A6 6 0 1 0 6 9c0 4 4 5 4 9h4Z"/>
-              </svg>
+          <div class="feature-card reveal rd3 group p-8 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-800/40">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-700/50 transition-colors group-hover:bg-gray-200 dark:group-hover:bg-gray-700">
+                <svg class="w-5 h-5 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 9a3 3 0 0 1 3-3m-2 15h4m0-3c0-4.1 4-4.9 4-9A6 6 0 1 0 6 9c0 4 4 5 4 9h4Z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Discovery & Ideation</h3>
             </div>
-            <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">Discovery & Ideation</h3>
-            <p class="text-gray-600 dark:text-gray-400">Continuous discovery techniques and ideation methods to find problems worth solving.</p>
-            <span class="inline-flex items-center mt-4 text-sm font-medium text-brand-600 dark:text-brand-400">
-              Coming soon
-              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            </span>
-          </a>
+            <p class="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">Continuous discovery techniques and ideation methods to find problems worth solving.</p>
+            <span class="text-sm text-gray-400 dark:text-gray-500">Coming soon</span>
+          </div>
 
         </div>
       </div>
     </section>
 
-    <!-- Tools Section -->
+    <!-- ═══════════════════════════════ FREE PM TOOLS ═══════════════════════════════ -->
     <section id="tools" class="bg-white dark:bg-gray-900">
-      <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-        <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-16">
-          <span class="inline-flex items-center px-3 py-1 mb-4 text-sm font-medium text-brand-800 bg-brand-50 rounded-full dark:bg-brand-900/30 dark:text-brand-300">
-            Tools
-          </span>
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Free PM Tools</h2>
-          <p class="text-gray-600 dark:text-gray-400 sm:text-xl">Small, focused tools to help you work faster and make better decisions. No sign-up required.</p>
+      <div class="py-16 lg:py-24 px-4 mx-auto max-w-screen-xl">
+
+        <!-- Section heading -->
+        <div class="text-center mb-14">
+          <h2 class="reveal text-3xl md:text-5xl font-semibold text-gray-900 dark:text-white mb-4">Free PM Tools</h2>
+          <p class="reveal rd1 text-lg text-gray-500 dark:text-gray-400 max-w-xl mx-auto leading-relaxed">Small, focused tools to help you work faster and make better decisions. No sign-up required.</p>
         </div>
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+        <!-- Tools grid -->
+        <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
 
           <!-- Tool 1 -->
-          <div class="p-6 bg-gray-50 rounded-lg dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
-            <div class="flex items-center mb-4">
-              <div class="flex justify-center items-center w-10 h-10 rounded-lg bg-brand-100 lg:h-12 lg:w-12 dark:bg-brand-800">
-                <svg class="w-5 h-5 text-brand-800 lg:w-6 lg:h-6 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 3v4a1 1 0 0 1-1 1H5m4 10v-2m3 2v-6m3 6v-3m4-11v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1Z"/>
+          <div class="feature-card reveal rd1 group p-8 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-800/40">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-700/50 transition-colors group-hover:bg-gray-200 dark:group-hover:bg-gray-700">
+                <svg class="w-5 h-5 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M10 3v4a1 1 0 0 1-1 1H5m4 10v-2m3 2v-6m3 6v-3m4-11v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1Z"/>
                 </svg>
               </div>
-              <span class="ml-3 px-2.5 py-0.5 text-xs font-medium bg-gray-200 text-gray-700 rounded dark:bg-gray-700 dark:text-gray-300">Interactive</span>
+              <div class="flex items-center gap-2">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">RICE Score Calculator</h3>
+                <span class="px-2 py-0.5 text-[11px] font-medium text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-700/50 rounded">Interactive</span>
+              </div>
             </div>
-            <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">RICE Score Calculator</h3>
-            <p class="mb-4 text-gray-600 dark:text-gray-400">Quickly calculate RICE scores for your feature ideas and compare them side by side.</p>
-            <span class="inline-flex items-center text-sm font-medium text-gray-400 dark:text-gray-500">Coming soon</span>
+            <p class="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">Quickly calculate RICE scores for your feature ideas and compare them side by side.</p>
+            <span class="text-sm text-gray-400 dark:text-gray-500">Coming soon</span>
           </div>
 
           <!-- Tool 2 -->
-          <div class="p-6 bg-gray-50 rounded-lg dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
-            <div class="flex items-center mb-4">
-              <div class="flex justify-center items-center w-10 h-10 rounded-lg bg-brand-100 lg:h-12 lg:w-12 dark:bg-brand-800">
-                <svg class="w-5 h-5 text-brand-800 lg:w-6 lg:h-6 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z"/>
+          <div class="feature-card reveal rd2 group p-8 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-800/40">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-700/50 transition-colors group-hover:bg-gray-200 dark:group-hover:bg-gray-700">
+                <svg class="w-5 h-5 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z"/>
                 </svg>
               </div>
-              <span class="ml-3 px-2.5 py-0.5 text-xs font-medium bg-gray-200 text-gray-700 rounded dark:bg-gray-700 dark:text-gray-300">Interactive</span>
+              <div class="flex items-center gap-2">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">User Story Generator</h3>
+                <span class="px-2 py-0.5 text-[11px] font-medium text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-700/50 rounded">Interactive</span>
+              </div>
             </div>
-            <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">User Story Generator</h3>
-            <p class="mb-4 text-gray-600 dark:text-gray-400">Turn rough ideas into well-structured user stories with acceptance criteria.</p>
-            <span class="inline-flex items-center text-sm font-medium text-gray-400 dark:text-gray-500">Coming soon</span>
+            <p class="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">Turn rough ideas into well-structured user stories with acceptance criteria.</p>
+            <span class="text-sm text-gray-400 dark:text-gray-500">Coming soon</span>
           </div>
 
           <!-- Tool 3 -->
-          <div class="p-6 bg-gray-50 rounded-lg dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
-            <div class="flex items-center mb-4">
-              <div class="flex justify-center items-center w-10 h-10 rounded-lg bg-brand-100 lg:h-12 lg:w-12 dark:bg-brand-800">
-                <svg class="w-5 h-5 text-brand-800 lg:w-6 lg:h-6 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+          <div class="feature-card reveal rd3 group p-8 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-800/40">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-700/50 transition-colors group-hover:bg-gray-200 dark:group-hover:bg-gray-700">
+                <svg class="w-5 h-5 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
                 </svg>
               </div>
-              <span class="ml-3 px-2.5 py-0.5 text-xs font-medium bg-gray-200 text-gray-700 rounded dark:bg-gray-700 dark:text-gray-300">Interactive</span>
+              <div class="flex items-center gap-2">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Sprint Velocity Tracker</h3>
+                <span class="px-2 py-0.5 text-[11px] font-medium text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-700/50 rounded">Interactive</span>
+              </div>
             </div>
-            <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Sprint Velocity Tracker</h3>
-            <p class="mb-4 text-gray-600 dark:text-gray-400">Track your team's velocity over time and forecast delivery with simple charts.</p>
-            <span class="inline-flex items-center text-sm font-medium text-gray-400 dark:text-gray-500">Coming soon</span>
+            <p class="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">Track your team's velocity over time and forecast delivery with simple charts.</p>
+            <span class="text-sm text-gray-400 dark:text-gray-500">Coming soon</span>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- Templates Section -->
-    <section id="templates" class="bg-gray-50 dark:bg-gray-800">
-      <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-        <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-16">
-          <span class="inline-flex items-center px-3 py-1 mb-4 text-sm font-medium text-brand-800 bg-brand-50 rounded-full dark:bg-brand-900/30 dark:text-brand-300">
-            Templates
-          </span>
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Ready-to-Use Templates</h2>
-          <p class="text-gray-600 dark:text-gray-400 sm:text-xl">Download and customize templates that real product managers use every day.</p>
+    <!-- ═══════════════════════════════ TEMPLATES ═══════════════════════════════ -->
+    <section id="templates" class="bg-gray-50 dark:bg-gray-800/50">
+      <div class="py-16 lg:py-24 px-4 mx-auto max-w-screen-xl">
+
+        <!-- Section heading -->
+        <div class="text-center mb-14">
+          <h2 class="reveal text-3xl md:text-5xl font-semibold text-gray-900 dark:text-white mb-4">Ready-to-Use Templates</h2>
+          <p class="reveal rd1 text-lg text-gray-500 dark:text-gray-400 max-w-xl mx-auto leading-relaxed">Download and customize templates that real product managers use every day.</p>
         </div>
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+
+        <!-- Templates grid -->
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
 
           <!-- Template 1 -->
-          <div class="p-5 bg-white rounded-lg shadow dark:bg-gray-900 text-center">
-            <div class="flex justify-center items-center mx-auto mb-4 w-12 h-12 rounded-lg bg-brand-100 dark:bg-brand-800">
-              <svg class="w-6 h-6 text-brand-800 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 3v4a1 1 0 0 1-1 1H5m4 8h6m-6-4h6m4-8v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1Z"/>
+          <div class="reveal rd1 text-center">
+            <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 dark:bg-gray-800 mb-4">
+              <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 3v4a1 1 0 0 1-1 1H5m4 8h6m-6-4h6m4-8v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1Z"/>
               </svg>
             </div>
-            <h3 class="mb-1 text-lg font-bold text-gray-900 dark:text-white">PRD Template</h3>
-            <p class="mb-3 text-sm text-gray-600 dark:text-gray-400">Product requirements document</p>
-            <span class="text-xs font-medium text-gray-400 dark:text-gray-500">Coming soon</span>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">PRD Template</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-3">Product requirements document</p>
+            <span class="text-xs text-gray-400 dark:text-gray-500">Coming soon</span>
           </div>
 
           <!-- Template 2 -->
-          <div class="p-5 bg-white rounded-lg shadow dark:bg-gray-900 text-center">
-            <div class="flex justify-center items-center mx-auto mb-4 w-12 h-12 rounded-lg bg-brand-100 dark:bg-brand-800">
-              <svg class="w-6 h-6 text-brand-800 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.872 9.687 20 6.56 17.44 4 4 17.44 6.56 20 16.873 9.687Zm0 0-2.56-2.56M6 7v2m0 0v2m0-2H4m2 0h2m7 7v2m0 0v2m0-2h-2m2 0h2M8 4h.01v.01H8V4Zm2 2h.01v.01H10V6Zm2-2h.01v.01H12V4Zm8 8h.01v.01H20V12Zm-2 2h.01v.01H18V14Zm2 2h.01v.01H20V16Z"/>
+          <div class="reveal rd2 text-center">
+            <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 dark:bg-gray-800 mb-4">
+              <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16.872 9.687 20 6.56 17.44 4 4 17.44 6.56 20 16.873 9.687Zm0 0-2.56-2.56M6 7v2m0 0v2m0-2H4m2 0h2m7 7v2m0 0v2m0-2h-2m2 0h2M8 4h.01v.01H8V4Zm2 2h.01v.01H10V6Zm2-2h.01v.01H12V4Zm8 8h.01v.01H20V12Zm-2 2h.01v.01H18V14Zm2 2h.01v.01H20V16Z"/>
               </svg>
             </div>
-            <h3 class="mb-1 text-lg font-bold text-gray-900 dark:text-white">Sprint Retro</h3>
-            <p class="mb-3 text-sm text-gray-600 dark:text-gray-400">Retrospective meeting format</p>
-            <span class="text-xs font-medium text-gray-400 dark:text-gray-500">Coming soon</span>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Sprint Retro</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-3">Retrospective meeting format</p>
+            <span class="text-xs text-gray-400 dark:text-gray-500">Coming soon</span>
           </div>
 
           <!-- Template 3 -->
-          <div class="p-5 bg-white rounded-lg shadow dark:bg-gray-900 text-center">
-            <div class="flex justify-center items-center mx-auto mb-4 w-12 h-12 rounded-lg bg-brand-100 dark:bg-brand-800">
-              <svg class="w-6 h-6 text-brand-800 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.03v13m0-13c-2.819-.831-4.715-1.076-8.029-1.023A.99.99 0 0 0 3 6v11c0 .563.466 1.014 1.03 1.007 3.122-.043 5.018.212 7.97 1.023m0-13c2.819-.831 4.715-1.076 8.029-1.023A.99.99 0 0 1 21 6v11c0 .563-.466 1.014-1.03 1.007-3.122-.043-5.018.212-7.97 1.023"/>
+          <div class="reveal rd3 text-center">
+            <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 dark:bg-gray-800 mb-4">
+              <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.03v13m0-13c-2.819-.831-4.715-1.076-8.029-1.023A.99.99 0 0 0 3 6v11c0 .563.466 1.014 1.03 1.007 3.122-.043 5.018.212 7.97 1.023m0-13c2.819-.831 4.715-1.076 8.029-1.023A.99.99 0 0 1 21 6v11c0 .563-.466 1.014-1.03 1.007-3.122-.043-5.018.212-7.97 1.023"/>
               </svg>
             </div>
-            <h3 class="mb-1 text-lg font-bold text-gray-900 dark:text-white">OKR Planner</h3>
-            <p class="mb-3 text-sm text-gray-600 dark:text-gray-400">Objectives & key results sheet</p>
-            <span class="text-xs font-medium text-gray-400 dark:text-gray-500">Coming soon</span>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">OKR Planner</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-3">Objectives & key results sheet</p>
+            <span class="text-xs text-gray-400 dark:text-gray-500">Coming soon</span>
           </div>
 
           <!-- Template 4 -->
-          <div class="p-5 bg-white rounded-lg shadow dark:bg-gray-900 text-center">
-            <div class="flex justify-center items-center mx-auto mb-4 w-12 h-12 rounded-lg bg-brand-100 dark:bg-brand-800">
-              <svg class="w-6 h-6 text-brand-800 dark:text-brand-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 19h4a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-2m-2.236-4a3 3 0 1 0 0-4M3 18v-1a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1Zm8-10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+          <div class="reveal rd4 text-center">
+            <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 dark:bg-gray-800 mb-4">
+              <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16 19h4a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-2m-2.236-4a3 3 0 1 0 0-4M3 18v-1a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1Zm8-10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
               </svg>
             </div>
-            <h3 class="mb-1 text-lg font-bold text-gray-900 dark:text-white">Interview Script</h3>
-            <p class="mb-3 text-sm text-gray-600 dark:text-gray-400">User interview question bank</p>
-            <span class="text-xs font-medium text-gray-400 dark:text-gray-500">Coming soon</span>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Interview Script</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-3">User interview question bank</p>
+            <span class="text-xs text-gray-400 dark:text-gray-500">Coming soon</span>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="bg-white dark:bg-gray-900">
-      <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-        <div class="mx-auto max-w-screen-md text-center">
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Want an AI that does PM work for you?</h2>
-          <p class="mb-8 text-gray-600 dark:text-gray-400 sm:text-xl">Sindre captures insights from meetings, manages tasks, and helps you make better product decisions - automatically.</p>
-          <a href="https://app.sindre.ai/login" class="text-white bg-brand-800 hover:bg-brand-600 focus:ring-4 focus:outline-none focus:ring-brand-100 font-medium rounded-lg px-6 py-3 text-center dark:bg-brand-800 dark:hover:bg-brand-600 dark:focus:ring-brand-800">
+    <!-- ═══════════════════════════════ CTA SECTION ═══════════════════════════════ -->
+    <section class="relative bg-gray-900 dark:bg-gray-800 overflow-hidden">
+      <!-- Lattice overlay -->
+      <div class="absolute inset-0 opacity-[0.05] pointer-events-none">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <pattern id="cta-lattice" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M20 0 L40 20 L20 40 L0 20Z" fill="none" stroke="white" stroke-width="0.5"/>
+          </pattern>
+          <rect width="100%" height="100%" fill="url(#cta-lattice)" />
+        </svg>
+      </div>
+
+      <div class="relative py-16 lg:py-24 px-4 mx-auto max-w-screen-md text-center">
+        <h2 class="reveal text-3xl md:text-5xl font-semibold text-white mb-4">Want an AI that does PM work for you?</h2>
+        <p class="reveal rd1 text-lg text-gray-400 max-w-xl mx-auto leading-relaxed mb-10">
+          Sindre captures insights from meetings, manages tasks, and helps you make better product decisions&nbsp;&mdash; automatically.
+        </p>
+        <div class="reveal rd2 flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="https://app.sindre.ai/login" class="inline-flex items-center px-6 py-3 text-white bg-brand-700 hover:bg-brand-800 rounded-lg font-medium transition-colors focus:ring-4 focus:ring-brand-200 dark:focus:ring-brand-900">
             Try Sindre Free
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
           </a>
-          <p class="text-sm text-gray-500 mt-3 dark:text-gray-400">14 days free trial</p>
+          <a href="https://www.sindre.ai" class="inline-flex items-center px-6 py-3 text-gray-300 border border-gray-600 hover:bg-gray-800 dark:hover:bg-gray-700 rounded-lg font-medium transition-colors">
+            Learn more
+          </a>
         </div>
+        <p class="reveal rd3 text-sm text-gray-500 mt-6">14 days free trial &middot; No credit card required</p>
       </div>
     </section>
 
     <Footer />
 
-  </body>
+  </div>
 </Layout>
+
+<style>
+  .toolkit-page {
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  }
+
+  /* Norse divider */
+  .norse-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #9CA3AF, transparent);
+    opacity: 0.3;
+  }
+  .dark .norse-divider { opacity: 0.15; }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .rd1 { transition-delay: 0.1s; }
+  .rd2 { transition-delay: 0.2s; }
+  .rd3 { transition-delay: 0.3s; }
+  .rd4 { transition-delay: 0.4s; }
+
+  /* Feature card hover */
+  .feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .feature-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  }
+  :global(.dark) .feature-card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  }
+</style>
+
+<script is:inline>
+  // Scroll reveal observer
+  (function() {
+    var observer = new IntersectionObserver(
+      function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -32px 0px' }
+    );
+    document.querySelectorAll('.toolkit-page .reveal').forEach(function(el) {
+      observer.observe(el);
+    });
+  })();
+</script>

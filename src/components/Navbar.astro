@@ -1,112 +1,239 @@
 <header>
-    <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800 fixed w-full z-20 top-0 start-0 border-b dark:border-gray-600">
-        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-            <a href="https://www.sindre.ai" class="flex items-center">
-                <img src="/sindre-logo-1024.png" class="rounded-md mr-3 h-6 sm:h-9" alt="Sindre Logo" />
-                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Sindre</span>
-            </a>
-            <div class="flex items-center lg:order-2">
-                <!-- Added wrapper div with hidden/block classes -->
-                <div class="hidden lg:block">
-                    <a href="https://app.sindre.ai"
-                        class="text-black hover:bg-gray-50 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-4 py-2 lg:px-5 lg:py-2.5 mr-2 dark:bg-brand-800 dark:hover:bg-brand-600 focus:outline-none dark:focus:ring-brand-800">
-                        Log in
-                    </a>
-                    <a href="https://app.sindre.ai/signup"
-                        class="text-white bg-brand-800 hover:bg-brand-600 focus:ring-4 focus:ring-brand-100 font-medium rounded-lg text-sm px-4 py-2 lg:px-5 lg:py-2.5 mr-2 dark:bg-brand-800 dark:hover:bg-brand-600 focus:outline-none dark:focus:ring-brand-800">
-                        Sign up
-                    </a>
-                </div>
-                <button data-collapse-toggle="mobile-menu-2" type="button"
-                    class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                    aria-controls="mobile-menu-2" aria-expanded="false">
-                    <!-- Button content remains unchanged -->
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                    <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </button>
-                <!-- Dark mode toggle button
-                <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 p-2 rounded-lg flex items-center">
-                    <span class="sr-only">Toggle dark mode</span>
-                    <svg id="theme-icon" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" />
-                    </svg>
-                </button>
-                 -->
+  <nav class="navbar-root bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border-b border-gray-100 dark:border-gray-800/60 fixed w-full z-20 top-0 start-0">
+    <div class="flex items-center justify-between mx-auto max-w-screen-xl px-4 lg:px-6 h-16">
+
+      <!-- Logo -->
+      <a href="https://www.sindre.ai" class="flex items-center gap-2.5 flex-shrink-0">
+        <img src="/sindre-logo-1024.png" class="w-7 h-7 rounded-md" alt="Sindre Logo" />
+        <span class="text-[15px] font-semibold text-gray-900 dark:text-white tracking-[-0.01em]">Sindre</span>
+      </a>
+
+      <!-- Desktop nav links (centered) -->
+      <div class="hidden lg:flex items-center gap-1">
+        <a href="https://www.sindre.ai/meeting-agent/"
+           class="nav-link px-3.5 py-2 text-[13px] font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white rounded-lg transition-colors duration-200">
+          AI Meeting Agent
+        </a>
+        <a href="https://www.sindre.ai/toolkit"
+           class="nav-link px-3.5 py-2 text-[13px] font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white rounded-lg transition-colors duration-200">
+          Toolkit
+        </a>
+
+        <!-- Apps dropdown -->
+        <div class="relative" id="apps-dropdown-wrapper">
+          <button type="button" id="apps-dropdown-btn"
+                  class="nav-link inline-flex items-center gap-1 px-3.5 py-2 text-[13px] font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white rounded-lg transition-colors duration-200">
+            Apps
+            <svg class="w-3.5 h-3.5 opacity-50 transition-transform duration-200" id="apps-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div id="apps-dropdown-menu" class="apps-dropdown absolute top-full left-1/2 -translate-x-1/2 mt-2 w-52 opacity-0 invisible translate-y-1 transition-all duration-200 ease-out z-30">
+            <div class="rounded-xl border border-gray-200/80 dark:border-gray-700/50 bg-white dark:bg-gray-800 shadow-lg shadow-gray-900/[0.08] dark:shadow-black/30 overflow-hidden py-1.5">
+              <a href="https://www.sindre.ai/zoom" class="flex items-center gap-3 px-4 py-2.5 text-[13px] text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors duration-150">
+                <img src="/zoom.svg" class="w-5 h-5" alt="Zoom" />
+                <span>Zoom App</span>
+              </a>
+              <a href="https://www.sindre.ai/linear" class="flex items-center gap-3 px-4 py-2.5 text-[13px] text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors duration-150">
+                <img src="/Linear.png" class="w-5 h-5" alt="Linear" />
+                <span>Linear App</span>
+              </a>
+              <a href="https://www.sindre.ai/slack" class="flex items-center gap-3 px-4 py-2.5 text-[13px] text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors duration-150">
+                <img src="/slack.png" class="w-5 h-5" alt="Slack" />
+                <span>Slack App</span>
+              </a>
             </div>
-            
-            <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
-                <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-                    <li>
-                        <a href="https://www.sindre.ai/meeting-agent/"
-                            class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-brand-600 lg:p-0 dark:text-gray-400 lg:dark:hover:text-brand-600 dark:hover:bg-gray-700 dark:hover:text-brand-600 lg:dark:hover:bg-transparent dark:border-gray-700"
-                            aria-current="page">AI Meeting Agent</a>
-                    </li>
-                    <li>
-                        <a href="https://www.sindre.ai/toolkit"
-                            class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-brand-600 lg:p-0 dark:text-gray-400 lg:dark:hover:text-brand-600 dark:hover:bg-gray-700 dark:hover:text-brand-600 lg:dark:hover:bg-transparent dark:border-gray-700">Toolkit</a>
-                    </li>
-                    <li>
-                        <button type="button" id="dropdown-button" data-dropdown-toggle="dropdown"
-                            class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 border-b border-gray-100 lg:w-auto hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-brand-600 lg:p-0 dark:text-gray-400 lg:dark:hover:text-brand-600 dark:hover:bg-gray-700 dark:hover:text-brand-600 lg:dark:hover:bg-transparent dark:border-gray-700">
-                            Apps
-                            <svg class="ml-1 w-5 h-5 lg:w-4 lg:h-4" fill="currentColor" viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                        <div id="dropdown" class="hidden z-10 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
-                            <ul class="py-1 text-sm font-light text-gray-500 dark:text-gray-400" aria-labelledby="dropdown-button">
-                                <!-- <li>
-                                    <a href="https://www.sindre.ai/hubspot" class="flex items-center py-2 px-5 w-full hover:bg-gray-100 hover:text-brand-600 dark:hover:text-brand-600 dark:hover:bg-gray-800">
-                                        <img src="/Hubspot.png" class="mr-3 w-[20px] h-[20px]" alt="Hubspot" />
-                                        <span class="text-left">Hubspot App</span>
-                                    </a>
-                                </li> -->
-                                <li>
-                                    <a href="https://www.sindre.ai/zoom" class="flex items-center py-2 px-5 w-full hover:bg-gray-100 hover:text-brand-600 dark:hover:text-brand-600 dark:hover:bg-gray-800">
-                                        <img src="/zoom.svg" class="mr-3 w-[20px] h-[20px]" alt="Zoom" />
-                                        <span class="text-left">Zoom App</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.sindre.ai/linear" class="flex items-center py-2 px-5 w-full hover:bg-gray-100 hover:text-brand-600 dark:hover:text-brand-600 dark:hover:bg-gray-800">
-                                        <img src="/Linear.png" class="mr-3 w-[20px] h-[20px]" alt="Linear" />
-                                        <span class="text-left">Linear App</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.sindre.ai/slack" class="flex items-center py-2 px-5 w-full hover:bg-gray-100 hover:text-brand-600 dark:hover:text-brand-600 dark:hover:bg-gray-800">
-                                        <img src="/slack.png" class="mr-3 w-[20px] h-[20px]" alt="Slack" />
-                                        <span class="text-left">Slack App</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="https://www.sindre.ai/contact"
-                            class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-brand-600 lg:p-0 dark:text-gray-400 lg:dark:hover:text-brand-600 dark:hover:bg-gray-700 dark:hover:text-brand-600 lg:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
-                    </li>
-                    <li class="block lg:hidden mt-4">
-                        <a href="https://app.sindre.ai"
-                            class="block w-full py-2 pr-4 pl-3 text-center text-white bg-brand-800 hover:bg-brand-600 focus:ring-4 focus:ring-brand-100 font-medium rounded-lg text-sm dark:bg-brand-800 dark:hover:bg-brand-600 focus:outline-none dark:focus:ring-brand-800">
-                            Go to App
-                        </a>
-                    </li>
-                </ul>
-            </div>
+          </div>
         </div>
-    </nav>
+
+        <a href="https://www.sindre.ai/contact"
+           class="nav-link px-3.5 py-2 text-[13px] font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white rounded-lg transition-colors duration-200">
+          Contact
+        </a>
+      </div>
+
+      <!-- Desktop right: auth buttons -->
+      <div class="hidden lg:flex items-center gap-2 flex-shrink-0">
+        <a href="https://app.sindre.ai"
+           class="px-4 py-2 text-[13px] font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">
+          Log in
+        </a>
+        <a href="https://app.sindre.ai/signup"
+           class="inline-flex items-center px-4 py-2 text-[13px] font-medium text-white bg-brand-700 hover:bg-brand-800 rounded-lg transition-colors duration-200 focus:ring-4 focus:ring-brand-200 dark:focus:ring-brand-900">
+          Sign up
+          <svg class="w-3.5 h-3.5 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button type="button" id="mobile-menu-btn"
+              class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
+              aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu-panel">
+        <svg class="w-5 h-5 hamburger-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"/>
+        </svg>
+        <svg class="w-5 h-5 close-icon hidden" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu panel -->
+    <div id="mobile-menu-panel" class="mobile-panel lg:hidden hidden border-t border-gray-100 dark:border-gray-800/60 bg-white dark:bg-gray-900">
+      <div class="px-4 py-4 space-y-1">
+        <a href="https://www.sindre.ai/meeting-agent/"
+           class="block px-3 py-2.5 text-[14px] font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors duration-150">
+          AI Meeting Agent
+        </a>
+        <a href="https://www.sindre.ai/toolkit"
+           class="block px-3 py-2.5 text-[14px] font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors duration-150">
+          Toolkit
+        </a>
+
+        <!-- Mobile apps sub-section -->
+        <div class="px-3 pt-2 pb-1">
+          <span class="text-[11px] font-medium tracking-[0.08em] uppercase text-gray-400 dark:text-gray-500">Apps</span>
+        </div>
+        <a href="https://www.sindre.ai/zoom"
+           class="flex items-center gap-3 px-3 py-2.5 text-[14px] font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors duration-150">
+          <img src="/zoom.svg" class="w-5 h-5" alt="Zoom" />
+          Zoom App
+        </a>
+        <a href="https://www.sindre.ai/linear"
+           class="flex items-center gap-3 px-3 py-2.5 text-[14px] font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors duration-150">
+          <img src="/Linear.png" class="w-5 h-5" alt="Linear" />
+          Linear App
+        </a>
+        <a href="https://www.sindre.ai/slack"
+           class="flex items-center gap-3 px-3 py-2.5 text-[14px] font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors duration-150">
+          <img src="/slack.png" class="w-5 h-5" alt="Slack" />
+          Slack App
+        </a>
+
+        <a href="https://www.sindre.ai/contact"
+           class="block px-3 py-2.5 text-[14px] font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors duration-150">
+          Contact
+        </a>
+
+        <!-- Mobile CTA buttons -->
+        <div class="pt-4 mt-2 border-t border-gray-100 dark:border-gray-800/60 space-y-2">
+          <a href="https://app.sindre.ai"
+             class="block text-center px-4 py-2.5 text-[14px] font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors duration-150">
+            Log in
+          </a>
+          <a href="https://app.sindre.ai/signup"
+             class="block text-center px-4 py-2.5 text-[14px] font-medium text-white bg-brand-700 hover:bg-brand-800 rounded-lg transition-colors duration-200 focus:ring-4 focus:ring-brand-200 dark:focus:ring-brand-900">
+            Sign up free
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
 </header>
+
+<style>
+  .navbar-root {
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  }
+
+  /* Dropdown open state */
+  .apps-dropdown.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  #apps-dropdown-btn.open .#apps-chevron {
+    transform: rotate(180deg);
+  }
+
+  /* Mobile panel animation */
+  .mobile-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.2s ease;
+    opacity: 0;
+  }
+  .mobile-panel.open {
+    max-height: 600px;
+    opacity: 1;
+  }
+  .mobile-panel.open {
+    display: block;
+  }
+</style>
+
+<script is:inline>
+  // Apps dropdown
+  (function() {
+    const btn = document.getElementById('apps-dropdown-btn');
+    const menu = document.getElementById('apps-dropdown-menu');
+    const chevron = document.getElementById('apps-chevron');
+    if (!btn || !menu) return;
+
+    let isOpen = false;
+
+    function toggle() {
+      isOpen = !isOpen;
+      menu.classList.toggle('open', isOpen);
+      if (chevron) chevron.style.transform = isOpen ? 'rotate(180deg)' : '';
+    }
+
+    function close() {
+      isOpen = false;
+      menu.classList.remove('open');
+      if (chevron) chevron.style.transform = '';
+    }
+
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      toggle();
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!menu.contains(e.target) && !btn.contains(e.target)) {
+        close();
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') close();
+    });
+  })();
+
+  // Mobile menu
+  (function() {
+    const btn = document.getElementById('mobile-menu-btn');
+    const panel = document.getElementById('mobile-menu-panel');
+    if (!btn || !panel) return;
+
+    const hamburger = btn.querySelector('.hamburger-icon');
+    const closeIcon = btn.querySelector('.close-icon');
+    let isOpen = false;
+
+    btn.addEventListener('click', function() {
+      isOpen = !isOpen;
+      btn.setAttribute('aria-expanded', isOpen);
+
+      if (isOpen) {
+        panel.classList.remove('hidden');
+        // Force reflow before adding open class for animation
+        panel.offsetHeight;
+        panel.classList.add('open');
+      } else {
+        panel.classList.remove('open');
+        // Wait for animation to finish before hiding
+        setTimeout(function() {
+          if (!panel.classList.contains('open')) {
+            panel.classList.add('hidden');
+          }
+        }, 300);
+      }
+
+      if (hamburger) hamburger.classList.toggle('hidden', isOpen);
+      if (closeIcon) closeIcon.classList.toggle('hidden', !isOpen);
+    });
+  })();
+</script>
