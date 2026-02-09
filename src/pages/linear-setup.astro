@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
 import Footer from '../components/Footer.astro';
 import Navbar from '../components/Navbar.astro';
 ---
@@ -8,148 +7,241 @@ import Navbar from '../components/Navbar.astro';
 <Layout>
   <Navbar />
 
-  <body>
-    <!-- Setup Guide Section start -->
+  <div class="setup-page">
+
+    <!-- Hero -->
     <section class="bg-white dark:bg-gray-900">
-        <div class="py-12 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 mt-10">
-            <div class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
+      <div class="pt-28 lg:pt-36 pb-12 lg:pb-16 px-4 mx-auto max-w-screen-xl">
+        <div class="max-w-screen-md">
 
-                <!-- Heading for Setup Guide -->
-                <div class="max-w-screen-lg mb-12 text-gray-500 sm:text-lg dark:text-gray-400">
-                    <h1 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Linear Integration Setup Guide</h1>
-                    <p class="mb-4">Follow these steps to connect Sindre to your Linear workspace. Setup takes under 5 minutes.</p>
-                </div>
+          <!-- Badge -->
+          <div class="reveal mb-8">
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+              <img src="/Linear.png" class="w-4 h-4" alt="Linear" />
+              <span class="text-sm font-medium text-gray-600 dark:text-gray-300">Setup Guide</span>
+            </span>
+          </div>
 
-                <!-- Step 1 -->
-                <div class="max-w-screen-lg mb-12 text-gray-500 sm:text-lg dark:text-gray-400 py-8 mx-auto max-w-screen-xl lg:py-8">
-                    <h2 class="mb-4 text-2xl tracking-tight font-bold text-gray-900 dark:text-white">1. Sign in to Sindre</h2>
-                    <p class="mb-4"><i>Access your Sindre account to begin setup.</i></p>
-
-                    <ul class="mb-4 space-y-2">
-                        <li class="flex items-start">
-                            <span class="mr-2">1.</span>
-                            Go to&nbsp;<a class="text-brand-600" href="https://app.sindre.ai/signup" target="_blank">app.sindre.ai/signup</a>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">2.</span>
-                            Sign in with your existing account or create a new one
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="max-w-screen-lg mb-12 text-gray-500 sm:text-lg dark:text-gray-400 py-8 mx-auto max-w-screen-xl lg:py-8">
-                    <h2 class="mb-4 text-2xl tracking-tight font-bold text-gray-900 dark:text-white">2. Connect Linear</h2>
-                    <p class="mb-4"><i>Link your Linear workspace to Sindre.</i></p>
-
-                    <ul class="mb-4 space-y-2">
-                        <li class="flex items-start">
-                            <span class="mr-2">1.</span>
-                            Navigate to&nbsp;<a class="text-brand-600" href="https://app.sindre.ai/settings?tab=integrations" target="_blank">Settings → Integrations</a>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">2.</span>
-                            Find Linear in the list of available integrations
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">3.</span>
-                            Click "Connect" and authorize Sindre to access your Linear workspace
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">4.</span>
-                            Select the workspace you want to connect
-                        </li>
-                    </ul>
-
-                    <a href="https://app.sindre.ai/settings?tab=integrations" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700">
-                        Go to Integration Settings
-                        <svg class="ml-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-                    </a>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="max-w-screen-lg mb-12 text-gray-500 sm:text-lg dark:text-gray-400 py-8 mx-auto max-w-screen-xl lg:py-8">
-                    <h2 class="mb-4 text-2xl tracking-tight font-bold text-gray-900 dark:text-white">3. Configure Settings</h2>
-                    <p class="mb-4"><i>Customize how Sindre works with your Linear workspace.</i></p>
-
-                    <ul class="mb-4 space-y-2">
-                        <li class="flex items-start">
-                            <span class="mr-2">1.</span>
-                            Select the preferred workspace in settings
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">2.</span>
-                            Choose whether to automatically add relevant Sindre context when new issues are created
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">3.</span>
-                            Enable or disable automatic creation of Linear issues from meeting action items
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Step 4 -->
-                <div class="max-w-screen-lg mb-12 text-gray-500 sm:text-lg dark:text-gray-400 py-8 mx-auto max-w-screen-xl lg:py-8">
-                    <h2 class="mb-4 text-2xl tracking-tight font-bold text-gray-900 dark:text-white">4. Start Using Sindre in Linear</h2>
-                    <p class="mb-4"><i>Begin enhancing your Linear workflow.</i></p>
-
-                    <ul class="mb-4 space-y-2">
-                        <li class="flex items-start">
-                            <span class="mr-2">1.</span>
-                            Open any issue in Linear
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">2.</span>
-                            Mention @Sindre in a comment to get help with the issue
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">3.</span>
-                            Or assign the issue to Sindre for automatic processing
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">4.</span>
-                            Sindre will analyze the context and provide structured output
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Need help section -->
-                <div class="max-w-screen-lg mb-16 text-gray-500 sm:text-lg dark:text-gray-400 py-8 mx-auto max-w-screen-xl lg:py-8 mt-5">
-                    <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">Need Help?</h2>
-                    <p class="mb-4">Please contact us if you're experiencing troubles when setting up the integration.</p>
-                    <a href="https://www.sindre.ai/contact" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700">
-                        Contact Support
-                        <svg class="ml-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-                    </a>
-                </div>
-            </div>
+          <h1 class="reveal rd1 text-4xl md:text-5xl font-semibold tracking-tight text-gray-900 dark:text-white mb-4">Linear Integration Setup Guide</h1>
+          <p class="reveal rd2 text-lg text-gray-500 dark:text-gray-400 leading-relaxed max-w-lg">Follow these steps to connect Sindre to your Linear workspace. Setup takes under 5&nbsp;minutes.</p>
         </div>
+      </div>
     </section>
-    <!-- Setup Guide Section end -->
 
-    <!-- Get Started CTA Section start -->
-    <section class="bg-gray-50 dark:bg-gray-800">
-        <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-            <div class="max-w-screen-md mx-auto text-center">
-                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Ready to Get Started?</h2>
-                <p class="mb-8 font-light text-gray-500 sm:text-xl dark:text-gray-400">Connect Sindre to Linear and start turning tickets into customer-driven work.</p>
-                <div class="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
-                    <a href="https://app.sindre.ai/signup" class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-center text-white bg-brand-700 rounded-lg hover:bg-brand-800 focus:ring-4 focus:ring-brand-300 dark:focus:ring-brand-900">
-                        Get started
-                    </a>
-                    <a href="/linear" class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-                        Learn more
-                    </a>
-                </div>
-            </div>
+    <!-- Divider -->
+    <div class="norse-divider mx-auto max-w-screen-lg"></div>
+
+    <!-- Steps -->
+    <section class="bg-white dark:bg-gray-900">
+      <div class="py-12 lg:py-20 px-4 mx-auto max-w-screen-xl">
+        <div class="max-w-screen-md space-y-16">
+
+          <!-- Step 1 -->
+          <div class="reveal step-block">
+            <span class="step-num">01</span>
+            <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Sign in to Sindre</h2>
+            <p class="text-sm text-gray-400 dark:text-gray-500 mb-5">Access your Sindre account to begin setup.</p>
+            <ol class="space-y-3 text-gray-500 dark:text-gray-400 leading-relaxed">
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">1</span>
+                Go to <a class="text-brand-600 dark:text-brand-400 hover:underline" href="https://app.sindre.ai/signup" target="_blank">app.sindre.ai/signup</a>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">2</span>
+                Sign in with your existing account or create a new one
+              </li>
+            </ol>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="reveal rd1 step-block">
+            <span class="step-num">02</span>
+            <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Connect Linear</h2>
+            <p class="text-sm text-gray-400 dark:text-gray-500 mb-5">Link your Linear workspace to Sindre.</p>
+            <ol class="space-y-3 text-gray-500 dark:text-gray-400 leading-relaxed">
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">1</span>
+                Navigate to <a class="text-brand-600 dark:text-brand-400 hover:underline" href="https://app.sindre.ai/settings?tab=integrations" target="_blank">Settings &rarr; Integrations</a>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">2</span>
+                Find Linear in the list of available integrations
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">3</span>
+                Click "Connect" and authorize Sindre to access your Linear workspace
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">4</span>
+                Select the workspace you want to connect
+              </li>
+            </ol>
+            <a href="https://app.sindre.ai/settings?tab=integrations" class="inline-flex items-center gap-1 mt-5 text-sm font-medium text-brand-600 dark:text-brand-400 hover:text-brand-800 dark:hover:text-brand-300 transition-colors">
+              Go to Integration Settings
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="reveal rd2 step-block">
+            <span class="step-num">03</span>
+            <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Configure Settings</h2>
+            <p class="text-sm text-gray-400 dark:text-gray-500 mb-5">Customize how Sindre works with your Linear workspace.</p>
+            <ol class="space-y-3 text-gray-500 dark:text-gray-400 leading-relaxed">
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">1</span>
+                Select the preferred workspace in settings
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">2</span>
+                Choose whether to automatically add relevant Sindre context when new issues are created
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">3</span>
+                Enable or disable automatic creation of Linear issues from meeting action items
+              </li>
+            </ol>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="reveal rd3 step-block">
+            <span class="step-num">04</span>
+            <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Start Using Sindre in Linear</h2>
+            <p class="text-sm text-gray-400 dark:text-gray-500 mb-5">Begin enhancing your Linear workflow.</p>
+            <ol class="space-y-3 text-gray-500 dark:text-gray-400 leading-relaxed">
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">1</span>
+                Open any issue in Linear
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">2</span>
+                Mention @Sindre in a comment to get help with the issue
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">3</span>
+                Or assign the issue to Sindre for automatic processing
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">4</span>
+                Sindre will analyze the context and provide structured output
+              </li>
+            </ol>
+          </div>
+
+          <!-- Need Help -->
+          <div class="reveal step-block">
+            <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Need Help?</h2>
+            <p class="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">Please contact us if you're experiencing troubles when setting up the integration.</p>
+            <a href="https://www.sindre.ai/contact" class="inline-flex items-center gap-1 text-sm font-medium text-brand-600 dark:text-brand-400 hover:text-brand-800 dark:hover:text-brand-300 transition-colors">
+              Contact Support
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
         </div>
+      </div>
     </section>
-    <!-- Get Started CTA Section end -->
 
-    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    <!-- CTA Section -->
+    <section class="relative bg-gray-900 dark:bg-gray-800 overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.05] pointer-events-none">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <pattern id="cta-lattice" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M20 0 L40 20 L20 40 L0 20Z" fill="none" stroke="white" stroke-width="0.5"/>
+          </pattern>
+          <rect width="100%" height="100%" fill="url(#cta-lattice)" />
+        </svg>
+      </div>
+      <div class="relative py-16 lg:py-24 px-4 mx-auto max-w-screen-md text-center">
+        <h2 class="reveal text-3xl md:text-5xl font-semibold text-white mb-4">Ready to Get Started?</h2>
+        <p class="reveal rd1 text-lg text-gray-400 max-w-xl mx-auto leading-relaxed mb-10">Connect Sindre to Linear and start turning tickets into customer-driven&nbsp;work.</p>
+        <div class="reveal rd2 flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="https://app.sindre.ai/signup" class="inline-flex items-center px-6 py-3 text-white bg-brand-700 hover:bg-brand-800 rounded-lg font-medium transition-colors focus:ring-4 focus:ring-brand-200 dark:focus:ring-brand-900">
+            Get started
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+          <a href="/linear" class="inline-flex items-center px-6 py-3 text-gray-300 border border-gray-600 hover:bg-gray-800 dark:hover:bg-gray-700 rounded-lg font-medium transition-colors">
+            Learn more
+          </a>
+        </div>
+      </div>
+    </section>
 
     <Footer />
-
-    </body>
-
+  </div>
 </Layout>
+
+<style>
+  .setup-page {
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  }
+  .norse-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #9CA3AF, transparent);
+    opacity: 0.3;
+  }
+  .dark .norse-divider { opacity: 0.15; }
+
+  .step-num {
+    display: block;
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 600;
+    color: #E5E7EB;
+    user-select: none;
+    margin-bottom: 0.75rem;
+  }
+  :global(.dark) .step-num {
+    color: #374151;
+  }
+
+  .step-list-num {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    background: #F3F4F6;
+    color: #6B7280;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-top: 0.15rem;
+  }
+  :global(.dark) .step-list-num {
+    background: #1F2A37;
+    color: #9CA3AF;
+  }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .rd1 { transition-delay: 0.1s; }
+  .rd2 { transition-delay: 0.2s; }
+  .rd3 { transition-delay: 0.3s; }
+</style>
+
+<script is:inline>
+  (function() {
+    var observer = new IntersectionObserver(
+      function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -32px 0px' }
+    );
+    document.querySelectorAll('.setup-page .reveal').forEach(function(el) {
+      observer.observe(el);
+    });
+  })();
+</script>

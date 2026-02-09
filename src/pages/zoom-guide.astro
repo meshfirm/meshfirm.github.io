@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
 import PrimaryCTA from '../components/PrimaryCTA.astro';
 import MeetingsFAQ from '../components/MeetingsFAQ.astro';
 import Footer from '../components/Footer.astro';
@@ -8,265 +7,310 @@ import Navbar from '../components/Navbar.astro';
 ---
 
 <Layout>
+  <Navbar />
 
-    <Navbar />
+  <div class="setup-page">
 
-    <body>
+    <!-- Hero -->
+    <section class="bg-white dark:bg-gray-900">
+      <div class="pt-28 lg:pt-36 pb-12 lg:pb-16 px-4 mx-auto max-w-screen-xl">
+        <div class="max-w-screen-md">
 
-        <!-- Hero Section -->
+          <!-- Badge -->
+          <div class="reveal mb-8">
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+              <img src="/zoom.svg" class="w-4 h-4" alt="Zoom" />
+              <span class="text-sm font-medium text-gray-600 dark:text-gray-300">Setup Guide</span>
+            </span>
+          </div>
 
-        <section class="bg-white dark:bg-gray-900">
-            <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 mt-10">
-                <div class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
-                    <h1 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">Get Started with <span class="font-extrabold">Sindre for Zoom</span></h1>
-                    <p class="mb-4">Sindre is a powerful tool that integrates with Zoom to enhance your meeting experience. <br>This guide will walk you through the process of setting up and using Sindre with your Zoom meetings.</p>
-                    <p class="mb-4 font-medium">Prerequisites</p>
-                    <ul class="mb-4 space-y-2">
-                        <li class="flex items-start">
-                            <span class="mr-2">1.</span>
-                            A Zoom account
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">2.</span>
-                            A device with internet access
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">3.</span>
-                            Permission to install Zoom apps (if using a work account, check with your IT department)
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+          <h1 class="reveal rd1 text-4xl md:text-5xl font-semibold tracking-tight text-gray-900 dark:text-white mb-4">Get Started with Sindre for&nbsp;Zoom</h1>
+          <p class="reveal rd2 text-lg text-gray-500 dark:text-gray-400 leading-relaxed max-w-lg mb-6">This guide walks you through setting up and using Sindre with your Zoom meetings.</p>
 
+          <!-- Prerequisites -->
+          <div class="reveal rd3 mt-8 p-5 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-800/40">
+            <h3 class="text-sm font-semibold text-gray-900 dark:text-white mb-3">Prerequisites</h3>
+            <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-400 dark:bg-gray-500 mt-1.5 flex-shrink-0"></span>
+                A Zoom account
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-400 dark:bg-gray-500 mt-1.5 flex-shrink-0"></span>
+                A device with internet access
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-400 dark:bg-gray-500 mt-1.5 flex-shrink-0"></span>
+                Permission to install Zoom apps (if using a work account, check with your IT department)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- Step-by-step setup guide -->
+    <!-- Divider -->
+    <div class="norse-divider mx-auto max-w-screen-lg"></div>
 
-        <section class="bg-white dark:bg-gray-900">
-            <div class="py-12 px-4 mx-auto max-w-screen-xl lg:py-8 lg:px-6">
-                <div class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
+    <!-- Steps -->
+    <section class="bg-white dark:bg-gray-900">
+      <div class="py-12 lg:py-20 px-4 mx-auto max-w-screen-xl">
+        <div class="max-w-screen-md space-y-16">
 
-                    
-                    <!-- Heading for Step-by-Step Guide -->
-                    <div class="max-w-screen-lg mb-12 text-gray-500 sm:text-lg dark:text-gray-400">
-                        <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">Step-by-Step Setup Guide</h2>
-                    </div>
+          <!-- Step 1 -->
+          <div class="reveal step-block">
+            <span class="step-num">01</span>
+            <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Sign Up for Sindre</h2>
+            <p class="text-sm text-gray-400 dark:text-gray-500 mb-5">Begin your journey with a free account.</p>
+            <ol class="space-y-3 text-gray-500 dark:text-gray-400 leading-relaxed">
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">1</span>
+                Visit the contact us page (click below)
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">2</span>
+                Send us a message with what you want to do
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">3</span>
+                You will start with 5 free meetings to try out the service
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">4</span>
+                Fill in your email address, phone, and name
+              </li>
+            </ol>
+            <a href="https://www.sindre.ai/contact" class="inline-flex items-center gap-1 mt-5 text-sm font-medium text-brand-600 dark:text-brand-400 hover:text-brand-800 dark:hover:text-brand-300 transition-colors">
+              Go to contact us page
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
 
+          <!-- Step 2 -->
+          <div class="reveal rd1 step-block">
+            <span class="step-num">02</span>
+            <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Create and Set Up Your Account</h2>
+            <p class="text-sm text-gray-400 dark:text-gray-500 mb-5">Personalize your experience.</p>
+            <ol class="space-y-3 text-gray-500 dark:text-gray-400 leading-relaxed">
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">1</span>
+                After verifying your email, log in to your new Sindre account
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">2</span>
+                Complete your profile by adding your preferred language and custom vocabulary
+              </li>
+            </ol>
+          </div>
 
-                    <!-- Step 1 -->
+          <!-- Step 3 -->
+          <div class="reveal rd2 step-block">
+            <span class="step-num">03</span>
+            <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Connect Your Calendar</h2>
+            <p class="text-sm text-gray-400 dark:text-gray-500 mb-5">Optional, but recommended. Connect Sindre to your calendar to automatically join new Zoom meetings.</p>
+            <ol class="space-y-3 text-gray-500 dark:text-gray-400 leading-relaxed">
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">1</span>
+                Navigate to <a class="text-brand-600 dark:text-brand-400 hover:underline" href="https://zoom.us/workspaces/management/calendar" target="_blank">Zoom App &rarr; Add Calendar</a>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">2</span>
+                Click "Add a Calendar Service" and select the service you prefer
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">3</span>
+                You will be prompted to sign in to the calendar
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">4</span>
+                Follow the rest of the process until completion
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">5</span>
+                Once connected, Sindre will join meetings in your calendar automatically. This can be turned off in <a class="text-brand-600 dark:text-brand-400 hover:underline" href="https://app.sindre.ai/settings" target="_blank">Settings</a>.
+              </li>
+            </ol>
+            <p class="mt-5 text-sm text-gray-400 dark:text-gray-500 leading-relaxed">
+              Prefer ad hoc? Go to the <a class="text-brand-600 dark:text-brand-400 hover:underline" href="https://app.sindre.ai" target="_blank">Dashboard</a>, click the + icon and provide the meeting title, link and language.
+            </p>
+          </div>
 
-                    <div class="max-w-screen-lg mb-12 text-gray-500 sm:text-lg dark:text-gray-400 py-8 mx-auto max-w-screen-xl lg:py-8 mt-5">
-                        
-                        
-                        <h3 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">1. Sign Up for Sindre</h3>
-                        <p class="mb-4"><i>Begin your journey with a free account.</i></p>
-                        
-                        <ul class="mb-4 space-y-2">
-                            <li class="flex items-start">
-                                <span class="mr-2">1.</span>
-                                Visit the contact us page (click below).
-                            </li>
-                            <li class="flex items-start">
-                                <span class="mr-2">2.</span>
-                                Send us a message with what you want to do
-                            </li>
-                            <li class="flex items-start">
-                                <span class="mr-2">3.</span>
-                                You will start with 5 free meetings to try out the service
-                            </li>
-                            <li class="flex items-start">
-                                <span class="mr-2">4.</span>
-                                Fill in your:
-                                - Email address
-                                - Phone
-                                - Name
-                            </li>
-                        </ul>
+          <!-- Step 4 -->
+          <div class="reveal rd3 step-block">
+            <span class="step-num">04</span>
+            <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Using Sindre in Your Zoom Meetings</h2>
+            <p class="text-sm text-gray-400 dark:text-gray-500 mb-5">Start enhancing your meetings.</p>
+            <ol class="space-y-3 text-gray-500 dark:text-gray-400 leading-relaxed">
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">1</span>
+                Start or schedule a new Zoom meeting
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">2</span>
+                Look for the Sindre panel in your Zoom interface
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">3</span>
+                The Sindre features should now be available during your meetings
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">4</span>
+                You have 5 free meetings to explore and test the features
+              </li>
+            </ol>
+          </div>
 
-                        <a href="https://www.sindre.ai/contact" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700">
-                            Go to contact us page
-                            <svg class="ml-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-                        </a>
-                    </div>
+          <!-- Step 5 -->
+          <div class="reveal step-block">
+            <span class="step-num">05</span>
+            <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Reap the Rewards</h2>
+            <p class="text-sm text-gray-400 dark:text-gray-500 mb-5">Access summaries and action items after every meeting.</p>
+            <ol class="space-y-3 text-gray-500 dark:text-gray-400 leading-relaxed">
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">1</span>
+                After your Zoom meetings, you will have summaries and action items in your Sindre Dashboard
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">2</span>
+                Go to <a class="text-brand-600 dark:text-brand-400 hover:underline" href="https://app.sindre.ai" target="_blank">app.sindre.ai</a>, navigate to Meetings and you'll see the different meetings
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">3</span>
+                Read the summary, topics discussed, decisions made and action items from the meeting
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="step-list-num">4</span>
+                You can also read and edit the transcript if you need it for interviews or similar
+              </li>
+            </ol>
+          </div>
 
-                    
-                    <!-- Step 2 -->
-                    
-                    <div class="max-w-screen-lg mb-12 text-gray-500 sm:text-lg dark:text-gray-400  py-8 mx-auto max-w-screen-xl lg:py-8 mt-5">
-                        <h3 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">2. Create and Set Up Your Sindre Account</h3>
-                        <p class="mb-4"><i>Personalize your experience</i></p>
-                        
-                        <ul class="mb-4 space-y-2">
-                            <li class="flex items-start">
-                                <span class="mr-2">1.</span>
-                                After verifying your email, log in to your new Sindre account
-                            </li>
-                            <li class="flex items-start">
-                                <span class="mr-2">2.</span>
-                                Complete your profile by adding:
-                                <br>- Preferred language
-                                <br>- Custom vocabulary
-                            </li>
-                        </ul>
-                    </div>
+          <!-- What's Next -->
+          <div class="reveal step-block">
+            <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">What's Next</h2>
+            <p class="text-gray-500 dark:text-gray-400 leading-relaxed mb-5">After setting up Sindre, you can:</p>
+            <ul class="space-y-3 text-gray-500 dark:text-gray-400 leading-relaxed">
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-900 dark:bg-white mt-2 flex-shrink-0"></span>
+                Test the integration with a practice meeting before using it in an important call
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-400 dark:bg-gray-500 mt-2 flex-shrink-0"></span>
+                See meeting summaries and action items after each meeting in Sindre Dashboard
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-400 dark:bg-gray-500 mt-2 flex-shrink-0"></span>
+                "Talk" with your meeting data using "Ask Sindre"
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-600 mt-2 flex-shrink-0"></span>
+                Connect with more data sources to get the full experience
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-600 mt-2 flex-shrink-0"></span>
+                Keep track of your remaining free meetings in your dashboard
+              </li>
+            </ul>
+            <p class="mt-5 text-gray-500 dark:text-gray-400 leading-relaxed">Want to learn more about how Sindre can transform your meetings?</p>
+            <a href="https://www.sindre.ai/meeting-agent" class="inline-flex items-center gap-1 mt-2 text-sm font-medium text-brand-600 dark:text-brand-400 hover:text-brand-800 dark:hover:text-brand-300 transition-colors">
+              Learn More
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
 
+          <!-- Need Help -->
+          <div class="reveal step-block">
+            <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Need Help?</h2>
+            <p class="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">Please contact us if you're experiencing troubles when setting up the app.</p>
+            <a href="https://www.sindre.ai/contact" class="inline-flex items-center gap-1 text-sm font-medium text-brand-600 dark:text-brand-400 hover:text-brand-800 dark:hover:text-brand-300 transition-colors">
+              Contact Support
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+            <p class="mt-5 text-sm text-gray-400 dark:text-gray-500 leading-relaxed">
+              To remove the app from Zoom, follow the steps in Zoom's support article: <a class="text-brand-600 dark:text-brand-400 hover:underline" href="https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0062865#01H8D90CZWJ9Q0K7Q3F8H5N543">Adding and removing Marketplace Apps</a>.
+            </p>
+          </div>
 
-                    <!-- Step 3 -->
-
-                    
-                    <div class="max-w-screen-lg mb-12 text-gray-500 sm:text-lg dark:text-gray-400  py-8 mx-auto max-w-screen-xl lg:py-8 mt-5">
-                                            
-                        <h3 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">3. Connect Your Calendar</h3>
-                        <p class="mb-4"><i>(Optional, but Recommended)
-                        Connect Sindre to your preferred calendar to automatically join new Zoom meetings.</i></p>
-                        
-                        <ul class="mb-4 space-y-2">
-                            <li class="flex items-start">
-                                <span class="mr-2">1.</span>
-                                Navigate to <a class="text-brand-600" href="https://zoom.us/workspaces/management/calendar" target="_blank"> Zoom App - Add Calendar</a>.
-                            </li>
-                            <li class="flex items-start">
-                                <span class="mr-2">2.</span>
-                                Click "Add a Calendar Service and select the service you prefer."
-                            </li>
-                            <li class="flex items-start">
-                                <span class="mr-2">3.</span>
-                                You will be prompted to sign in to the calendar.
-                            </li>
-                            <li class="flex items-start">
-                                <span class="mr-2">6.</span>
-                                Follow the rest of the process until completion.
-                            </li>
-                            <li class="flex items-start">
-                                <span class="mr-2">4.</span>
-                                Once the Calendar is connected to Zoom, Sindre will be able to join meetings in your calendar automatically. 
-                                <br></br>(This can be turned off in Sindre <a class="text-brand-600" href="https://app.sindre.ai/settings" target="_blank">Settings</a>).
-                            </li>
-                        </ul>
-                        <p>
-                        If you prefer, then you can always add sindre to a Zoom meeting ad hoc from the Sindre Dashboard.<br></br>
-                        Simply go to the <a href="https://app.sindre.ai" target="_blank">Dashboard</a>, click the + icon and give it the meeting title, link and language.
-                        </p>
-                    </div>
-
-
-                    <!-- Step 4 -->
-
-                    <div class="max-w-screen-lg mb-12 text-gray-500 sm:text-lg dark:text-gray-400 py-8 mx-auto max-w-screen-xl lg:py-8 mt-5">
-                        
-                        <h3 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">4. Using Sindre in Your Zoom Meetings</h3>
-                        <p class="mb-4"><i>Start enhancing your meetings</i></p>
-                        
-                        <ul class="mb-4 space-y-2">
-                            <li class="flex items-start">
-                                <span class="mr-2">1.</span>
-                                Start or schedule a new Zoom meeting
-                            </li>
-                            <li class="flex items-start">
-                                <span class="mr-2">2.</span>
-                                Look for the Sindre panel in your Zoom interface
-                            </li>
-                            <li class="flex items-start">
-                                <span class="mr-2">3.</span>
-                                The Sindre features should now be available during your meetings
-                            </li>
-                            <li class="flex items-start">
-                                <span class="mr-2">4.</span>
-                                You have 5 free meetings to explore and test the features
-                            </li>
-                        </ul>
-                    </div>
-
-
-                    <!-- Step 5 -->
-
-                    <div class="max-w-screen-lg mb-12 text-gray-500 sm:text-lg dark:text-gray-400 py-8 mx-auto max-w-screen-xl lg:py-8 mt-5">
-                        
-                        <h3 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">5. Reap the Rewards</h3>
-                        <p class="mb-4"><i>Start enhancing your meetings</i></p>
-                        
-                        <ul class="mb-4 space-y-2">
-                            <li class="flex items-start">
-                                <span class="mr-2">1.</span>
-                                After your Zoom meetings, you will now have summaries and action items in your Sindre Dashboard.
-                            </li>
-                            <li class="flex items-start">
-                                <span class="mr-2">2.</span>
-                                Simply go to <a href="https://app.sindre.ai">app.sindre.ai</a>, go to Meetings and you'll see the different meetings.
-                            </li>
-                            <li class="flex items-start">
-                                <span class="mr-2">3.</span>
-                                Read the summary, topics discussed, decisions made and action items from the meeting.
-                            </li>
-                            <li class="flex items-start">
-                                <span class="mr-2">4.</span>
-                                If you want, you can even read and edit the transcript for if you need it for interviews or similar.
-                            </li>
-                        </ul>
-                    </div>
-
-
-                    <!-- What's Next section -->
-
-                    <div class="max-w-screen-lg mb-16 text-gray-500 sm:text-lg dark:text-gray-400 py-8 mx-auto max-w-screen-xl lg:py-8 mt-5">
-                        <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">What's Next</h2>
-                        <p class="mb-4">After setting up Sindre, you can:</p>
-                        <ul class="mb-4 space-y-2">
-                            <li class="flex items-start">
-                                <span class="mr-2">1.</span>
-                                Test the integration with a practice meeting before using it in an important call
-                            </li>
-                            <li class="flex items-start">
-                                <span class="mr-2">2.</span>
-                                See meeting summaries and action items after each meeting in Sindre Dashboard
-                            </li>
-                            <li class="flex items-start">
-                                <span class="mr-2">3.</span>
-                                'Talk' with your meeting data using "Ask Sindre"
-                            </li>
-                            <li class="flex items-start">
-                                <span class="mr-2">4.</span>
-                                Connect with more data sources to get the full experience
-                            </li>
-                            <li class="flex items-start">
-                                <span class="mr-2">5.</span>
-                                Keep track of your remaining free meetings in your Sindre dashboard
-                            </li>
-                        </ul>
-                        <p class="mb-4">Want to learn more about how Sindre can transform your meetings?</p>
-                        <a href="https://www.sindre.ai/meeting-agent" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700">
-                            Learn More
-                            <svg class="ml-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-                        </a>
-                    </div>
-
-
-                    <!-- Need help section -->
-
-                    <div class="max-w-screen-lg mb-16 text-gray-500 sm:text-lg dark:text-gray-400 py-8 mx-auto max-w-screen-xl lg:py-8 mt-5">
-                        <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">Need Help?</h2>
-                        <p class="mb-4">Please contact us if you're experiencing troubles when setting up the app.</p>
-                        <a href="https://www.sindre.ai/contact" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700">
-                            Contact Support
-                            <svg class="ml-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-                        </a>
-                        <p class="pt-4">
-                            If you would at any time like to delete delete the app from Zoom, follow the steps listed in Zoom's support article here: <a class="text-brand-600" href="https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0062865#01H8D90CZWJ9Q0K7Q3F8H5N543">Adding and removing Marketplace Apps for personal use</a>.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+        </div>
+      </div>
+    </section>
 
     <MeetingsFAQ />
-
     <PrimaryCTA />
-
     <Footer />
-
-    </body>
-
-
+  </div>
 </Layout>
+
+<style>
+  .setup-page {
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  }
+  .norse-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #9CA3AF, transparent);
+    opacity: 0.3;
+  }
+  .dark .norse-divider { opacity: 0.15; }
+
+  .step-num {
+    display: block;
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 600;
+    color: #E5E7EB;
+    user-select: none;
+    margin-bottom: 0.75rem;
+  }
+  :global(.dark) .step-num {
+    color: #374151;
+  }
+
+  .step-list-num {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    background: #F3F4F6;
+    color: #6B7280;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-top: 0.15rem;
+  }
+  :global(.dark) .step-list-num {
+    background: #1F2A37;
+    color: #9CA3AF;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .rd1 { transition-delay: 0.1s; }
+  .rd2 { transition-delay: 0.2s; }
+  .rd3 { transition-delay: 0.3s; }
+</style>
+
+<script is:inline>
+  (function() {
+    var observer = new IntersectionObserver(
+      function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -32px 0px' }
+    );
+    document.querySelectorAll('.setup-page .reveal').forEach(function(el) {
+      observer.observe(el);
+    });
+  })();
+</script>
