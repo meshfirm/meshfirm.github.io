@@ -81,68 +81,91 @@ const defaultIcon = 'M5.005 11.19V12l6.998 4.042L19 12v-.81M5 16.15v.81L11.997 2
     <!-- Divider -->
     <div class="norse-divider mx-auto max-w-screen-lg"></div>
 
-    <!-- ═══════════════════════════════ LEARNING MATERIALS ═══════════════════════════════ -->
+    <!-- ═══════════════════════════════ FRAMEWORKS ═══════════════════════════════ -->
     <section id="learn" class="bg-gray-50 dark:bg-gray-800/50">
       <div class="py-16 lg:py-24 px-4 mx-auto max-w-screen-xl">
 
         <!-- Section heading -->
         <div class="text-center mb-14">
           <h2 class="reveal text-3xl md:text-5xl font-semibold text-gray-900 dark:text-white mb-4">Level Up Your PM Skills</h2>
-          <p class="reveal rd1 text-lg text-gray-500 dark:text-gray-400 max-w-xl mx-auto leading-relaxed">Practical guides and deep dives into the skills that matter most for product managers.</p>
+          <p class="reveal rd1 text-lg text-gray-500 dark:text-gray-400 max-w-xl mx-auto leading-relaxed">595+ mental models and frameworks from top product leaders, extracted from 284 episodes of Lenny's Podcast.</p>
         </div>
 
-        <!-- Cards grid: dynamic from repos -->
+        <!-- Frameworks grid -->
         <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {manifests.map(({ manifest }) => {
             const repoPages = allPages.filter(p => p.repoSlug === manifest.repo.slug);
-            // Show framework categories as individual cards
-            const frameworksCollection = manifest.collections.find((c: any) => c.id === 'frameworks');
-            const learningPlansCollection = manifest.collections.find((c: any) => c.id === 'learning-plans');
-            const categories = frameworksCollection ? getCategories(allPages, manifest.repo.slug, 'frameworks') : [];
+            const categories = getCategories(allPages, manifest.repo.slug, 'frameworks');
             const delays = ['rd1', 'rd2', 'rd3', 'rd1', 'rd2', 'rd3', 'rd1', 'rd2', 'rd3'];
 
-            return [
-              // Framework category cards
-              ...categories.map((cat, i) => {
-                const catPages = repoPages.filter(p => p.collectionId === 'frameworks' && p.category === cat);
-                const icon = categoryIcons[cat] || defaultIcon;
-                return (
-                  <a href={`/toolkit/${manifest.repo.slug}/frameworks/${cat}/`}
-                    class={`feature-card reveal ${delays[i]} group p-8 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-800/40`}>
-                    <div class="flex items-center gap-4 mb-4">
-                      <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-700/50 transition-colors group-hover:bg-brand-50 dark:group-hover:bg-brand-900/20">
-                        <svg class="w-5 h-5 text-gray-600 dark:text-gray-300 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" d={icon}/>
-                        </svg>
-                      </div>
-                      <h3 class="text-xl font-semibold text-gray-900 dark:text-white">{formatCategoryTitle(cat)}</h3>
+            return categories.map((cat, i) => {
+              const catPages = repoPages.filter(p => p.collectionId === 'frameworks' && p.category === cat);
+              const icon = categoryIcons[cat] || defaultIcon;
+              return (
+                <a href={`/toolkit/${manifest.repo.slug}/frameworks/${cat}/`}
+                  class={`feature-card reveal ${delays[i]} group p-8 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-800/40`}>
+                  <div class="flex items-center gap-4 mb-4">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-700/50 transition-colors group-hover:bg-brand-50 dark:group-hover:bg-brand-900/20">
+                      <svg class="w-5 h-5 text-gray-600 dark:text-gray-300 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d={icon}/>
+                      </svg>
                     </div>
-                    <p class="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">{catPages.length} frameworks from top product leaders</p>
-                    <span class="text-sm font-medium text-brand-600 dark:text-brand-400 group-hover:underline">Browse frameworks &rarr;</span>
-                  </a>
-                );
-              }),
-              // Learning plans card
-              learningPlansCollection && (() => {
-                const lpPages = repoPages.filter(p => p.collectionId === 'learning-plans');
-                return (
-                  <a href={`/toolkit/${manifest.repo.slug}/learning-plans/`}
-                    class={`feature-card reveal ${delays[categories.length % 3]} group p-8 rounded-xl border border-brand-100 dark:border-brand-900/30 bg-brand-25 dark:bg-brand-900/10`}>
-                    <div class="flex items-center gap-4 mb-4">
-                      <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 dark:bg-brand-900/20 transition-colors group-hover:bg-brand-100 dark:group-hover:bg-brand-900/30">
-                        <svg class="w-5 h-5 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.03v13m0-13c-2.819-.831-4.715-1.076-8.029-1.023A.99.99 0 0 0 3 6v11c0 .563.466 1.014 1.03 1.007 3.122-.043 5.018.212 7.97 1.023m0-13c2.819-.831 4.715-1.076 8.029-1.023A.99.99 0 0 1 21 6v11c0 .563-.466 1.014-1.03 1.007-3.122-.043-5.018.212-7.97 1.023"/>
-                        </svg>
-                      </div>
-                      <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Learning Plans</h3>
-                    </div>
-                    <p class="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">{lpPages.length} structured learning paths for different PM career stages</p>
-                    <span class="text-sm font-medium text-brand-600 dark:text-brand-400 group-hover:underline">View learning plans &rarr;</span>
-                  </a>
-                );
-              })(),
-            ];
-          }).flat().filter(Boolean)}
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">{formatCategoryTitle(cat)}</h3>
+                  </div>
+                  <p class="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">{catPages.length} frameworks from top product leaders</p>
+                  <span class="text-sm font-medium text-brand-600 dark:text-brand-400 group-hover:underline">Browse frameworks &rarr;</span>
+                </a>
+              );
+            });
+          }).flat()}
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ LEARNING PLANS ═══════════════════════════════ -->
+    <section id="learning-plans" class="bg-white dark:bg-gray-900">
+      <div class="py-16 lg:py-24 px-4 mx-auto max-w-screen-xl">
+
+        <!-- Section heading -->
+        <div class="text-center mb-14">
+          <h2 class="reveal text-3xl md:text-5xl font-semibold text-gray-900 dark:text-white mb-4">Learning Plans</h2>
+          <p class="reveal rd1 text-lg text-gray-500 dark:text-gray-400 max-w-xl mx-auto leading-relaxed">Structured curricula that guide you through the frameworks step by step, tailored to your career stage.</p>
+        </div>
+
+        <!-- Learning plans grid -->
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {manifests.map(({ manifest }) => {
+            const repoPages = allPages.filter(p => p.repoSlug === manifest.repo.slug);
+            const lpPages = repoPages
+              .filter(p => p.collectionId === 'learning-plans')
+              .sort((a, b) => a.title.localeCompare(b.title));
+            const delays = ['rd1', 'rd2', 'rd3', 'rd4', 'rd1', 'rd2', 'rd3'];
+
+            return lpPages.map((page, i) => (
+              <a href={page.url}
+                class={`feature-card reveal ${delays[i]} group p-6 rounded-xl border border-brand-100 dark:border-brand-900/30 bg-brand-25 dark:bg-brand-900/10 hover:bg-brand-50 dark:hover:bg-brand-900/20`}>
+                <div class="flex items-center gap-3 mb-3">
+                  <div class="flex items-center justify-center w-9 h-9 rounded-lg bg-brand-50 dark:bg-brand-900/20 group-hover:bg-brand-100 dark:group-hover:bg-brand-900/30 transition-colors">
+                    <svg class="w-4.5 h-4.5 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.03v13m0-13c-2.819-.831-4.715-1.076-8.029-1.023A.99.99 0 0 0 3 6v11c0 .563.466 1.014 1.03 1.007 3.122-.043 5.018.212 7.97 1.023m0-13c2.819-.831 4.715-1.076 8.029-1.023A.99.99 0 0 1 21 6v11c0 .563-.466 1.014-1.03 1.007-3.122-.043-5.018.212-7.97 1.023"/>
+                    </svg>
+                  </div>
+                  <h3 class="text-base font-semibold text-gray-900 dark:text-white group-hover:text-brand-700 dark:group-hover:text-brand-300 transition-colors">{page.title}</h3>
+                </div>
+                {page.frontmatter.target_audience && (
+                  <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-3 line-clamp-2">{page.frontmatter.target_audience}</p>
+                )}
+                <div class="flex items-center gap-2 text-xs text-gray-400 dark:text-gray-500">
+                  {page.frontmatter.difficulty && (
+                    <span class="px-2 py-0.5 bg-brand-50 dark:bg-brand-900/20 text-brand-700 dark:text-brand-300 rounded font-medium">{page.frontmatter.difficulty}</span>
+                  )}
+                  {page.frontmatter.time_commitment && (
+                    <span>{page.frontmatter.time_commitment}</span>
+                  )}
+                </div>
+              </a>
+            ));
+          }).flat()}
         </div>
       </div>
     </section>
