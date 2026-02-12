@@ -44,23 +44,23 @@ const categoryTitle = formatCategoryTitle(category);
       <div class="px-4 mx-auto max-w-screen-xl">
 
         <!-- Breadcrumbs -->
-        <nav class="mb-8" aria-label="Breadcrumb">
+        <nav class="reveal mb-8" aria-label="Breadcrumb">
           <ol class="flex flex-wrap items-center gap-1 text-sm text-gray-500 dark:text-gray-400">
             <li><a href="/toolkit/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Toolkit</a></li>
             <li class="flex items-center">
-              <svg class="w-3 h-3 mx-1.5 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-3 h-3 mx-1.5 text-gray-300 dark:text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
               </svg>
               <a href={`/toolkit/${manifest.repo.slug}/`} class="hover:text-gray-900 dark:hover:text-white transition-colors">{manifest.repo.title}</a>
             </li>
             <li class="flex items-center">
-              <svg class="w-3 h-3 mx-1.5 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-3 h-3 mx-1.5 text-gray-300 dark:text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
               </svg>
               <a href={`/toolkit/${manifest.repo.slug}/${collection.id}/`} class="hover:text-gray-900 dark:hover:text-white transition-colors">{collection.title}</a>
             </li>
             <li class="flex items-center">
-              <svg class="w-3 h-3 mx-1.5 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-3 h-3 mx-1.5 text-gray-300 dark:text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
               </svg>
               <span class="text-gray-900 dark:text-white font-medium">{categoryTitle}</span>
@@ -68,25 +68,33 @@ const categoryTitle = formatCategoryTitle(category);
           </ol>
         </nav>
 
-        <div class="mb-10">
-          <h1 class="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white mb-3">{categoryTitle}</h1>
+        <div class="reveal rd1 mb-10">
+          <h1 class="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white tracking-tight mb-3">{categoryTitle}</h1>
           <p class="text-lg text-gray-500 dark:text-gray-400">
             {categoryPages.length} {categoryPages.length === 1 ? 'framework' : 'frameworks'} in {categoryTitle.toLowerCase()}
           </p>
         </div>
 
         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {categoryPages.map(page => (
+          {categoryPages.map((page, idx) => (
             <a href={page.url}
-              class="group p-5 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-800/30 hover:bg-gray-50 dark:hover:bg-gray-800/60 hover:border-gray-200 dark:hover:border-gray-700 hover:shadow-sm transition-all">
-              <h3 class="text-base font-semibold text-gray-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors mb-2">{page.title}</h3>
+              class={`reveal item-card group p-5 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-800/30 hover:bg-white dark:hover:bg-gray-800/60 hover:border-gray-200 dark:hover:border-gray-700 transition-all`}>
+              <div class="flex items-start justify-between gap-3 mb-2">
+                <h3 class="text-base font-semibold text-gray-900 dark:text-white">{page.title}</h3>
+                <svg class="w-3.5 h-3.5 text-gray-300 dark:text-gray-600 group-hover:text-gray-400 dark:group-hover:text-gray-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
               {page.frontmatter.one_liner && (
                 <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-3 line-clamp-2">{page.frontmatter.one_liner}</p>
               )}
               {page.frontmatter.source_guest && (
-                <p class="text-xs text-gray-400 dark:text-gray-500">
-                  From: {page.frontmatter.source_guest}
-                </p>
+                <div class="flex items-center gap-1.5 text-xs text-gray-400 dark:text-gray-500">
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/>
+                  </svg>
+                  {page.frontmatter.source_guest}
+                </div>
               )}
             </a>
           ))}
@@ -102,4 +110,43 @@ const categoryTitle = formatCategoryTitle(category);
   .toolkit-content-page {
     font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
   }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .rd1 { transition-delay: 0.1s; }
+
+  .item-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  }
+  .item-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  }
+  :global(.dark) .item-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
 </style>
+
+<script is:inline>
+  (function() {
+    var observer = new IntersectionObserver(
+      function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -32px 0px' }
+    );
+    document.querySelectorAll('.toolkit-content-page .reveal').forEach(function(el) {
+      observer.observe(el);
+    });
+  })();
+</script>
