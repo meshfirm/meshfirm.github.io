@@ -1,0 +1,3 @@
+[submodule "content/repos/lenny-interviews-course"]
+	path = content/repos/lenny-interviews-course
+	url = https://github.com/magnusnoeddegaard/lenny-interviews-course.git

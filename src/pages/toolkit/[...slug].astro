@@ -1,0 +1,31 @@
+---
+import ToolkitContentLayout from '../../layouts/ToolkitContentLayout.astro';
+import { getAllPages } from '../../lib/content-loader';
+
+export function getStaticPaths() {
+  const pages = getAllPages();
+  return pages.map(page => {
+    // slug is e.g. "lenny-course/frameworks/career/30-60-90-day-plan"
+    const parts = page.slug.split('/');
+    return {
+      params: { slug: parts.join('/') },
+      props: { page },
+    };
+  });
+}
+
+const { page } = Astro.props;
+---
+
+<ToolkitContentLayout
+  title={page.title}
+  frontmatter={page.frontmatter}
+  htmlContent={page.htmlContent}
+  githubUrl={page.githubUrl}
+  repoSlug={page.repoSlug}
+  repoTitle={page.repoTitle}
+  collectionId={page.collectionId}
+  collectionTitle={page.collectionTitle}
+  category={page.category}
+  url={page.url}
+/>
