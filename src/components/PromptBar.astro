@@ -1,0 +1,352 @@
+---
+// PromptBar — full-width hero input with smart routing across text, file, and URL.
+// Backend submission is stubbed: this component dispatches a `prompt-bar:submit`
+// CustomEvent on document so the streaming-draft renderer and analytics layer
+// can subscribe once they ship. See sibling tasks for the renderer + endpoint.
+---
+
+<div class="prompt-bar-wrapper max-w-2xl mx-auto text-left">
+  <form id="prompt-bar-form" class="prompt-bar group" novalidate aria-label="Try Sindre">
+    <label for="prompt-bar-input" class="sr-only">Describe what you're trying to build or paste notes / a link</label>
+    <textarea
+      id="prompt-bar-input"
+      name="prompt"
+      rows="3"
+      placeholder="Describe a problem, paste a thread, drop a Linear or Productboard URL…"
+      class="prompt-bar__input"
+      autocomplete="off"
+      spellcheck="true"
+    ></textarea>
+
+    <div class="prompt-bar__footer">
+      <div class="prompt-bar__hint" data-hint>
+        <span class="prompt-bar__hint-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+          </svg>
+        </span>
+        <span data-hint-text>Drop a file, paste a link, or type what's on your mind.</span>
+      </div>
+
+      <button type="submit" class="prompt-bar__submit" data-submit aria-label="Generate draft">
+        <span data-submit-label>Draft my bet</span>
+        <svg class="w-3.5 h-3.5 ml-2 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+
+    <div class="prompt-bar__drop-overlay" data-drop-overlay aria-hidden="true">
+      <span class="prompt-bar__drop-label">Drop your file to attach</span>
+    </div>
+  </form>
+
+  <input type="file" hidden data-file-input accept=".txt,.md,.pdf,.png,.jpg,.jpeg,.csv,.json,.docx" />
+
+  <div class="prompt-bar__chips" role="group" aria-label="Input shortcuts">
+    <button type="button" class="prompt-bar__chip" data-chip-file>
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m18.375 12.739-7.693 7.693a4.5 4.5 0 0 1-6.364-6.364l10.94-10.94A3 3 0 1 1 19.5 7.372L8.552 18.32m.009-.01-.01.01m5.699-9.941-7.81 7.81a1.5 1.5 0 0 0 2.112 2.13"/></svg>
+      <span>Drop file</span>
+    </button>
+    <button type="button" class="prompt-bar__chip" data-chip-connect aria-describedby="prompt-bar-connect-hint">
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"/></svg>
+      <span>Connect Linear / Productboard</span>
+    </button>
+  </div>
+  <p id="prompt-bar-connect-hint" class="prompt-bar__chip-hint" data-connect-hint hidden>
+    Direct connect is coming soon — for now, paste a Linear or Productboard URL into the bar above.
+  </p>
+
+  <div class="prompt-bar__status" role="status" aria-live="polite" data-status hidden></div>
+</div>
+
+<style is:global>
+  .prompt-bar-wrapper { font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif; }
+
+  .prompt-bar {
+    position: relative;
+    border-radius: 1rem;
+    border: 1px solid rgba(209, 213, 219, 0.7);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    box-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.03),
+      0 8px 24px -8px rgba(0, 0, 0, 0.06),
+      0 24px 48px -16px rgba(0, 0, 0, 0.06);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  }
+  .prompt-bar:focus-within {
+    border-color: rgba(84, 75, 195, 0.45);
+    box-shadow:
+      0 0 0 4px rgba(202, 197, 255, 0.18),
+      0 1px 2px rgba(0, 0, 0, 0.03),
+      0 8px 24px -8px rgba(0, 0, 0, 0.08);
+  }
+  .dark .prompt-bar {
+    border-color: rgba(75, 85, 99, 0.5);
+    background: rgba(31, 41, 55, 0.65);
+    box-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.25),
+      0 8px 24px -8px rgba(0, 0, 0, 0.4);
+  }
+  .dark .prompt-bar:focus-within {
+    border-color: rgba(150, 141, 250, 0.6);
+    box-shadow:
+      0 0 0 4px rgba(84, 75, 195, 0.18),
+      0 1px 2px rgba(0, 0, 0, 0.25);
+  }
+
+  .prompt-bar__input {
+    display: block;
+    width: 100%;
+    border: 0;
+    background: transparent;
+    resize: none;
+    padding: 1.1rem 1.25rem 0.5rem;
+    font-size: 1rem;
+    line-height: 1.55;
+    color: #111827;
+    outline: none;
+    min-height: 5.5rem;
+  }
+  .prompt-bar__input::placeholder { color: #9CA3AF; }
+  .dark .prompt-bar__input { color: #F3F4F6; }
+  .dark .prompt-bar__input::placeholder { color: #6B7280; }
+
+  .prompt-bar__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.5rem 0.75rem 0.75rem 1.25rem;
+    border-top: 1px dashed rgba(229, 231, 235, 0.7);
+  }
+  .dark .prompt-bar__footer { border-top-color: rgba(75, 85, 99, 0.4); }
+
+  .prompt-bar__hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    color: #6B7280;
+    min-width: 0;
+  }
+  .dark .prompt-bar__hint { color: #9CA3AF; }
+  .prompt-bar__hint-icon { display: inline-flex; }
+  .prompt-bar__hint[data-routed="url"] { color: #047857; }
+  .prompt-bar__hint[data-routed="file"] { color: #047857; }
+  .prompt-bar__hint[data-routed="text"] { color: #4B5563; }
+  .dark .prompt-bar__hint[data-routed="url"],
+  .dark .prompt-bar__hint[data-routed="file"] { color: #6EE7B7; }
+  .dark .prompt-bar__hint[data-routed="text"] { color: #D1D5DB; }
+
+  .prompt-bar__submit {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.55rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #fff;
+    background: #544BC3;
+    border-radius: 0.65rem;
+    border: 0;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 1px 2px rgba(84, 75, 195, 0.18);
+    flex-shrink: 0;
+  }
+  .prompt-bar__submit:hover { background: #443AB0; box-shadow: 0 4px 16px rgba(84, 75, 195, 0.28); }
+  .prompt-bar__submit:focus-visible { outline: none; box-shadow: 0 0 0 4px rgba(202, 197, 255, 0.45); }
+  .prompt-bar__submit:disabled { opacity: 0.55; cursor: progress; }
+  .dark .prompt-bar__submit { background: #6E63E6; }
+  .dark .prompt-bar__submit:hover { background: #5B52D6; }
+  .dark .prompt-bar__submit:focus-visible { box-shadow: 0 0 0 4px rgba(84, 75, 195, 0.5); }
+
+  .prompt-bar__drop-overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: 1rem;
+    border: 2px dashed rgba(84, 75, 195, 0.45);
+    background: rgba(202, 197, 255, 0.18);
+    backdrop-filter: blur(2px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 2;
+  }
+  .prompt-bar.is-dragging .prompt-bar__drop-overlay { display: flex; }
+  .prompt-bar__drop-label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #443AB0;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    box-shadow: 0 6px 18px rgba(84, 75, 195, 0.2);
+  }
+  .dark .prompt-bar__drop-label { color: #C9C4FF; background: rgba(31, 41, 55, 0.9); }
+
+  .prompt-bar__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 0.9rem;
+  }
+  .prompt-bar__chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 0.85rem;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: #4B5563;
+    background: rgba(243, 244, 246, 0.85);
+    border: 1px solid rgba(229, 231, 235, 0.9);
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+  .prompt-bar__chip:hover { background: #fff; color: #111827; border-color: #D1D5DB; }
+  .prompt-bar__chip:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(202, 197, 255, 0.45); }
+  .dark .prompt-bar__chip { color: #D1D5DB; background: rgba(31, 41, 55, 0.6); border-color: rgba(75, 85, 99, 0.5); }
+  .dark .prompt-bar__chip:hover { background: rgba(55, 65, 81, 0.8); color: #fff; border-color: rgba(107, 114, 128, 0.8); }
+
+  .prompt-bar__chip-hint {
+    margin-top: 0.6rem;
+    font-size: 0.78rem;
+    color: #6B7280;
+    text-align: center;
+  }
+  .dark .prompt-bar__chip-hint { color: #9CA3AF; }
+
+  .prompt-bar__status {
+    margin-top: 0.9rem;
+    font-size: 0.85rem;
+    text-align: center;
+    color: #4B5563;
+  }
+  .prompt-bar__status[data-state="error"] { color: #B91C1C; }
+  .dark .prompt-bar__status { color: #D1D5DB; }
+  .dark .prompt-bar__status[data-state="error"] { color: #FCA5A5; }
+</style>
+
+<script>
+  // Smart routing: file > URL > text. URL must be a single token shaped like one.
+  // Reliability is the accepted trade-off per the bet — keep the rules explicit.
+  const URL_RE = /^(https?:\/\/\S+|www\.\S+\.\S+)$/i;
+
+  function classify(text: string, file: File | null): 'file' | 'url' | 'text' | null {
+    if (file) return 'file';
+    const trimmed = text.trim();
+    if (!trimmed) return null;
+    return URL_RE.test(trimmed) ? 'url' : 'text';
+  }
+
+  function previewLabel(route: 'file' | 'url' | 'text', text: string, file: File | null): string {
+    if (route === 'file' && file) return `File ready: ${file.name}`;
+    if (route === 'url') return 'Looks like a link — we\u2019ll fetch it.';
+    if (route === 'text') return text.length > 40 ? 'Paste detected — drafting from your notes.' : 'Got it — drafting from your prompt.';
+    return 'Drop a file, paste a link, or type what\u2019s on your mind.';
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('prompt-bar-form') as HTMLFormElement | null;
+    if (!form) return;
+
+    const input = form.querySelector<HTMLTextAreaElement>('#prompt-bar-input');
+    const submit = form.querySelector<HTMLButtonElement>('[data-submit]');
+    const submitLabel = form.querySelector<HTMLSpanElement>('[data-submit-label]');
+    const hint = form.querySelector<HTMLDivElement>('[data-hint]');
+    const hintText = form.querySelector<HTMLSpanElement>('[data-hint-text]');
+    const fileInput = form.parentElement?.querySelector<HTMLInputElement>('[data-file-input]');
+    const chipFile = form.parentElement?.querySelector<HTMLButtonElement>('[data-chip-file]');
+    const chipConnect = form.parentElement?.querySelector<HTMLButtonElement>('[data-chip-connect]');
+    const connectHint = form.parentElement?.querySelector<HTMLParagraphElement>('[data-connect-hint]');
+    const status = form.parentElement?.querySelector<HTMLDivElement>('[data-status]');
+
+    if (!input || !submit || !submitLabel || !hint || !hintText || !fileInput || !chipFile || !chipConnect || !connectHint || !status) return;
+
+    let attachedFile: File | null = null;
+
+    const refreshHint = () => {
+      const route = classify(input.value, attachedFile);
+      if (route) {
+        hint.setAttribute('data-routed', route);
+        hintText.textContent = previewLabel(route, input.value, attachedFile);
+      } else {
+        hint.removeAttribute('data-routed');
+        hintText.textContent = 'Drop a file, paste a link, or type what\u2019s on your mind.';
+      }
+    };
+
+    input.addEventListener('input', refreshHint);
+
+    chipFile.addEventListener('click', () => fileInput.click());
+
+    fileInput.addEventListener('change', () => {
+      attachedFile = fileInput.files?.[0] ?? null;
+      refreshHint();
+    });
+
+    chipConnect.addEventListener('click', () => {
+      connectHint.hidden = !connectHint.hidden;
+    });
+
+    // Drag-and-drop on the bar itself
+    let dragDepth = 0;
+    const onDragEnter = (e: DragEvent) => {
+      if (!e.dataTransfer || !Array.from(e.dataTransfer.types).includes('Files')) return;
+      e.preventDefault();
+      dragDepth += 1;
+      form.classList.add('is-dragging');
+    };
+    const onDragLeave = (e: DragEvent) => {
+      e.preventDefault();
+      dragDepth = Math.max(0, dragDepth - 1);
+      if (dragDepth === 0) form.classList.remove('is-dragging');
+    };
+    const onDragOver = (e: DragEvent) => {
+      if (e.dataTransfer && Array.from(e.dataTransfer.types).includes('Files')) e.preventDefault();
+    };
+    const onDrop = (e: DragEvent) => {
+      e.preventDefault();
+      dragDepth = 0;
+      form.classList.remove('is-dragging');
+      const file = e.dataTransfer?.files?.[0];
+      if (file) {
+        attachedFile = file;
+        refreshHint();
+      }
+    };
+    form.addEventListener('dragenter', onDragEnter);
+    form.addEventListener('dragleave', onDragLeave);
+    form.addEventListener('dragover', onDragOver);
+    form.addEventListener('drop', onDrop);
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const route = classify(input.value, attachedFile);
+      if (!route) {
+        status.hidden = false;
+        status.dataset.state = 'error';
+        status.textContent = 'Type a prompt, paste a link, or drop a file to get started.';
+        input.focus();
+        return;
+      }
+      const payload = {
+        route,
+        text: input.value.trim(),
+        file: attachedFile ? { name: attachedFile.name, size: attachedFile.size, type: attachedFile.type } : null,
+      };
+      // Success-path observability — T8 funnel instrumentation will hook this too.
+      console.log('[prompt-bar] submit', { route: payload.route, textLength: payload.text.length, file: payload.file });
+      document.dispatchEvent(new CustomEvent('prompt-bar:submit', { detail: { ...payload, fileObject: attachedFile } }));
+
+      submit.disabled = true;
+      submitLabel.textContent = 'Drafting…';
+      status.hidden = false;
+      status.removeAttribute('data-state');
+      status.textContent = 'Connecting to the bet strategist… (streaming draft lands here in the next task)';
+    });
+  });
+</script>
